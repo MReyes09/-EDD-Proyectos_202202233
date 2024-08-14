@@ -5,11 +5,19 @@
 class User_Controller
 {
 private:
+
     int id_User;
+    User* User_Logued;
     LinkedList list_Users;
+
 public:
+
     User_Controller();
     void sigIn();
+    void admin_add();
+    User* logIn();
+    bool deleteUser();
+
 };
 
 #endif

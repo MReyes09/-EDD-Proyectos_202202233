@@ -14,10 +14,11 @@ class User {
         string email;
         string password;
         string birthdate;
+        string rol;
 
     public:
         // Constructor
-        User(int id_User_, string name_, string lastname_, string email_, string password_, string birthdate_);
+        User(int id_User_, string name_, string lastname_, string email_, string password_, string birthdate_, string rol_);
 
         // Getters
         int getIdUser() const;
@@ -26,6 +27,7 @@ class User {
         string getEmail() const;
         string getPassword() const;
         string getBirthdate() const;
+        string getRol() const;
 
         // Setters
         void setIdUser(int id);
@@ -34,6 +36,7 @@ class User {
         void setEmail(string email_);
         void setPassword(string password_);
         void setBirthdate(string birthdate_);
+        void setRol(string rol_);
 };
 
 #endif // USER_H
