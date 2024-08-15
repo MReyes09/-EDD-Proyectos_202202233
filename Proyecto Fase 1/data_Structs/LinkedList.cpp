@@ -1,6 +1,6 @@
 #include <iostream>
 #include "LinkedList.h"
-#include "../models/user.cpp"
+#include "../models/user.h"
 
 using namespace std;
 
@@ -38,15 +38,21 @@ void LinkedList::append(User* value)
     }
 }
 
-void LinkedList::print()
+void LinkedList::print(int id_UserLogin)
 {
     Node *temp = head;
     while (temp != nullptr)
     {
-        cout << temp->user->getEmail() << " -> ";
+        if(temp->user->getIdUser() == id_UserLogin){
+            temp = temp->next;
+            continue;
+        }
+        int id = temp->user->getIdUser();
+        string correo = temp->user->getEmail();
+        string mensaje = " " + to_string(id) + ") " + correo;
+        cout << mensaje << endl;
         temp = temp->next;
     }
-    cout << " nullptr" << endl;
 }
 
 LinkedList::~LinkedList()
@@ -77,6 +83,8 @@ User* LinkedList::search_LogIn(string email, string password)
     return nullptr;
 }
 
+
+
 bool LinkedList::remove_User(User* user)
 {
     if (head == nullptr)
@@ -105,4 +113,21 @@ bool LinkedList::remove_User(User* user)
     previous->next = current->next;
     delete current;
     return true;
+}
+
+User* LinkedList::search_By_Id(int id){
+
+    Node *temp = head;
+
+    while ( temp != nullptr )
+    {
+        if ( temp->user->getIdUser() == id ){
+            return temp->user;
+        }
+        temp = temp->next;
+    }
+
+    cout << "\n >> El id que has compartido no corresponde a ningún usuario\n" << endl;
+    return nullptr;
+
 }

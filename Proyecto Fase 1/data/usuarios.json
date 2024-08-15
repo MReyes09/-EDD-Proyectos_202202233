@@ -1,0 +1,51 @@
+[
+    {
+        "nombres": "Juan",
+        "apellidos": "Perez Gomez",
+        "fecha_De_Nacimiento": "1990/05/14",
+        "correo": "juan.perez@example.com",
+        "contraseña": "password123"
+    },
+    {
+        "nombres": "Mati",
+        "apellidos": "Reyes",
+        "fecha_De_Nacimiento": "2002/09/02",
+        "correo": "user@gmail.com",
+        "contraseña": "123"
+    },
+    {
+        "nombres": "Ana",
+        "apellidos": "Martinez López",
+        "fecha_De_Nacimiento": "1985/07/22",
+        "correo": "ana.martinez@example.com",
+        "contraseña": "anaPass2024"
+    },
+    {
+        "nombres": "Carlos",
+        "apellidos": "Hernandez Ruiz",
+        "fecha_De_Nacimiento": "1978/12/11",
+        "correo": "carlos.hernandez@example.com",
+        "contraseña": "carlosHR78"
+    },
+    {
+        "nombres": "Lucia",
+        "apellidos": "Gomez Sanchez",
+        "fecha_De_Nacimiento": "1995/03/30",
+        "correo": "lucia.gomez@example.com",
+        "contraseña": "luciaG123"
+    },
+    {
+        "nombres": "Miguel",
+        "apellidos": "Rodriguez Fernandez",
+        "fecha_De_Nacimiento": "2000/11/19",
+        "correo": "miguel.rodriguez@example.com",
+        "contraseña": "miguelR2000"
+    },
+    {
+        "nombres": "Sofia",
+        "apellidos": "Lopez Martinez",
+        "fecha_De_Nacimiento": "1993/06/25",
+        "correo": "sofia.lopez@example.com",
+        "contraseña": "sofiaL93"
+    }
+]

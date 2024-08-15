@@ -50,7 +50,7 @@ public:
                 {
                     if( user_LogIn->getRol() == "Admin" )
                     {
-                        cout << "\n || Menu de administrador" << endl;
+                        menu_Administrador();
                     }
                     else
                     {
@@ -78,7 +78,6 @@ public:
 
     void menu_Usuario(){
 
-        SetConsoleOutputCP(CP_UTF8);
         system("cls");
         do
         {
@@ -104,7 +103,7 @@ public:
                 break;
             
             case 2:
-                
+                Menu_Solicitudes();
                 break;
             
             case 3:
@@ -130,7 +129,6 @@ public:
     }
 
     int Menu_Perfil(){
-        SetConsoleOutputCP(CP_UTF8);
         system("cls");
 
         do
@@ -184,5 +182,95 @@ public:
 
         }while(opcion != 3);
         return 0;
+    }
+
+    void Menu_Solicitudes(){
+
+        system("cls");
+        do
+        {
+            cout << " ************************************ " << endl;
+			cout << " || Opciones de Solicitud" << endl;
+			cout << " || " << endl;
+			cout << " || 1. Ver Solicitudes De Amistad" << endl;
+            cout << " || 2. Enviar Solicitudes De Amistad" << endl;
+            cout << " || 3. Salir" << endl;
+			cout << " || " << endl;
+			cout << " || Ingrese el numero > ";
+            cin >> opcion;
+            
+            system("cls");
+
+            switch (opcion)
+            {
+            case 1:
+                
+                break;
+            
+            case 2:
+                
+                userControl->solicitud_Amistad();                
+                break;
+
+            default:
+                break;
+            }
+        }while(opcion != 3);
+
+    }
+
+    void menu_Administrador(){
+        system("cls");
+        do
+        {
+            cout << " ************************************ " << endl;
+			cout << " || Bienvenido " << user_LogIn->getName() << endl;
+			cout << " || " << endl;
+			cout << " || 1. Carga De Usuarios" << endl;
+            cout << " || 2. Carga De Relaciones" << endl;
+            cout << " || 3. Carga De Publicaciones" << endl;
+            cout << " || 4. Gestionar usuarios" << endl;
+            cout << " || 5. Reportes" << endl;
+            cout << " || 6. Salir" << endl;
+			cout << " || " << endl;
+			cout << " || Ingrese el numero > ";
+            cin >> opcion;
+            
+            system("cls");
+            bool res = false;
+            switch (opcion)
+            {
+            case 1:
+                userControl->carga_Usuarios();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                break;
+            
+            case 2:
+                
+                break;
+            
+            case 3:
+                
+                break;
+            
+            case 4:
+                
+                break;
+            
+            case 5:
+                
+                break;
+                
+            case 6:
+                
+                break;
+            
+            default:
+                system("cls");
+                cout << ">> Opción no valida" << endl;
+                break;
+            }
+
+        }while(opcion != 6);
     }
 };

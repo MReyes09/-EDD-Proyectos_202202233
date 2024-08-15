@@ -17,7 +17,8 @@ public:
     void admin_add();
     User* logIn();
     bool deleteUser();
-
+    void carga_Usuarios();
+    void solicitud_Amistad();
 };
 
 #endif
