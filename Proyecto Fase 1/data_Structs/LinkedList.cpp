@@ -1,6 +1,5 @@
 #include <iostream>
 #include "LinkedList.h"
-#include "../models/user.h"
 
 using namespace std;
 
@@ -25,6 +24,9 @@ void LinkedList::append(User* value)
             {
                 cout << "\n >> El correo electrónico " + value->getEmail() + " ¡Ya existe!\n" << endl;
                 delete newNode;
+                cout << " Presiona Enter para continuar...";
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+                cin.get(); // Lee la tecla Enter
                 return; // Salir de la función para no añadir el nodo duplicado
             }
             if (temp->next == nullptr) // Verifica si es el último nodo
@@ -83,8 +85,6 @@ User* LinkedList::search_LogIn(string email, string password)
     return nullptr;
 }
 
-
-
 bool LinkedList::remove_User(User* user)
 {
     if (head == nullptr)
@@ -115,13 +115,13 @@ bool LinkedList::remove_User(User* user)
     return true;
 }
 
-User* LinkedList::search_By_Id(int id){
+User* LinkedList::search_By_Id(int id, string correo){
 
     Node *temp = head;
 
     while ( temp != nullptr )
     {
-        if ( temp->user->getIdUser() == id ){
+        if ( temp->user->getIdUser() == id || temp->user->getEmail() == correo){
             return temp->user;
         }
         temp = temp->next;
@@ -131,3 +131,51 @@ User* LinkedList::search_By_Id(int id){
     return nullptr;
 
 }
+
+void LinkedList::print_Desconocidos(int id_User, LinkedList_Sol& list_Env, LinkedList_Sol& list_Sol){
+    Node *temp = head;
+
+    while (temp != nullptr)
+    {
+        // Si el usuario actual es el que ha iniciado sesión, lo omitimos
+        if (temp->user->getIdUser() == id_User){
+            temp = temp->next;
+            continue;
+        }
+
+        bool solicitud_enviada = false;
+        bool solicitud_recibida = false;
+
+        // Revisar si se ha enviado una solicitud a este usuario
+        Node_Sol *temp2 = list_Env.head;
+        while(temp2 != nullptr){
+            if (temp2->solicitud->getCorreoReceptor() == temp->user->getEmail()) {
+                solicitud_enviada = true;
+                break;
+            }
+            temp2 = temp2->next;
+        }
+
+        // Revisar si se ha recibido una solicitud de este usuario
+        Node_Sol *temp3 = list_Sol.head;
+        while(temp3 != nullptr){
+            if (temp3->solicitud->getCorreoEmisor() == temp->user->getEmail()) {
+                solicitud_recibida = true;
+                break;
+            }
+            temp3 = temp3->next;
+        }
+
+        // Si no se ha enviado ni recibido una solicitud, imprimir el usuario
+        if (!solicitud_enviada && !solicitud_recibida) {
+            int id = temp->user->getIdUser();
+            string correo = temp->user->getEmail();
+            string mensaje = " " + to_string(id) + ") " + correo;
+            cout << mensaje << endl;
+        }
+
+        temp = temp->next;
+    }
+}
+
+

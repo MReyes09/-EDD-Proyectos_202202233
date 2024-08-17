@@ -5,6 +5,7 @@
 #include <limits>
 #include "user_Controller.h"
 #include "../models/user.h"
+#include "../models/solicitud.h"
 #include "../include/json.hpp"
 
 using json = nlohmann::json;
@@ -46,8 +47,10 @@ void User_Controller::sigIn()
 
 void User_Controller::admin_add()
 {
-    string name = "admin@gmail.com";
-    string password = "EDD2S2024";
+    //string name = "admin@gmail.com";
+    //string password = "EDD2S2024";
+    string name = "x";
+    string password = "s";
 
     User *newUser = new User(id_User, name, "", name, password, "", "Admin");
     id_User += 1;
@@ -140,22 +143,110 @@ void User_Controller::carga_Usuarios(){
     system("cls");
 }
 
-void User_Controller::solicitud_Amistad(){
+void User_Controller::solicitud_Amistad() {
 
     cout << " *******************************************" << endl;
     cout << " Personas que quízas conozcas" << endl;
 
-    list_Users.print(User_Logued->getIdUser());
-    cout << " Escribe el numero de a quien quieres enviar solicitud" << endl;
+    list_Users.print_Desconocidos(User_Logued->getIdUser(), User_Logued->getListEnvios(), User_Logued->getListSol());
+    cout << "\n Escribe el numero de a quien quieres enviar solicitud" << endl;
     cout << " id >> ";
+
     int id;
     cin >> id;
-    
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpia el buffer
+
     User* user_Solicitud = list_Users.search_By_Id(id);
-    /*
-    if( user_Solicitud != nullptr ){
-        User_Logued->getListSol().append(user_Solicitud);
-        User_Logued->getListSol().print(User_Logued->getIdUser());
+
+    if (user_Solicitud != nullptr) {
+        Solicitud* newSolicitud = new Solicitud(User_Logued->getEmail(), user_Solicitud->getEmail());
+        bool res = User_Logued->getListEnvios().append(newSolicitud);
+        if( res ){            
+            user_Solicitud->getListSol().push(newSolicitud);
+            User_Logued->getListEnvios().print(0);            
+            cout << " || Presiona Enter para continuar...";
+        }        
+    } else {
+        cout << "Usuario no encontrado." << endl;
     }
-    */
 }
+
+void User_Controller::carga_Solicitudes(){
+    // Leer el archivo JSON
+    string path = "data/solicitudes.json";
+    ifstream file(path);
+
+    if (!file.is_open()) {
+        cerr << " >> No se pudo abrir el archivo JSON" << endl;
+        return;
+    }
+
+    json jsonData;
+    file >> jsonData;
+
+
+    // Iterar sobre los elementos del JSON y crear objetos User
+    for (auto& element : jsonData) {
+        string emisor = element["emisor"];
+        string receptor = element["receptor"];
+        string estado = element["estado"];
+
+        if( estado == "PENDIENTE" ){
+            User* userEM = list_Users.search_By_Id(-1, emisor);
+            User* userRec = list_Users.search_By_Id(-1, receptor);
+
+            if( userEM != nullptr && userRec != nullptr ){
+                Solicitud* newSolicitud = new Solicitud(emisor, receptor);
+                userEM->getListEnvios().append(newSolicitud);
+                userRec->getListSol().push(newSolicitud);
+            }else{
+                if( userEM == nullptr ){
+                    cout << " >> El usuario con correo: " + emisor << " no existe" << endl; 
+                }else{
+                    cout << " >> El usuario con correo: " + receptor << " no existe" << endl; 
+                }
+            }
+
+        }else{
+            //SI SON SOLICITUDES ACEPTADAS< DEBEMOS AGREGARLAS A LA MATRIZ DISPERSA!
+        }
+    }
+    system("cls");
+    cout << " La carga de relaciones en el sistema fue satisfactorio" << endl;
+    cout << " Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+
+}
+
+void User_Controller::solicitudes(int opcion){
+
+    if( opcion == 0 ){ // Esta opcion es cuando el usuario acepta una solicitud
+        
+
+
+    }else{  // Esta opcion es cuando el usuario rechaza una solicitud
+
+        Solicitud *solicitud = User_Logued->getListSol().head->solicitud;
+
+        bool result = User_Logued->getListSol().remove(solicitud);
+        if(result){
+            cout << " >> Se rechazo con exito la solicitud \n" << endl;
+        }else{
+            cout << " >> A ocurrido un error, nunca se encontro la solicitud \n" << endl;
+        }
+
+        User* user_Emisor =  list_Users.search_By_Id(-1, solicitud->getCorreoEmisor());
+        result = user_Emisor->getListEnvios().remove(solicitud);
+
+        if( !result ) {
+            cout << " >> A ocurrido un error, nunca se encontro la solicitud\n" << endl;            
+        }
+
+        delete solicitud;
+
+    }
+    
+}
+

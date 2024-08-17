@@ -3,6 +3,7 @@
 #define USER_H
 
 #include <string>
+#include "../data_Structs/LinkedList_Sol.cpp"
 
 using namespace std;
 
@@ -15,6 +16,8 @@ class User {
         string password;
         string birthdate;
         string rol;
+        LinkedList_Sol list_Envios;
+        LinkedList_Sol list_Sol;
 
     public:
         // Constructor
@@ -28,6 +31,8 @@ class User {
         string getPassword() const;
         string getBirthdate() const;
         string getRol() const;
+        LinkedList_Sol& getListEnvios();
+        LinkedList_Sol& getListSol();
 
         // Setters
         void setIdUser(int id);

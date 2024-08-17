@@ -10,8 +10,8 @@
         "nombres": "Mati",
         "apellidos": "Reyes",
         "fecha_De_Nacimiento": "2002/09/02",
-        "correo": "user@gmail.com",
-        "contraseña": "123"
+        "correo": "a",
+        "contraseña": "1"
     },
     {
         "nombres": "Ana",
@@ -35,17 +35,17 @@
         "contraseña": "luciaG123"
     },
     {
-        "nombres": "Miguel",
-        "apellidos": "Rodriguez Fernandez",
+        "nombres": "Maria",
+        "apellidos": "Lopez Martinez",
         "fecha_De_Nacimiento": "2000/11/19",
-        "correo": "miguel.rodriguez@example.com",
+        "correo": "maria.lopez@example.com",
         "contraseña": "miguelR2000"
     },
     {
-        "nombres": "Sofia",
-        "apellidos": "Lopez Martinez",
+        "nombres": "Carlos",
+        "apellidos": "Rodriguez Fernandez",
         "fecha_De_Nacimiento": "1993/06/25",
-        "correo": "sofia.lopez@example.com",
+        "correo": "carlos.rodriguez@example.com",
         "contraseña": "sofiaL93"
     }
 ]

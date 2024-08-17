@@ -185,10 +185,9 @@ public:
     }
 
     void Menu_Solicitudes(){
-
-        system("cls");
         do
         {
+            system("cls");
             cout << " ************************************ " << endl;
 			cout << " || Opciones de Solicitud" << endl;
 			cout << " || " << endl;
@@ -200,16 +199,23 @@ public:
             cin >> opcion;
             
             system("cls");
+            
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
 
             switch (opcion)
             {
             case 1:
-                
+                menu_Aceptar_Solicitudes();
+                opcion = 0;
                 break;
             
             case 2:
                 
-                userControl->solicitud_Amistad();                
+                userControl->solicitud_Amistad();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+                break;
+
+            case 3:
                 break;
 
             default:
@@ -242,11 +248,10 @@ public:
             {
             case 1:
                 userControl->carga_Usuarios();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             
             case 2:
-                
+                userControl->carga_Solicitudes();
                 break;
             
             case 3:
@@ -273,4 +278,53 @@ public:
 
         }while(opcion != 6);
     }
+
+    void menu_Aceptar_Solicitudes(){
+        
+        system("cls");
+        do
+        {
+            if( user_LogIn->getListSol().head == nullptr ){
+                cout << " *******************************************" << endl;
+                cout << " || No tienes solicitudes pendientes por aceptar" << endl;
+                cout << " || Presiona Enter para continuar...";
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+                cin.get(); // Lee la tecla Enter
+                break;
+            }
+
+            cout << " *******************************************" << endl;
+
+            user_LogIn->getListSol().print(1);
+
+            cout << "\n || Deseas aceptar la solicitud de: " << user_LogIn->getListSol().head->solicitud->getCorreoEmisor() << endl;
+            cout << " || 1. Aceptar" << endl;
+            cout << " || 2. Rechazar" << endl;
+            cout << " || 3. Salir" << endl;
+            cout << " Tu respuesta >> ";
+            cin >> opcion;            
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+
+            switch (opcion)
+            {
+            case 1:
+                
+                break;
+            case 2:
+                userControl->solicitudes(1);                
+                cout << " || Presiona Enter para continuar...";
+                cin.get(); // Lee la tecla Enter
+                system("cls");
+                break;
+            case 3:
+                
+                break;
+
+            default:
+                cout << " >> Tu respuesta no es valida" << endl;
+                break;
+            }
+        }while(opcion != 3);
+    }
+
 };

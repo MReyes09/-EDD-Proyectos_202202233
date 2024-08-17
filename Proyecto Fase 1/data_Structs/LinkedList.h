@@ -3,6 +3,7 @@
 
 #include "Node.h"
 #include "../models/user.h"
+#include "LinkedList_Sol.h"
 
 using namespace std;
 
@@ -20,7 +21,8 @@ public:
     void print(int id_UserLogin);
     User* search_LogIn(string email, string password);
     bool remove_User(User* user);
-    User* search_By_Id(int id);
+    User* search_By_Id(int id, string correo = "");
+    void print_Desconocidos(int id_User, LinkedList_Sol& lista_Env, LinkedList_Sol& lista_Sol);
 
 };
 

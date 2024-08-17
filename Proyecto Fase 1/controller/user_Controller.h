@@ -19,6 +19,8 @@ public:
     bool deleteUser();
     void carga_Usuarios();
     void solicitud_Amistad();
+    void carga_Solicitudes();
+    void solicitudes(int opcion);
 };
 
 #endif

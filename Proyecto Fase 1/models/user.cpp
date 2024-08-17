@@ -19,6 +19,8 @@ string User::getEmail() const { return email; }
 string User::getPassword() const { return password; }
 string User::getBirthdate() const { return birthdate; }
 string User::getRol() const { return rol; }
+LinkedList_Sol& User::getListEnvios() { return list_Envios; }
+LinkedList_Sol& User::getListSol() { return list_Sol; }
 
 // Setters
 void User::setIdUser(int id) { id_User = id; }
