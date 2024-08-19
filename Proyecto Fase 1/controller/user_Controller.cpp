@@ -7,6 +7,7 @@
 #include "../models/user.h"
 #include "../models/solicitud.h"
 #include "../include/json.hpp"
+#include "../data_Structs/matriz_struct/Matriz.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -14,6 +15,7 @@ using namespace std;
 User_Controller::User_Controller(){
     id_User = 0;
     admin_add();
+    //Matriz matriz;
 }
 
 void User_Controller::sigIn()
@@ -148,14 +150,16 @@ void User_Controller::solicitud_Amistad() {
     cout << " *******************************************" << endl;
     cout << " Personas que quízas conozcas" << endl;
 
-    list_Users.print_Desconocidos(User_Logued->getIdUser(), User_Logued->getListEnvios(), User_Logued->getListSol());
-    cout << "\n Escribe el numero de a quien quieres enviar solicitud" << endl;
+    list_Users.print_Desconocidos(User_Logued->getIdUser(), User_Logued->getListEnvios(), User_Logued->getListSol(), User_Logued->getListAmigos());
+    cout << "\n Escribe el numero de a quien quieres enviar solicitud o -1 para salir" << endl;
     cout << " id >> ";
 
     int id;
     cin >> id;
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpia el buffer
-
+    if(id == -1){
+        return;
+    }
     User* user_Solicitud = list_Users.search_By_Id(id);
 
     if (user_Solicitud != nullptr) {
@@ -209,6 +213,20 @@ void User_Controller::carga_Solicitudes(){
 
         }else{
             //SI SON SOLICITUDES ACEPTADAS< DEBEMOS AGREGARLAS A LA MATRIZ DISPERSA!
+            User* userEM = list_Users.search_By_Id(-1, emisor);
+            User* userRec = list_Users.search_By_Id(-1, receptor);
+
+            if( userEM != nullptr && userRec != nullptr ){
+                Solicitud* newSolicitud = new Solicitud(emisor, receptor);
+                userEM->getListAmigos().append(newSolicitud);
+                userRec->getListAmigos().append(newSolicitud);
+            }else{
+                if( userEM == nullptr ){
+                    cout << " >> El usuario con correo: " + emisor << " no existe" << endl; 
+                }else{
+                    cout << " >> El usuario con correo: " + receptor << " no existe" << endl; 
+                }
+            }
         }
     }
     system("cls");
@@ -222,9 +240,29 @@ void User_Controller::carga_Solicitudes(){
 
 void User_Controller::solicitudes(int opcion){
 
-    if( opcion == 0 ){ // Esta opcion es cuando el usuario acepta una solicitud
+    if( opcion == 1 ){ // Esta opcion es cuando el usuario acepta una solicitud
         
+        Solicitud *solicitud = User_Logued->getListSol().head->solicitud;
 
+        bool result = User_Logued->getListSol().remove(solicitud);
+        if(result){
+            cout << " >> Se acepto con exito la solicitud\n" <<endl;
+        }else{
+            cout << " >> A ocurrido un error, nunca se encontro la solicitud \n" << endl;
+        }
+
+        User* user_Emisor = list_Users.search_By_Id(-1, solicitud->getCorreoEmisor());
+        result = user_Emisor->getListEnvios().remove(solicitud);
+
+        if( !result ) {
+            cout << " >> A ocurrido un error, nunca se encontro la solicitud\n" << endl;            
+        }
+        User_Logued->getListAmigos().append_Friend(solicitud);
+        user_Emisor->getListAmigos().append_Friend(solicitud);
+        User_Logued->getListAmigos().print(2, User_Logued->getEmail());
+        int i = User_Logued->getIdUser();
+        int j = user_Emisor->getIdUser();
+        //add_Matriz(solicitud, i, j);
 
     }else{  // Esta opcion es cuando el usuario rechaza una solicitud
 
@@ -247,6 +285,10 @@ void User_Controller::solicitudes(int opcion){
         delete solicitud;
 
     }
-    
-}
 
+}
+/*
+void User_Controller::add_Matriz(Solicitud* solicitud, int i, int j){
+    matriz.insert(i, j, solicitud);
+}
+*/

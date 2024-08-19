@@ -14,9 +14,10 @@ class LinkedList_Sol{
         LinkedList_Sol();
         ~LinkedList_Sol();
         bool append(Solicitud* value);
-        void print(int opcion);
+        void print(int opcion, string emailLog = "");
         void push(Solicitud* value);
         bool remove(Solicitud* value);
+        bool append_Friend(Solicitud* value);
 };
 
 #endif

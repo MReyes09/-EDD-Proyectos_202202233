@@ -287,6 +287,7 @@ public:
             if( user_LogIn->getListSol().head == nullptr ){
                 cout << " *******************************************" << endl;
                 cout << " || No tienes solicitudes pendientes por aceptar" << endl;
+                user_LogIn->getListAmigos().print(2, user_LogIn->getEmail());
                 cout << " || Presiona Enter para continuar...";
                 cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
                 cin.get(); // Lee la tecla Enter
@@ -308,10 +309,14 @@ public:
             switch (opcion)
             {
             case 1:
-                
+                userControl->solicitudes(1);
+                cout << " || Presiona Enter para continuar...";
+                cin.get(); // Lee la tecla Enter
+                system("cls");
+                opcion = 0;
                 break;
             case 2:
-                userControl->solicitudes(1);                
+                userControl->solicitudes(0);                
                 cout << " || Presiona Enter para continuar...";
                 cin.get(); // Lee la tecla Enter
                 system("cls");

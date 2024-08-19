@@ -18,6 +18,7 @@ class User {
         string rol;
         LinkedList_Sol list_Envios;
         LinkedList_Sol list_Sol;
+        LinkedList_Sol amigos;
 
     public:
         // Constructor
@@ -33,6 +34,7 @@ class User {
         string getRol() const;
         LinkedList_Sol& getListEnvios();
         LinkedList_Sol& getListSol();
+        LinkedList_Sol& getListAmigos();
 
         // Setters
         void setIdUser(int id);

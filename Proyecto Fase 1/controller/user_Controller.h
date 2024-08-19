@@ -1,6 +1,7 @@
 #ifndef USER_CONTROLLER_H
 #define USER_CONTROLLER_H
 #include "../data_Structs/LinkedList.cpp"
+#include "../models/solicitud.h"
 
 class User_Controller
 {
@@ -21,6 +22,7 @@ public:
     void solicitud_Amistad();
     void carga_Solicitudes();
     void solicitudes(int opcion);
+    //void add_Matriz(Solicitud* solicitud, int i, int j);
 };
 
 #endif

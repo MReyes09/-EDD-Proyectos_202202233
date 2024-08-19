@@ -21,10 +21,10 @@
         "contraseña": "anaPass2024"
     },
     {
-        "nombres": "Carlos",
+        "nombres": "Ramiro",
         "apellidos": "Hernandez Ruiz",
         "fecha_De_Nacimiento": "1978/12/11",
-        "correo": "carlos.hernandez@example.com",
+        "correo": "ramiro.hernandez@example.com",
         "contraseña": "carlosHR78"
     },
     {
@@ -42,7 +42,7 @@
         "contraseña": "miguelR2000"
     },
     {
-        "nombres": "Carlos",
+        "nombres": "carlos",
         "apellidos": "Rodriguez Fernandez",
         "fecha_De_Nacimiento": "1993/06/25",
         "correo": "carlos.rodriguez@example.com",

@@ -43,14 +43,16 @@ bool LinkedList_Sol::append(Solicitud* value)
     }
 }
 
-void LinkedList_Sol::print(int opcion)
+void LinkedList_Sol::print(int opcion, string emailog)
 {
     Node_Sol *temp = head;
     int id = 0;
     if( opcion == 0 ){
         cout << "\n La lista de tus solicitudes son: " << endl;
-    }else{
+    }else if(opcion == 1){
         cout << "\n || Estas personas quieren ser tus amigos: " << endl;
+    }else{
+        cout << "\n Esta es tu lista de amigos: \n" << endl;
     }
     
     while (temp != nullptr)
@@ -58,8 +60,15 @@ void LinkedList_Sol::print(int opcion)
         string correo = "";
         if( opcion == 0 ){
             correo = temp->solicitud->getCorreoReceptor();
-        }else{
+        }else if( opcion == 1){
             correo = temp->solicitud->getCorreoEmisor();
+        }else{
+            if( emailog == temp->solicitud->getCorreoEmisor() ){
+                correo = temp->solicitud->getCorreoReceptor();
+            }else{
+                correo = temp->solicitud->getCorreoEmisor();
+            }
+
         }
         string mensaje = "  " + to_string(id) + ") " + correo;
         cout << mensaje << endl;
@@ -125,3 +134,20 @@ bool LinkedList_Sol::remove(Solicitud* value)
         return true;
     }
 
+bool LinkedList_Sol::append_Friend(Solicitud* value){
+
+    Node_Sol* newNode_Sol = new Node_Sol(value);
+    if (head == nullptr) {
+        head = newNode_Sol;
+        return true;
+    }
+    else {
+        Node_Sol* temp = head;
+        while (temp->next != nullptr) {
+            temp = temp->next;
+        }
+        temp->next = newNode_Sol;
+        return true;
+    }
+
+}

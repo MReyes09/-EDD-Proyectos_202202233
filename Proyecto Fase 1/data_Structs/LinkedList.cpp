@@ -132,7 +132,7 @@ User* LinkedList::search_By_Id(int id, string correo){
 
 }
 
-void LinkedList::print_Desconocidos(int id_User, LinkedList_Sol& list_Env, LinkedList_Sol& list_Sol){
+void LinkedList::print_Desconocidos(int id_User, LinkedList_Sol& list_Env, LinkedList_Sol& list_Sol, LinkedList_Sol& amigos){
     Node *temp = head;
 
     while (temp != nullptr)
@@ -145,6 +145,7 @@ void LinkedList::print_Desconocidos(int id_User, LinkedList_Sol& list_Env, Linke
 
         bool solicitud_enviada = false;
         bool solicitud_recibida = false;
+        bool amigs = false;
 
         // Revisar si se ha enviado una solicitud a este usuario
         Node_Sol *temp2 = list_Env.head;
@@ -166,8 +167,17 @@ void LinkedList::print_Desconocidos(int id_User, LinkedList_Sol& list_Env, Linke
             temp3 = temp3->next;
         }
 
+        Node_Sol *temp4 = amigos.head;
+        while( temp4 != nullptr){
+            if( temp4->solicitud->getCorreoEmisor() == temp->user->getEmail() || temp4->solicitud->getCorreoReceptor() == temp->user->getEmail() ){
+                amigs = true;
+                break;
+            }
+            temp4 = temp4->next;
+        }
+
         // Si no se ha enviado ni recibido una solicitud, imprimir el usuario
-        if (!solicitud_enviada && !solicitud_recibida) {
+        if (!solicitud_enviada && !solicitud_recibida && !amigs) {
             int id = temp->user->getIdUser();
             string correo = temp->user->getEmail();
             string mensaje = " " + to_string(id) + ") " + correo;
