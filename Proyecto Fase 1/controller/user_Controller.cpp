@@ -7,7 +7,6 @@
 #include "../models/user.h"
 #include "../models/solicitud.h"
 #include "../include/json.hpp"
-#include "../data_Structs/matriz_struct/Matriz.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -15,7 +14,6 @@ using namespace std;
 User_Controller::User_Controller(){
     id_User = 0;
     admin_add();
-    //Matriz matriz;
 }
 
 void User_Controller::sigIn()
@@ -220,6 +218,9 @@ void User_Controller::carga_Solicitudes(){
                 Solicitud* newSolicitud = new Solicitud(emisor, receptor);
                 userEM->getListAmigos().append(newSolicitud);
                 userRec->getListAmigos().append(newSolicitud);
+                int i = userEM->getIdUser();
+                int j = userRec->getIdUser();
+                add_Matriz(newSolicitud, i, j);
             }else{
                 if( userEM == nullptr ){
                     cout << " >> El usuario con correo: " + emisor << " no existe" << endl; 
@@ -229,7 +230,6 @@ void User_Controller::carga_Solicitudes(){
             }
         }
     }
-    system("cls");
     cout << " La carga de relaciones en el sistema fue satisfactorio" << endl;
     cout << " Presiona Enter para continuar...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
@@ -262,7 +262,7 @@ void User_Controller::solicitudes(int opcion){
         User_Logued->getListAmigos().print(2, User_Logued->getEmail());
         int i = User_Logued->getIdUser();
         int j = user_Emisor->getIdUser();
-        //add_Matriz(solicitud, i, j);
+        add_Matriz(solicitud, i, j);
 
     }else{  // Esta opcion es cuando el usuario rechaza una solicitud
 
@@ -287,8 +287,10 @@ void User_Controller::solicitudes(int opcion){
     }
 
 }
-/*
+
 void User_Controller::add_Matriz(Solicitud* solicitud, int i, int j){
-    matriz.insert(i, j, solicitud);
+    m.insert(i, j, solicitud);
+    cout << "\n" << endl;
+    m.print();
+    cout << "\n" << endl;
 }
-*/

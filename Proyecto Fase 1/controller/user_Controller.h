@@ -2,6 +2,7 @@
 #define USER_CONTROLLER_H
 #include "../data_Structs/LinkedList.cpp"
 #include "../models/solicitud.h"
+#include "../data_Structs/matriz_struct/Matriz.h"
 
 class User_Controller
 {
@@ -10,6 +11,7 @@ private:
     int id_User;
     User* User_Logued;
     LinkedList list_Users;
+    Matriz m;
 
 public:
 
@@ -22,7 +24,7 @@ public:
     void solicitud_Amistad();
     void carga_Solicitudes();
     void solicitudes(int opcion);
-    //void add_Matriz(Solicitud* solicitud, int i, int j);
+    void add_Matriz(Solicitud* solicitud, int i, int j);
 };
 
 #endif
