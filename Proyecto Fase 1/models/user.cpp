@@ -10,6 +10,7 @@ User::User(int id_User_, string name_, string lastname_, string email_, string p
     password = password_;
     birthdate = birthdate_;
     rol = rol_;
+    No_Post = 0;
 }
 // Getters
 int User::getIdUser() const { return id_User; }

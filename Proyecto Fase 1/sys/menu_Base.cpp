@@ -107,7 +107,7 @@ public:
                 break;
             
             case 3:
-                
+                menu_Post();
                 break;
             
             case 4:
@@ -255,7 +255,7 @@ public:
                 break;
             
             case 3:
-                
+                userControl->carga_Post();
                 break;
             
             case 4:
@@ -330,6 +330,50 @@ public:
                 break;
             }
         }while(opcion != 3);
+    }
+
+    void menu_Post(){
+        system("cls");
+        do
+        {
+            cout << " ************************************ " << endl;
+			cout << " || Opciones de publicacion"<< endl;
+			cout << " || " << endl;
+			cout << " || 1. Ver Todas" << endl;
+            cout << " || 2. Crear " << endl;
+            cout << " || 3. Eliminar" << endl;
+            cout << " || 4. Salir" << endl;
+			cout << " || " << endl;
+			cout << " || Ingrese el numero > ";
+            cin >> opcion;
+            
+            system("cls");
+            bool res = false;
+            switch (opcion)
+            {
+            case 1:
+                userControl->mostrar_Post();
+                break;
+            
+            case 2:
+                userControl->add_Post();
+                break;
+            
+            case 3:
+                
+                break;
+            
+            case 4:
+                
+                break;
+            
+            default:
+                system("cls");
+                cout << ">> Opción no valida" << endl;
+                break;
+            }
+
+        }while(opcion != 4);
     }
 
 };

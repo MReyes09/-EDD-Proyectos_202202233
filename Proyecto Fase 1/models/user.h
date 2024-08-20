@@ -22,6 +22,7 @@ class User {
 
     public:
         // Constructor
+        int No_Post;
         User(int id_User_, string name_, string lastname_, string email_, string password_, string birthdate_, string rol_);
 
         // Getters

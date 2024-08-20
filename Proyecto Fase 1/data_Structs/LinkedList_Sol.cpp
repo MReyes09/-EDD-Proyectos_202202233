@@ -151,3 +151,22 @@ bool LinkedList_Sol::append_Friend(Solicitud* value){
     }
 
 }
+
+bool LinkedList_Sol::search(string email, string email_loged){
+
+    Node_Sol *temp = head;
+
+    while (temp != nullptr)
+    {
+        if (temp->solicitud->getCorreoEmisor() == email && temp->solicitud->getCorreoReceptor() == email_loged)
+        {
+            return true;
+        }
+        else if (temp->solicitud->getCorreoEmisor() == email_loged && temp->solicitud->getCorreoReceptor() == email){
+            return true;
+        }
+        temp = temp->next;
+    }
+    return false;
+
+}

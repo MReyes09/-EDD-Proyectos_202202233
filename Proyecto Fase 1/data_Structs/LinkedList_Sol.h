@@ -18,6 +18,7 @@ class LinkedList_Sol{
         void push(Solicitud* value);
         bool remove(Solicitud* value);
         bool append_Friend(Solicitud* value);
+        bool search(string email, string email_Loged);
 };
 
 #endif

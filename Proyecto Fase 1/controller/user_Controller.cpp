@@ -1,12 +1,18 @@
 #include <iostream>
 #include <locale>
+#include <ctime>
+#include <iomanip>
+#include <sstream>
 #include <windows.h>
 #include <fstream>
 #include <limits>
 #include "user_Controller.h"
 #include "../models/user.h"
 #include "../models/solicitud.h"
+#include "../models/publicacion.h"
 #include "../include/json.hpp"
+#include "../data_Structs/Node_Sol.h"
+#include "../data_Structs/circularList/CircularList.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -293,4 +299,88 @@ void User_Controller::add_Matriz(Solicitud* solicitud, int i, int j){
     cout << "\n" << endl;
     m.print();
     cout << "\n" << endl;
+}
+
+void User_Controller::add_Post() {
+    string email = User_Logued->getEmail(), contenido, fecha, hora;
+
+    cout << "Escribe a continuacion el contenido de tu publicacion" << endl;
+    cout << "contenido >> " << endl;
+    cin.ignore(); // Para ignorar el salto de línea anterior
+    getline(cin, contenido);
+
+    // Obtener la fecha y hora actual
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+
+    // Formatear la fecha como dd/mm/yyyy
+    stringstream ss_fecha;
+    ss_fecha << setfill('0') << setw(2) << ltm->tm_mday << "/"
+             << setfill('0') << setw(2) << 1 + ltm->tm_mon << "/"
+             << 1900 + ltm->tm_year;
+    fecha = ss_fecha.str();
+
+    // Formatear la hora como HH:MM en formato 24 horas
+    stringstream ss_hora;
+    ss_hora << setfill('0') << setw(2) << ltm->tm_hour << ":"
+            << setfill('0') << setw(2) << ltm->tm_min;
+    hora = ss_hora.str();
+
+    // Aquí podrías continuar con la lógica para almacenar la publicación
+    cout << "\n || Publicacion registrada: \n";
+    cout << " || Fecha: " << fecha << "\n";
+    cout << " || Hora: " << hora << "\n";
+    cout << " || Contenido: " << contenido << endl;
+
+    Publicacion* newPost = new Publicacion(email, contenido, fecha, hora);
+    posts.append(newPost);
+    User_Logued->No_Post+=1;
+    
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+}
+
+void User_Controller::carga_Post(){
+
+    string path = "data/publicaciones.json";
+    ifstream file(path);
+
+    if (!file.is_open()) {
+        cerr << " >> No se pudo abrir el archivo JSON" << endl;
+        return;
+    }
+
+    json jsonData;
+    file >> jsonData;
+
+    for( auto& element : jsonData ){
+        string correo = element["correo"];
+        string contenido = element["contenido"];
+        string fecha = element["fecha"];
+        string hora = element["hora"];
+
+        User* findUser = list_Users.search_By_Id(-1, correo);
+        findUser->No_Post += 1;
+        Publicacion* newPost = new Publicacion(correo, contenido, fecha, hora);
+        posts.append(newPost);
+
+    }
+    posts.print();
+    cout << " La carga de publicaciones en el sistema fue satisfactorio" << endl;
+    cout << " Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+
+}
+
+void User_Controller::mostrar_Post(){
+
+    DoublyCircular* friend_Posts = new DoublyCircular();
+    posts.extractPost(User_Logued->getListAmigos(), friend_Posts, User_Logued->getEmail());
+    friend_Posts->print();
+    delete friend_Posts;
+
 }
