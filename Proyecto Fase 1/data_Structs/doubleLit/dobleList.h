@@ -54,15 +54,15 @@ public:
         cout << "fin" <<endl;
     }
 
-    void remove(Publicacion* value){
+    void remove(string email){
         NodeD* current = head;
 
-        while (current != nullptr && current->data != value){
+        while (current != nullptr && current->data->email != email){
             current = current->next;
         }
 
         if(current == nullptr){
-            cout << "No se encontro el valor a eliminar" << endl;
+            cout << "No se encontro el valor a eliminar o no hay publicaciones" << endl;
             return;
         }
 
@@ -93,7 +93,7 @@ public:
     }
 
     void graph(){
-        ofstream file("graph.dot");
+        ofstream file("report/List_Posts.dot");
         file << "digraph G {" << endl;
         file << "rankdir=LR;" << endl;
         file << "node [shape=record];" << endl;
@@ -101,7 +101,8 @@ public:
         NodeD* current = head;
         int id = 0;
         while (current != nullptr) {
-            file << "node" << id << " [label=\"{" << current->data << "}\"];" << endl;
+            string lab = current->data->email + "\\n" + current->data->contenido;
+            file << "node" << id << " [label=\"{" << lab << "}\"];" << endl;
             if (current->next != nullptr) {
                 file << "node" << id << " -> node" << (id + 1) << " ;" << endl;
                 file << "node" << (id + 1) << " -> node" << id << " ;" << endl;
@@ -113,7 +114,7 @@ public:
         file << "}" << endl;
         file.close();
 
-        string command = "dot -Tpng graph.dot -o graph.png";
+        string command = "dot -Tpng report/List_Posts.dot -o report/posts.png";
         system(command.c_str());
     }
 

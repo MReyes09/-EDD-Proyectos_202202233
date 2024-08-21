@@ -63,7 +63,7 @@ public:
                 userControl->sigIn();
                 break;
             case 3:
-                cout << "\n >> Matthew Emmanuel Reyes Melgar\n ||202202233\n ||Lab Estructura de datos\n ||Sección \"C\"\n" << endl;                
+                cout << "\n || Matthew Emmanuel Reyes Melgar\n ||202202233\n ||Lab Estructura de datos\n ||Sección \"C\"\n" << endl;                
                 break;
             case 4:
                 cout << ">> Adiós" << endl;
@@ -111,7 +111,7 @@ public:
                 break;
             
             case 4:
-                
+                reportes_User();
                 break;
             
             case 5:
@@ -166,6 +166,7 @@ public:
                 break;
             
             case 2:
+                
                 res = userControl->deleteUser();
                 if(res){return 1;}
                 break;
@@ -259,11 +260,11 @@ public:
                 break;
             
             case 4:
-                
+                userControl->gestionar_Usuarios(user_LogIn);
                 break;
             
             case 5:
-                
+                reportes_Admin();
                 break;
                 
             case 6:
@@ -341,8 +342,7 @@ public:
 			cout << " || " << endl;
 			cout << " || 1. Ver Todas" << endl;
             cout << " || 2. Crear " << endl;
-            cout << " || 3. Eliminar" << endl;
-            cout << " || 4. Salir" << endl;
+            cout << " || 3. Salir" << endl;
 			cout << " || " << endl;
 			cout << " || Ingrese el numero > ";
             cin >> opcion;
@@ -363,7 +363,57 @@ public:
                 
                 break;
             
+            default:
+                system("cls");
+                cout << ">> Opción no valida" << endl;
+                break;
+            }
+
+        }while(opcion != 4);
+    }
+
+    void reportes_Admin(){
+        system("cls");
+        do
+        {
+            cout << " ************************************ " << endl;
+			cout << " || Escoge el reporte a generar"<< endl;
+			cout << " || " << endl;
+			cout << " || 1. Grafico lista de usuarios" << endl;
+            cout << " || 2. Grafico matriz dispersa" << endl;
+            cout << " || 3. Grafico lista publicaciones" << endl;
+            cout << " || 4. Top 5 usuarios con más publicaciones" << endl;
+            cout << " || 5. Top 5 usuarios con menos amigos" << endl;
+            cout << " || 6. Salir" << endl;
+			cout << " || " << endl;
+			cout << " || Ingrese el numero > ";
+            cin >> opcion;
+            
+            system("cls");
+            bool res = false;
+            switch (opcion)
+            {
+            case 1:
+                userControl->report_Usuarios();
+                break;
+            
+            case 2:
+                userControl->report_Matriz();
+                break;
+            
+            case 3:
+                userControl->report_Posts();
+                break;
+            
             case 4:
+                userControl->top5_Usuarios_Posts();
+                break;
+            
+            case 5:
+                userControl->top5_Mas_Amigos();
+                break;
+                
+            case 6:
                 
                 break;
             
@@ -373,7 +423,54 @@ public:
                 break;
             }
 
-        }while(opcion != 4);
+        }while(opcion != 6);
+    }
+
+    void reportes_User(){
+        system("cls");
+        do
+        {
+            cout << " ************************************ " << endl;
+			cout << " || Escoge el reporte a generar"<< endl;
+			cout << " || " << endl;
+			cout << " || 1. Grafico solicitudes y pila de solicitudes" << endl;
+            cout << " || 2. Grafico matriz dispersa" << endl;
+            cout << " || 3. Grafico lista circular de publicaciones" << endl;
+            cout << " || 4. Mostrar amigos" << endl;
+            cout << " || 5. Salir" << endl;
+			cout << " || " << endl;
+			cout << " || Ingrese el numero > ";
+            cin >> opcion;
+            
+            system("cls");
+            bool res = false;
+            switch (opcion)
+            {
+            case 1:
+                userControl->reporte_Sol();
+                break;
+            
+            case 2:
+                userControl->report_Matriz();
+                break;
+            
+            case 3:
+                userControl->report_Posts();
+                break;
+            
+            case 4:
+                userControl->top5_Usuarios_Posts();
+                break;
+            
+            case 5:
+                break;
+            default:
+                system("cls");
+                cout << ">> Opción no valida" << endl;
+                break;
+            }
+
+        }while(opcion != 5);
     }
 
 };

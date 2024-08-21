@@ -30,6 +30,13 @@ public:
     void add_Post();
     void carga_Post();
     void mostrar_Post();
+    void gestionar_Usuarios(User* userAd);
+    void report_Usuarios();
+    void report_Matriz();
+    void report_Posts();
+    void top5_Usuarios_Posts();
+    void top5_Mas_Amigos();
+    void reporte_Sol();
 
 };
 

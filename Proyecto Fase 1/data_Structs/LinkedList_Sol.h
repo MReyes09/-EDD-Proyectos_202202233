@@ -19,6 +19,8 @@ class LinkedList_Sol{
         bool remove(Solicitud* value);
         bool append_Friend(Solicitud* value);
         bool search(string email, string email_Loged);
+        void generateDot(const string& name);
+        void renderGraphviz(const string& name);
 };
 
 #endif

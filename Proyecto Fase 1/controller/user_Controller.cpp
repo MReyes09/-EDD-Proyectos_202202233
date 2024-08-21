@@ -53,10 +53,8 @@ void User_Controller::sigIn()
 
 void User_Controller::admin_add()
 {
-    //string name = "admin@gmail.com";
-    //string password = "EDD2S2024";
-    string name = "x";
-    string password = "s";
+    string name = "admin@gmail.com";
+    string password = "EDD2S2024";
 
     User *newUser = new User(id_User, name, "", name, password, "", "Admin");
     id_User += 1;
@@ -98,10 +96,17 @@ User* User_Controller::logIn()
 
 bool User_Controller::deleteUser()
 {
+    while(User_Logued->No_Post != 0){
+        posts.remove(User_Logued->getEmail());
+        User_Logued->No_Post -= 1;
+    }
+    cout << " || Las publicaciones del usuario fueron removidas con exito" << endl;
+
     bool res = list_Users.remove_User(User_Logued);
     if(res)
     {
-        cout << " >> La cuenta se ha borrado satisfactoriamente\n" << endl;
+        
+        cout << " || La cuenta se ha borrado satisfactoriamente\n" << endl;
         return res;
     }
     else
@@ -113,12 +118,17 @@ bool User_Controller::deleteUser()
 
 void User_Controller::carga_Usuarios(){
     // Leer el archivo JSON
-    string path = "data/usuarios.json";
+    string path = "";
+    cout << " || Brinda la ruta donde se encuentra el archivo a cargar " << endl;
+    cout << " || Ruta >> ";
+    cin >> path;
+    cin.get();
+
     //cout << "Escribe la ruta del archivo\n ruta >> ";
     ifstream file(path);
 
     if (!file.is_open()) {
-        cerr << " >> No se pudo abrir el archivo JSON" << endl;
+        cerr << "|| >> No se pudo abrir el archivo JSON" << endl;
         return;
     }
 
@@ -140,10 +150,10 @@ void User_Controller::carga_Usuarios(){
         list_Users.append(newUser);
     }
     system("cls");
-    cout << "\n >> Los usuarios registrados en el sistema son:"<<endl;
+    cout << "\n || Los usuarios registrados en el sistema son:"<<endl;
     list_Users.print(User_Logued->getIdUser());
-    cout << " La carga de usuarios en el sistema fue satisfactorio" << endl;
-    cout << " Presiona Enter para continuar...";
+    cout << " || La carga de usuarios en el sistema fue satisfactorio" << endl;
+    cout << " || Presiona Enter para continuar...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
     cin.get(); // Lee la tecla Enter
     system("cls");
@@ -152,11 +162,11 @@ void User_Controller::carga_Usuarios(){
 void User_Controller::solicitud_Amistad() {
 
     cout << " *******************************************" << endl;
-    cout << " Personas que quízas conozcas" << endl;
+    cout << " || Personas que quízas conozcas" << endl;
 
     list_Users.print_Desconocidos(User_Logued->getIdUser(), User_Logued->getListEnvios(), User_Logued->getListSol(), User_Logued->getListAmigos());
-    cout << "\n Escribe el numero de a quien quieres enviar solicitud o -1 para salir" << endl;
-    cout << " id >> ";
+    cout << "\n || Escribe el numero de a quien quieres enviar solicitud o -1 para salir" << endl;
+    cout << " || id >> ";
 
     int id;
     cin >> id;
@@ -181,7 +191,11 @@ void User_Controller::solicitud_Amistad() {
 
 void User_Controller::carga_Solicitudes(){
     // Leer el archivo JSON
-    string path = "data/solicitudes.json";
+    string path = "";
+    cout << " || Brinda la ruta donde se encuentra el archivo a cargar " << endl;
+    cout << " || Ruta >> ";
+    cin >> path;
+    cin.get();
     ifstream file(path);
 
     if (!file.is_open()) {
@@ -204,6 +218,7 @@ void User_Controller::carga_Solicitudes(){
             User* userRec = list_Users.search_By_Id(-1, receptor);
 
             if( userEM != nullptr && userRec != nullptr ){
+                
                 Solicitud* newSolicitud = new Solicitud(emisor, receptor);
                 userEM->getListEnvios().append(newSolicitud);
                 userRec->getListSol().push(newSolicitud);
@@ -219,11 +234,12 @@ void User_Controller::carga_Solicitudes(){
             //SI SON SOLICITUDES ACEPTADAS< DEBEMOS AGREGARLAS A LA MATRIZ DISPERSA!
             User* userEM = list_Users.search_By_Id(-1, emisor);
             User* userRec = list_Users.search_By_Id(-1, receptor);
-
-            if( userEM != nullptr && userRec != nullptr ){
+            if( userEM != nullptr && userRec != nullptr ){;
                 Solicitud* newSolicitud = new Solicitud(emisor, receptor);
                 userEM->getListAmigos().append(newSolicitud);
+                userEM->No_Fri += 1;
                 userRec->getListAmigos().append(newSolicitud);
+                userRec->No_Fri += 1;
                 int i = userEM->getIdUser();
                 int j = userRec->getIdUser();
                 add_Matriz(newSolicitud, i, j);
@@ -236,6 +252,7 @@ void User_Controller::carga_Solicitudes(){
             }
         }
     }
+    system("cls");
     cout << " La carga de relaciones en el sistema fue satisfactorio" << endl;
     cout << " Presiona Enter para continuar...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
@@ -264,7 +281,9 @@ void User_Controller::solicitudes(int opcion){
             cout << " >> A ocurrido un error, nunca se encontro la solicitud\n" << endl;            
         }
         User_Logued->getListAmigos().append_Friend(solicitud);
+        User_Logued->No_Fri += 1;
         user_Emisor->getListAmigos().append_Friend(solicitud);
+        user_Emisor->No_Fri += 1;
         User_Logued->getListAmigos().print(2, User_Logued->getEmail());
         int i = User_Logued->getIdUser();
         int j = user_Emisor->getIdUser();
@@ -296,8 +315,7 @@ void User_Controller::solicitudes(int opcion){
 
 void User_Controller::add_Matriz(Solicitud* solicitud, int i, int j){
     m.insert(i, j, solicitud);
-    cout << "\n" << endl;
-    m.print();
+    m.insert(j,i, solicitud);
     cout << "\n" << endl;
 }
 
@@ -344,7 +362,11 @@ void User_Controller::add_Post() {
 
 void User_Controller::carga_Post(){
 
-    string path = "data/publicaciones.json";
+    string path = "";
+    cout << " || Brinda la ruta donde se encuentra el archivo a cargar " << endl;
+    cout << " || Ruta >> ";
+    cin >> path;
+    cin.get();
     ifstream file(path);
 
     if (!file.is_open()) {
@@ -367,9 +389,8 @@ void User_Controller::carga_Post(){
         posts.append(newPost);
 
     }
-    posts.print();
-    cout << " La carga de publicaciones en el sistema fue satisfactorio" << endl;
-    cout << " Presiona Enter para continuar...";
+    cout << " || La carga de publicaciones en el sistema fue satisfactorio" << endl;
+    cout << " || Presiona Enter para continuar...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
     cin.get(); // Lee la tecla Enter
     system("cls");
@@ -382,5 +403,104 @@ void User_Controller::mostrar_Post(){
     posts.extractPost(User_Logued->getListAmigos(), friend_Posts, User_Logued->getEmail());
     friend_Posts->print();
     delete friend_Posts;
+
+}
+
+void User_Controller::gestionar_Usuarios(User* userAd){
+
+    cout << " || Usuarios registrados en el sistema " << endl;
+    list_Users.print(userAd->getIdUser());
+    int id_User_Delete;
+    cout << " || Escribe el id del usuario a eliminar o escribe -1 para salir" << endl;
+    cout << " || id >> ";
+    cin >> id_User_Delete;
+    cin.get();
+
+    if( id_User_Delete == -1 ){
+        return;
+    }else{
+        User* user = list_Users.search_By_Id(id_User_Delete);
+        User_Logued = user;
+
+        bool res = deleteUser();
+        if( !res ){
+            cout << " || Error al eliminar al usuario" << endl;
+        }
+        User_Logued = userAd;
+    }
+
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+
+}
+
+void User_Controller::report_Usuarios(){
+    list_Users.generateDot();
+    list_Users.renderGraphviz();
+    cout << " || La imagen fue generada exitosamente, puedes verla en el area de reportes" << endl;
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+}
+
+void User_Controller::report_Matriz(){
+    m.generateDot();
+    m.renderGraphviz();
+    cout << " || La imagen fue generada exitosamente, puedes verla en el area de reportes" << endl;
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+}
+
+void User_Controller::report_Posts(){
+    posts.graph();
+    cout << " || Reporte de publicaciones creado correctamente" << endl;
+    cout << " || La imagen fue generada exitosamente, puedes verla en el area de reportes" << endl;
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+}
+
+void User_Controller::top5_Usuarios_Posts(){
+
+    list_Users.sortListByPosts();
+    list_Users.printList(0);
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+
+}
+
+void User_Controller::top5_Mas_Amigos(){
+
+    list_Users.sortListByFriends();
+    list_Users.printList(1);
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+}
+
+void User_Controller::reporte_Sol(){
+
+    cout << " || Generando grafica de solicitudes " << endl;
+    User_Logued->getListEnvios().generateDot("solicitudes");
+    User_Logued->getListEnvios().renderGraphviz("solicitudes");
+    cout << " || Grafica de solicitudes generado" << endl;
+    cout << " || Generando grafica pila " << endl;
+    User_Logued->getListSol().generateDot("pila");
+    User_Logued->getListSol().renderGraphviz("pila");
+    cout << " || Grafica de pila generado" << endl;
+    cout << " ||" << endl;
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
 
 }

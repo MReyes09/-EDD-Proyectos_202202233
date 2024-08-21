@@ -204,6 +204,89 @@ public:
         }
         return val;
     }
+
+
+    void generateDot(){
+        string filename = "report/matriz.dot";
+        ofstream file(filename);
+        if (file.is_open()) {
+            file << "digraph G {" << endl;
+            file << "node [shape=record];" << endl;
+            file << "rankdir=LR;" << endl; // Opción para el layout en horizontal
+
+            // Añadir nodo raíz
+            file << "root [label=\"Root\", shape=ellipse];" << endl;
+
+            // Añadir encabezados de columna
+            NodeM* currentColumn = root->right;
+            while (currentColumn) {
+                string user = currentColumn->j != -1 ? "User" + to_string(currentColumn->j) : "Col";
+                file << "col" << currentColumn->j << " [label=\"" << user << "\", shape=box];" << endl;
+                file << "root -> col" << currentColumn->j << ";" << endl;
+                currentColumn = currentColumn->right;
+            }
+
+            // Añadir encabezados de fila
+            NodeM* currentRow = root->down;
+            while (currentRow) {
+                string user = currentRow->i != -1 ? "User" + to_string(currentRow->i) : "Row";
+                file << "row" << currentRow->i << " [label=\"" << user << "\", shape=box];" << endl;
+                file << "root -> row" << currentRow->i << ";" << endl;
+                currentRow = currentRow->down;
+            }
+
+            // Añadir nodos de la matriz y sus conexiones
+            currentRow = root->down;
+            while (currentRow) {
+                NodeM* currentNode = currentRow->right;
+                while (currentNode) {
+                    string nodeName = "node" + to_string(currentNode->i) + "_" + to_string(currentNode->j);
+                    file << nodeName << " [label=\"Solicitud\", shape=record];" << endl;
+
+                    if (currentNode->up) {
+                        string valNod;
+                        if( currentNode->up->i == -1 ){ valNod = "x";}else{ valNod = to_string(currentNode->up->i);}
+                        string upNodeName = "node" + valNod + "_" + to_string(currentNode->up->j);
+                        file << nodeName << " -> " << upNodeName << " [label=\"\"];" << endl;
+                    }
+                    if (currentNode->down) {
+                        string downNodeName = "node" + to_string(currentNode->down->i) + "_" + to_string(currentNode->down->j);
+                        file << nodeName << " -> " << downNodeName << " [label=\"\"];" << endl;
+                    }
+                    if (currentNode->left) {
+                        string leftNodeName = "node" + to_string(currentNode->left->i) + "_" + to_string(currentNode->left->j);
+                        file << nodeName << " -> " << leftNodeName << " [label=\"\"];" << endl;
+                    }
+                    if (currentNode->right) {
+                        string rightNodeName = "node" + to_string(currentNode->right->i) + "_" + to_string(currentNode->right->j);
+                        file << nodeName << " -> " << rightNodeName << " [label=\"\"];" << endl;
+                    }
+
+                    // Conexión desde los encabezados
+                    file << "row" << currentNode->i << " -> " << nodeName << ";" << endl;
+                    file << "col" << currentNode->j << " -> " << nodeName << ";" << endl;
+
+                    currentNode = currentNode->right;
+                }
+                currentRow = currentRow->down;
+            }
+
+            file << "}" << endl;
+            file.close();
+        } else {
+            cout << " || No se pudo abrir el archivo" << endl;
+        }
+    }
+
+    void renderGraphviz(){
+        string dotFilename = "report/matriz.dot";
+        string imageFilename = "report/matriz.svg";
+
+        string command = "dot -Tsvg " + dotFilename + " -o " + imageFilename;
+        system(command.c_str());
+    }
+
+
 };
 
 #endif

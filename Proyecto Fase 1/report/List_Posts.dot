@@ -1,0 +1,11 @@
+digraph G {
+rankdir=LR;
+node [shape=record];
+node0 [label="{juan.perez@example.com\nQUe pasiones banda}"];
+node0 -> node1 ;
+node1 -> node0 ;
+node1 [label="{maria.lopez@example.com\nUna publicacion más}"];
+node1 -> node2 ;
+node2 -> node1 ;
+node2 [label="{carlos.rodriguez@example.com\nEsta es extra}"];
+}

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
 #include "LinkedList_Sol.h"
 
 using namespace std;
@@ -169,4 +171,51 @@ bool LinkedList_Sol::search(string email, string email_loged){
     }
     return false;
 
+}
+
+void LinkedList_Sol::generateDot(const string& name)
+    {
+        string filename = "report/"+name +".dot";
+        ofstream file(filename);
+        
+        if (file.is_open())
+        {
+            file << "digraph G {" << endl;
+            file << "node [shape=record];" << endl;
+            if(name == "pila"){
+                file << "rankdir=TB;" << endl;
+            }else{
+                file << "rankdir=LR;" << endl;
+            }
+
+            Node_Sol *current = head;
+            int id = 0;
+            while (current != nullptr)
+            {
+                cout << "id: "+ to_string(id)<< endl;
+                string body = "Emisor: " + current->solicitud->getCorreoEmisor() +
+                     "\\nReceptor: " + current->solicitud->getCorreoReceptor();
+                file << "node" << id << " [label=\"{" << body << "}\"];" << endl;
+                if (current->next != nullptr)
+                {
+                    file << "node" << id << " -> node" << (id + 1) << ";" << endl;
+                }
+                current = current->next;
+                id++;
+            }
+
+            file << "}" << endl;
+            file.close();
+        }
+        else
+        {
+            cout << "No se pudo abrir el archivo" << endl;
+        }
+    }
+
+void LinkedList_Sol::renderGraphviz(const string& name) {
+    string dotFilename = "report/"+name +".dot";
+    string imageFilename = "report/" + name + ".png";
+    string command = "dot -Tpng " + dotFilename + " -o " + imageFilename;
+    system(command.c_str());
 }
