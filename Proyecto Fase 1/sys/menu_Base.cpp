@@ -369,7 +369,7 @@ public:
                 break;
             }
 
-        }while(opcion != 4);
+        }while(opcion != 3);
     }
 
     void reportes_Admin(){
@@ -455,11 +455,11 @@ public:
                 break;
             
             case 3:
-                userControl->report_Posts();
+                userControl->reporte_Publicaciones_User();
                 break;
             
             case 4:
-                userControl->top5_Usuarios_Posts();
+                userControl->mostrar_Amigos();
                 break;
             
             case 5:

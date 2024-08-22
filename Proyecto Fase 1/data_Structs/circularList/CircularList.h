@@ -136,7 +136,7 @@ public:
     }
 
     void graph() {
-        ofstream file("graph.dot");
+        ofstream file("report/lista_Circular.dot");
         file << "digraph G {" << endl;
         file << "rankdir=LR;" << endl; // Horizontal
         file << "node [shape=record];" << endl;
@@ -145,7 +145,10 @@ public:
         int id = 0;
         if (head != nullptr) {
             do {
-                file << "node" << id << " [label=\"{" << current->data << "}\"];" << endl;
+                string body = "corre: " + current->data->email 
+                    + "\\nFecha " + current->data->fecha + " Hora " + current->data->hora 
+                    + "\\ncontenido: "+ current->data->contenido;
+                file << "node" << id << " [label=\"{" << body << "}\"];" << endl;
                 if (current->next != head) {
                     file << "node" << id << " -> node" << (id + 1) << " [dir=both];" << endl;
                 }
@@ -160,7 +163,7 @@ public:
         file.close();
 
         // Renderizar usando Graphviz
-        string command = "dot -Tpng graph.dot -o graph.png";
+        string command = "dot -Tpng report/lista_Circular.dot -o report/lista_Circular.png";
         system(command.c_str());
     }
 

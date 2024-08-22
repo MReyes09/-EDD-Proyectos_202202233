@@ -10,8 +10,7 @@ LinkedList_Sol::LinkedList_Sol()
     head = nullptr;
 }
 
-bool LinkedList_Sol::append(Solicitud* value)
-{   
+bool LinkedList_Sol::append(Solicitud* value, string email_User){
     if (value->getCorreoEmisor() == value->getCorreoReceptor()) {
         cout << " >> Operacion invalida " << endl;
         return false;
@@ -26,18 +25,49 @@ bool LinkedList_Sol::append(Solicitud* value)
     else {
         Node_Sol* temp = head;
         while (temp->next != nullptr) {
-            if (temp->solicitud->getCorreoReceptor() == value->getCorreoReceptor()) {
-                cout << " >> Operacion invalida, solicitud anteriormente enviada" << endl;
-                delete newNode_Sol;
-                return false;
+
+            if( temp->solicitud->getCorreoEmisor() == email_User){ //Esta es una peticion en la que ya soy emisor
+
+                if(temp->solicitud->getCorreoReceptor() == value->getCorreoReceptor()){
+
+                    cout << " || Solicitud enviada anteriormente (emisor): " + email_User + " (receptor)" + value->getCorreoReceptor() <<endl;
+                    delete newNode_Sol;
+                    return false;
+                }
+
+            }else if( temp->solicitud->getCorreoReceptor() == email_User){ //Esta es una peticiion en la que ya soy receptor
+
+                if ( temp->solicitud->getCorreoEmisor() == value->getCorreoEmisor() ){
+
+                    cout << " || Solicitud enviada anteriormente (emisor): " + value->getCorreoEmisor() + " (receptor)" + email_User <<endl;
+                    delete newNode_Sol;
+                    return false;
+
+                }
+
             }
             temp = temp->next;
         }
         // Verifica la última posición
-        if (temp->solicitud->getCorreoReceptor() == value->getCorreoReceptor()) {
-            cout << " >> Operacion invalida, solicitud anteriormente enviada" << endl;
-            delete newNode_Sol;
-            return false;
+        if( temp->solicitud->getCorreoEmisor() == email_User){ //Esta es una peticion en la que ya soy emisor
+
+            if(temp->solicitud->getCorreoReceptor() == value->getCorreoReceptor()){
+
+                cout << " || Solicitud enviada anteriormente (emisor): " + email_User + " (receptor)" + value->getCorreoReceptor() <<endl;
+                delete newNode_Sol;
+                return false;
+            }
+
+        }else if( temp->solicitud->getCorreoReceptor() == email_User){ //Esta es una peticiion en la que ya soy receptor
+
+            if ( temp->solicitud->getCorreoEmisor() == value->getCorreoEmisor() ){
+
+                cout << " || Solicitud enviada anteriormente (emisor): " + value->getCorreoEmisor() + " (receptor)" + email_User <<endl;
+                delete newNode_Sol;
+                return false;
+
+            }
+
         }
         temp->next = newNode_Sol;
         cout << "\n >> La solicitud ha sido enviada con exito!" << endl;
@@ -50,11 +80,11 @@ void LinkedList_Sol::print(int opcion, string emailog)
     Node_Sol *temp = head;
     int id = 0;
     if( opcion == 0 ){
-        cout << "\n La lista de tus solicitudes son: " << endl;
+        cout << "\n || La lista de tus solicitudes son: " << endl;
     }else if(opcion == 1){
         cout << "\n || Estas personas quieren ser tus amigos: " << endl;
     }else{
-        cout << "\n Esta es tu lista de amigos: \n" << endl;
+        cout << "\n || Esta es tu lista de amigos: \n" << endl;
     }
     
     while (temp != nullptr)

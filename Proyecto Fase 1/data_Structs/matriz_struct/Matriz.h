@@ -210,64 +210,86 @@ public:
         string filename = "report/matriz.dot";
         ofstream file(filename);
         if (file.is_open()) {
-            file << "digraph G {" << endl;
-            file << "node [shape=record];" << endl;
-            file << "rankdir=LR;" << endl; // Opción para el layout en horizontal
+            file << "digraph Sparce_Matrix {" << endl;
+            file << "node [shape=box];" << endl;
 
-            // Añadir nodo raíz
-            file << "root [label=\"Root\", shape=ellipse];" << endl;
+            // Nodo principal (raíz)
+            file << "root [label=\"Root\", shape=ellipse, group=1];" << endl;
 
-            // Añadir encabezados de columna
+            // Encabezados de columna
             NodeM* currentColumn = root->right;
             while (currentColumn) {
                 string user = currentColumn->j != -1 ? "User" + to_string(currentColumn->j) : "Col";
-                file << "col" << currentColumn->j << " [label=\"" << user << "\", shape=box];" << endl;
-                file << "root -> col" << currentColumn->j << ";" << endl;
+                file << "col" << currentColumn->j << " [label=\"" << user << "\", shape=box, group=" << currentColumn->j + 2 << "];" << endl;
+                file << "root -> col" << currentColumn->j << " [dir=none];" << endl;
                 currentColumn = currentColumn->right;
             }
 
-            // Añadir encabezados de fila
+            // Encabezados de fila
             NodeM* currentRow = root->down;
             while (currentRow) {
                 string user = currentRow->i != -1 ? "User" + to_string(currentRow->i) : "Row";
-                file << "row" << currentRow->i << " [label=\"" << user << "\", shape=box];" << endl;
-                file << "root -> row" << currentRow->i << ";" << endl;
+                file << "row" << currentRow->i << " [label=\"" << user << "\", shape=box, group=1];" << endl;
+                file << "root -> row" << currentRow->i << " [dir=none];" << endl;
                 currentRow = currentRow->down;
             }
 
-            // Añadir nodos de la matriz y sus conexiones
+            // Conexión entre nodos
             currentRow = root->down;
             while (currentRow) {
                 NodeM* currentNode = currentRow->right;
                 while (currentNode) {
                     string nodeName = "node" + to_string(currentNode->i) + "_" + to_string(currentNode->j);
-                    file << nodeName << " [label=\"Solicitud\", shape=record];" << endl;
+                    file << nodeName << " [label=\"Solicitud\", shape=record, group=" << currentNode->j + 2 << "];" << endl;
 
                     if (currentNode->up) {
-                        string valNod;
-                        if( currentNode->up->i == -1 ){ valNod = "x";}else{ valNod = to_string(currentNode->up->i);}
-                        string upNodeName = "node" + valNod + "_" + to_string(currentNode->up->j);
-                        file << nodeName << " -> " << upNodeName << " [label=\"\"];" << endl;
+                        string upNodeName = currentNode->up->i == -1 
+                            ? "col" + to_string(currentNode->up->j) 
+                            : "node" + to_string(currentNode->up->i) + "_" + to_string(currentNode->up->j);
+                        file << upNodeName << " -> " << nodeName << " [dir=none];" << endl;
                     }
                     if (currentNode->down) {
                         string downNodeName = "node" + to_string(currentNode->down->i) + "_" + to_string(currentNode->down->j);
-                        file << nodeName << " -> " << downNodeName << " [label=\"\"];" << endl;
+                        file << nodeName << " -> " << downNodeName << " [dir=none];" << endl;
                     }
                     if (currentNode->left) {
                         string leftNodeName = "node" + to_string(currentNode->left->i) + "_" + to_string(currentNode->left->j);
-                        file << nodeName << " -> " << leftNodeName << " [label=\"\"];" << endl;
+                        file << leftNodeName << " -> " << nodeName << " [dir=none];" << endl;
                     }
                     if (currentNode->right) {
                         string rightNodeName = "node" + to_string(currentNode->right->i) + "_" + to_string(currentNode->right->j);
-                        file << nodeName << " -> " << rightNodeName << " [label=\"\"];" << endl;
+                        file << nodeName << " -> " << rightNodeName << " [dir=none];" << endl;
                     }
 
-                    // Conexión desde los encabezados
-                    file << "row" << currentNode->i << " -> " << nodeName << ";" << endl;
-                    file << "col" << currentNode->j << " -> " << nodeName << ";" << endl;
+                    // Conexiones desde los encabezados
+                    file << "row" << currentNode->i << " -> " << nodeName << " [dir=none];" << endl;
+                    file << "col" << currentNode->j << " -> " << nodeName << " [dir=none];" << endl;
 
                     currentNode = currentNode->right;
                 }
+                currentRow = currentRow->down;
+            }
+
+            // Ajustar el rango para alinearlos adecuadamente
+            file << "{ rank=same; root;";
+            currentColumn = root->right;
+            while (currentColumn) {
+                file << " col" << currentColumn->j << ";";
+                currentColumn = currentColumn->right;
+            }
+            file << "}" << endl;
+
+            // Alinear filas
+            currentRow = root->down;
+            while (currentRow) {
+                file << "{ rank=same; row" << currentRow->i << ";";
+                NodeM* currentNode = currentRow->right;
+                while (currentNode) {
+                    string nodeName = "node" + to_string(currentNode->i) + "_" + to_string(currentNode->j);
+                    file << nodeName << ";";
+                    currentNode = currentNode->right;
+                }
+                file << "}" << endl;
                 currentRow = currentRow->down;
             }
 
@@ -277,6 +299,7 @@ public:
             cout << " || No se pudo abrir el archivo" << endl;
         }
     }
+
 
     void renderGraphviz(){
         string dotFilename = "report/matriz.dot";

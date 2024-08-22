@@ -1,0 +1,10 @@
+digraph G {
+rankdir=LR;
+node [shape=record];
+node0 [label="{corre: juan.perez@example.com\nFecha 27/07/2024 Hora 10:00\ncontenido: QUe pasiones banda}"];
+node0 -> node1 [dir=both];
+node1 [label="{corre: maria.lopez@example.com\nFecha 22/07/2024 Hora 12:30\ncontenido: Una publicacion más}"];
+node1 -> node2 [dir=both];
+node2 [label="{corre: carlos.rodriguez@example.com\nFecha 31/07/2024 Hora 15:30\ncontenido: Esta es extra}"];
+node2 -> node0 [dir=both];
+}

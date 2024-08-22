@@ -178,7 +178,7 @@ void User_Controller::solicitud_Amistad() {
 
     if (user_Solicitud != nullptr) {
         Solicitud* newSolicitud = new Solicitud(User_Logued->getEmail(), user_Solicitud->getEmail());
-        bool res = User_Logued->getListEnvios().append(newSolicitud);
+        bool res = User_Logued->getListEnvios().append(newSolicitud, User_Logued->getEmail());
         if( res ){            
             user_Solicitud->getListSol().push(newSolicitud);
             User_Logued->getListEnvios().print(0);            
@@ -220,7 +220,7 @@ void User_Controller::carga_Solicitudes(){
             if( userEM != nullptr && userRec != nullptr ){
                 
                 Solicitud* newSolicitud = new Solicitud(emisor, receptor);
-                userEM->getListEnvios().append(newSolicitud);
+                userEM->getListEnvios().append(newSolicitud, userEM->getEmail());
                 userRec->getListSol().push(newSolicitud);
             }else{
                 if( userEM == nullptr ){
@@ -236,9 +236,9 @@ void User_Controller::carga_Solicitudes(){
             User* userRec = list_Users.search_By_Id(-1, receptor);
             if( userEM != nullptr && userRec != nullptr ){;
                 Solicitud* newSolicitud = new Solicitud(emisor, receptor);
-                userEM->getListAmigos().append(newSolicitud);
+                userEM->getListAmigos().append(newSolicitud, userEM->getEmail());
                 userEM->No_Fri += 1;
-                userRec->getListAmigos().append(newSolicitud);
+                userRec->getListAmigos().append(newSolicitud, userRec->getEmail());
                 userRec->No_Fri += 1;
                 int i = userEM->getIdUser();
                 int j = userRec->getIdUser();
@@ -252,7 +252,6 @@ void User_Controller::carga_Solicitudes(){
             }
         }
     }
-    system("cls");
     cout << " La carga de relaciones en el sistema fue satisfactorio" << endl;
     cout << " Presiona Enter para continuar...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
@@ -497,6 +496,32 @@ void User_Controller::reporte_Sol(){
     User_Logued->getListSol().generateDot("pila");
     User_Logued->getListSol().renderGraphviz("pila");
     cout << " || Grafica de pila generado" << endl;
+    cout << " ||" << endl;
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+
+}
+
+void User_Controller::reporte_Publicaciones_User(){
+
+    DoublyCircular* friend_Posts = new DoublyCircular();
+    posts.extractPost(User_Logued->getListAmigos(), friend_Posts, User_Logued->getEmail());
+    friend_Posts->graph();
+    cout << " || Grafica generada con exito " << endl;
+    cout << " ||" << endl;
+    cout << " || Presiona Enter para continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+    cin.get(); // Lee la tecla Enter
+    system("cls");
+    delete friend_Posts;
+
+}
+
+void User_Controller::mostrar_Amigos(){
+
+    User_Logued->getListAmigos().print(3, User_Logued->getEmail());
     cout << " ||" << endl;
     cout << " || Presiona Enter para continuar...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter

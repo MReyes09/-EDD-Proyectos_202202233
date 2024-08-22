@@ -13,7 +13,7 @@ class LinkedList_Sol{
         Node_Sol* head;
         LinkedList_Sol();
         ~LinkedList_Sol();
-        bool append(Solicitud* value);
+        bool append(Solicitud* value, string email_user);
         void print(int opcion, string emailLog = "");
         void push(Solicitud* value);
         bool remove(Solicitud* value);

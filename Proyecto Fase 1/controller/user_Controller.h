@@ -37,6 +37,8 @@ public:
     void top5_Usuarios_Posts();
     void top5_Mas_Amigos();
     void reporte_Sol();
+    void reporte_Publicaciones_User();
+    void mostrar_Amigos();
 
 };
 
