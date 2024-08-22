@@ -205,13 +205,12 @@ public:
         return val;
     }
 
-
     void generateDot(){
         string filename = "report/matriz.dot";
         ofstream file(filename);
         if (file.is_open()) {
             file << "digraph Sparce_Matrix {" << endl;
-            file << "node [shape=box];" << endl;
+            file << "node [shape=box, fontname=Arial];" << endl;
 
             // Nodo principal (raíz)
             file << "root [label=\"Root\", shape=ellipse, group=1];" << endl;
@@ -220,7 +219,7 @@ public:
             NodeM* currentColumn = root->right;
             while (currentColumn) {
                 string user = currentColumn->j != -1 ? "User" + to_string(currentColumn->j) : "Col";
-                file << "col" << currentColumn->j << " [label=\"" << user << "\", shape=box, group=" << currentColumn->j + 2 << "];" << endl;
+                file << "col" << currentColumn->j << " [label=<" << user << ">, shape=box, group=" << currentColumn->j + 2 << "];" << endl;
                 file << "root -> col" << currentColumn->j << " [dir=none];" << endl;
                 currentColumn = currentColumn->right;
             }
@@ -229,7 +228,7 @@ public:
             NodeM* currentRow = root->down;
             while (currentRow) {
                 string user = currentRow->i != -1 ? "User" + to_string(currentRow->i) : "Row";
-                file << "row" << currentRow->i << " [label=\"" << user << "\", shape=box, group=1];" << endl;
+                file << "row" << currentRow->i << " [label=<" << user << ">, shape=box, group=1];" << endl;
                 file << "root -> row" << currentRow->i << " [dir=none];" << endl;
                 currentRow = currentRow->down;
             }
@@ -240,7 +239,7 @@ public:
                 NodeM* currentNode = currentRow->right;
                 while (currentNode) {
                     string nodeName = "node" + to_string(currentNode->i) + "_" + to_string(currentNode->j);
-                    file << nodeName << " [label=\"Solicitud\", shape=record, group=" << currentNode->j + 2 << "];" << endl;
+                    file << nodeName << " [label=<Solicitud>, shape=box, group=" << currentNode->j + 2 << "];" << endl;
 
                     if (currentNode->up) {
                         string upNodeName = currentNode->up->i == -1 
@@ -299,7 +298,6 @@ public:
             cout << " || No se pudo abrir el archivo" << endl;
         }
     }
-
 
     void renderGraphviz(){
         string dotFilename = "report/matriz.dot";

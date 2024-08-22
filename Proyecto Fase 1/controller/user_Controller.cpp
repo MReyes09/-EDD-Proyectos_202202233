@@ -127,36 +127,44 @@ void User_Controller::carga_Usuarios(){
     //cout << "Escribe la ruta del archivo\n ruta >> ";
     ifstream file(path);
 
-    if (!file.is_open()) {
-        cerr << "|| >> No se pudo abrir el archivo JSON" << endl;
-        return;
+    try
+    {
+        if (!file.is_open()) {
+            cerr << "|| >> No se pudo abrir el archivo JSON" << endl;
+            return;
+        }
+
+        json jsonData;
+        file >> jsonData;
+        
+
+        // Iterar sobre los elementos del JSON y crear objetos User
+        for (auto& element : jsonData) {
+            string name = element["nombres"];
+            string lastname = element["apellidos"];
+            string birthdate = element["fecha_de_nacimiento"];
+            string email = element["correo"];
+            string password = element["contraseña"];
+            string rol = "Usuario"; // Podrías agregar esto a tu JSON si es necesario
+
+            User* newUser = new User(id_User, name, lastname, email, password, birthdate, rol);
+            id_User++;
+            list_Users.append(newUser);
+        }
+        system("cls");
+        cout << "\n || Los usuarios registrados en el sistema son:"<<endl;
+        list_Users.print(User_Logued->getIdUser());
+        cout << " || La carga de usuarios en el sistema fue satisfactorio" << endl;
+        cout << " || Presiona Enter para continuar...";
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
+        cin.get(); // Lee la tecla Enter
+        system("cls");
+    }
+    catch(const json::exception& e)
+    {
+        std::cerr << e.what() << '\n';
     }
 
-    json jsonData;
-    file >> jsonData;
-    
-
-    // Iterar sobre los elementos del JSON y crear objetos User
-    for (auto& element : jsonData) {
-        string name = element["nombres"];
-        string lastname = element["apellidos"];
-        string birthdate = element["fecha_De_Nacimiento"];
-        string email = element["correo"];
-        string password = element["contraseña"];
-        string rol = "Usuario"; // Podrías agregar esto a tu JSON si es necesario
-
-        User* newUser = new User(id_User, name, lastname, email, password, birthdate, rol);
-        id_User++;
-        list_Users.append(newUser);
-    }
-    system("cls");
-    cout << "\n || Los usuarios registrados en el sistema son:"<<endl;
-    list_Users.print(User_Logued->getIdUser());
-    cout << " || La carga de usuarios en el sistema fue satisfactorio" << endl;
-    cout << " || Presiona Enter para continuar...";
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Espera hasta que el usuario presione Enter
-    cin.get(); // Lee la tecla Enter
-    system("cls");
 }
 
 void User_Controller::solicitud_Amistad() {
@@ -220,8 +228,22 @@ void User_Controller::carga_Solicitudes(){
             if( userEM != nullptr && userRec != nullptr ){
                 
                 Solicitud* newSolicitud = new Solicitud(emisor, receptor);
-                userEM->getListEnvios().append(newSolicitud, userEM->getEmail());
-                userRec->getListSol().push(newSolicitud);
+                if( userEM->getListEnvios().search(userRec->getEmail(), userEM->getEmail()) ){
+                    cout << " || La solici=tud entre " + emisor + " y " + receptor + " ya existe" << endl;
+                    delete newSolicitud;
+                    continue;
+                }else if( userEM->getListAmigos().search(userRec->getEmail(), userEM->getEmail()) ){
+                    cout << " || Entre " + emisor + " y " + receptor + " ya existe una amistad hecha" << endl;
+                    delete newSolicitud;
+                    continue;
+                }else if( userEM->getListSol().search(userRec->getEmail(), userEM->getEmail()) ){
+                    cout << " || La solici=tud entre " + emisor + " y " + receptor + " ya existe" << endl;
+                    delete newSolicitud;
+                    continue;
+                }else{
+                    userEM->getListEnvios().append(newSolicitud, userEM->getEmail());
+                    userRec->getListSol().push(newSolicitud);
+                }
             }else{
                 if( userEM == nullptr ){
                     cout << " >> El usuario con correo: " + emisor << " no existe" << endl; 

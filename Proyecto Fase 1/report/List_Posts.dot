@@ -1,113 +1,56 @@
-digraph Sparce_Matrix {
-
-    node [shape=box]
-
-    /* este es el nodo principal y lo pones en el grupo 1 para que se muestre como el origen de un todo */
-    Mt[ label = "Matrix", width = 1.5, style = filled, fillcolor = firebrick1, group = 1 ];
-
-    /* esto no se elimina, es para evitar el posicionamiento a lo loco */
-    e0[ shape = point, width = 0 ];
-    e1[ shape = point, width = 0 ];
-
-
-    
-    /* estos son los padres de cada fila, mira que es grupo 1 */ 
-    U0 [label = "Estructuras"    pos = "5.3,3.5!" width = 1.5 style = filled, fillcolor = bisque1, group = 1 ];
-    U1 [label = "Redes"          width = 1.5 style = filled, fillcolor = bisque1, group = 1 ];
-    U2 [label = "Compiladores"   width = 1.5 style = filled, fillcolor = bisque1, group = 1 ];
-    U3 [label = "Investigacion"  width = 1.5 style = filled, fillcolor = bisque1, group = 1 ];
-    U4 [label = "Lenguajes"      width = 1.5 style = filled, fillcolor = bisque1, group = 1 ];
-
-    //relaciones
-    U0 -> U1;
-    U1 -> U0;
-    U1 -> U2;
-    U2 -> U1;
-    U2 -> U3;
-    U3 -> U2;
-    U3 -> U4;
-    U4 -> U3;
-
-    
-    /* aca el grupo cambia por ser las cabeceras de las columnas */
-    A0 [label = "Josefina"   width = 1.5 style = filled, fillcolor = lightskyblue, group = 2 ];
-    A1 [label = "Alejandro"  width = 1.5 style = filled, fillcolor = lightskyblue, group = 3 ];
-    A2 [label = "Marco"      width = 1.5 style = filled, fillcolor = lightskyblue, group = 4 ];
-    A3 [label = "Julian"     width = 1.5 style = filled, fillcolor = lightskyblue, group = 5 ];
-    A4 [label = "Pamela"     width = 1.5 style = filled, fillcolor = lightskyblue, group = 6 ];
-
-    //relaciones
-    A0 -> A1;
-    A1 -> A0;
-    A1 -> A2;
-    A2 -> A1;
-    A2 -> A3;
-    A3 -> A2;
-    A3 -> A4;
-    A4 -> A3;
-
-    Mt -> U0;
-    Mt -> A0;
-
-    { rank = same; Mt; A0; A1; A2; A3; A4; }//para que aparezacan en la misma direccion
-
-    
-    /* los nodos del centro, acuerdate de los grupos */
-    N0_L0 [label = "Jose-Estr" width = 1.5, group = 2 ];
-    N1_L0 [label = "Marc-Estr" width = 1.5, group = 4 ];
-    N2_L0 [label = "Juli-Estr" width = 1.5, group = 5 ];
-
-   
-    N0_L2 [label = "Marc-Comp" width = 1.5, group = 4 ];
-    N1_L2 [label = "Juli-Comp" width = 1.5, group = 5 ];
-
-    
-    N0_L4 [label = "Marc-Leng" width = 1.5, group = 4 ];
-    N1_L4 [label = "Juli-Leng" width = 1.5, group = 5 ];
-    N2_L4 [label = "Pame-Leng" width = 1.5, group = 6 ];
-
-
-    //relaciones y ranks, no olvides que deben ir en la misma direccion    
-
-    U0 -> N0_L0;
-    A0 -> N0_L0;
-    N0_L0 -> N1_L0;
-    N1_L0 -> N0_L0;
-    A2 -> N1_L0;
-    N1_L0 -> N2_L0;
-    N2_L0 -> N1_L0;
-    A3 -> N2_L0;
-
-    { rank = same; U0; N0_L0;N1_L0;N2_L0; }
-    
-
-    U2 -> N0_L2;
-    N0_L2 ->N1_L0;
-    N1_L0 ->N0_L2;
-    N0_L2 -> N1_L2;
-    N1_L2 -> N0_L2;
-    N1_L2 ->N2_L0;
-    N2_L0 ->N1_L2;
-
-    { rank = same; U2; N0_L2;N1_L2; }
-    
-
-    U4 -> N0_L4;
-    N0_L4 -> N0_L2;
-    N0_L2 -> N0_L4;
-    N0_L4 -> N1_L4;
-    N1_L4 -> N0_L4;
-    N1_L4 -> N1_L2;
-    N1_L2 -> N1_L4;
-    N1_L4 -> N2_L4;
-    N2_L4 -> N1_L4;
-
-    { rank = same; U4; N0_L4;N1_L4;N2_L4; }
-    { rank=same; U2; e0; }
-    { rank=same; U3; e1; }
-
-    /* para que aparezca la flecha del ultimo */
-    
-    A4 -> e0 -> e1[ dir = none ];
-    e1 -> N2_L4;
+digraph G {
+rankdir=LR;
+node [shape=record];
+node0 [label="{carlos.gomez@example.com\nDisfrutando de un día soleado en la playa, la vida es mejor con arena y mar.}"];
+node0 -> node1 ;
+node1 -> node0 ;
+node1 [label="{maria.lopez@example.com\nHoy aprendí algo nuevo, siempre es bueno salir de la zona de confort.}"];
+node1 -> node2 ;
+node2 -> node1 ;
+node2 [label="{juan.martinez@example.com\nEl café de la mañana nunca decepciona, ¡energía pura para el día!}"];
+node2 -> node3 ;
+node3 -> node2 ;
+node3 [label="{ana.hernandez@example.com\nLos atardeceres en la ciudad son simplemente mágicos, me encanta.}"];
+node3 -> node4 ;
+node4 -> node3 ;
+node4 [label="{luis.perez@example.com\nDía perfecto para una caminata por el parque, disfrutando de la naturaleza.}"];
+node4 -> node5 ;
+node5 -> node4 ;
+node5 [label="{laura.ramirez@example.com\nLa lectura de un buen libro puede cambiar tu perspectiva del mundo.}"];
+node5 -> node6 ;
+node6 -> node5 ;
+node6 [label="{jose.garcia@example.com\nEsos pequeños momentos de felicidad son los que más cuentan.}"];
+node6 -> node7 ;
+node7 -> node6 ;
+node7 [label="{elena.torres@example.com\nCocinando mi plato favorito, nada como la comida casera.}"];
+node7 -> node8 ;
+node8 -> node7 ;
+node8 [label="{miguel.rodriguez@example.com\nUna nueva aventura comienza, emocionado por lo que viene.}"];
+node8 -> node9 ;
+node9 -> node8 ;
+node9 [label="{carlos.gomez@example.com\nEl deporte me mantiene enfocado y lleno de energía, nunca lo dejaré.}"];
+node9 -> node10 ;
+node10 -> node9 ;
+node10 [label="{maria.lopez@example.com\nEl arte es una expresión del alma, cada cuadro cuenta una historia.}"];
+node10 -> node11 ;
+node11 -> node10 ;
+node11 [label="{juan.martinez@example.com\nA veces solo necesitas una taza de té y un buen libro.}"];
+node11 -> node12 ;
+node12 -> node11 ;
+node12 [label="{ana.hernandez@example.com\nRecordando viejos tiempos con amigos, esas memorias nunca se olvidan.}"];
+node12 -> node13 ;
+node13 -> node12 ;
+node13 [label="{luis.perez@example.com\nEl ejercicio diario es clave para una vida saludable, nunca lo dudes.}"];
+node13 -> node14 ;
+node14 -> node13 ;
+node14 [label="{laura.ramirez@example.com\nLa naturaleza siempre tiene una forma de sorprendernos, es increíble.}"];
+node14 -> node15 ;
+node15 -> node14 ;
+node15 [label="{jose.garcia@example.com\nLa familia es lo más importante, siempre agradecido por ellos.}"];
+node15 -> node16 ;
+node16 -> node15 ;
+node16 [label="{elena.torres@example.com\nLos pequeños detalles hacen la diferencia, siempre presta atención.}"];
+node16 -> node17 ;
+node17 -> node16 ;
+node17 [label="{miguel.rodriguez@example.com\nEl camino hacia el éxito está lleno de retos, pero vale la pena.}"];
 }

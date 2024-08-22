@@ -112,10 +112,10 @@ public:
             
             case 4:
                 reportes_User();
+                opcion = 0;
                 break;
             
             case 5:
-                
                 break;
             
             default:
@@ -265,6 +265,7 @@ public:
             
             case 5:
                 reportes_Admin();
+                opcion = 0;
                 break;
                 
             case 6:

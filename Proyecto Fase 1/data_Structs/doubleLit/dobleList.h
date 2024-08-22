@@ -122,7 +122,7 @@ public:
         
         NodeD* current = head;
 
-        if (!current) {
+        if (current == nullptr) {
             cout << "No hay publicaciones disponibles." << endl;
             return;
         }

@@ -337,7 +337,7 @@ void LinkedList::sortListByFriends(){
 
     for(Node* i = head; i != nullptr; i = i->next){
         for(Node* j = i->next; j != nullptr; j= j->next){
-            if( i->user->No_Fri < j->user->No_Fri ){
+            if( i->user->No_Fri > j->user->No_Fri ){
                 User* temp = i->user;
                 i->user = j->user;
                 j->user = temp;

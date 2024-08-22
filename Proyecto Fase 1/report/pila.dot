@@ -1,9 +1,0 @@
-digraph G {
-node [shape=record];
-rankdir=TB;
-node0 [label="{Emisor: maria.lopez@example.com\nReceptor: juan.perez@example.com}"];
-node0 -> node1;
-node1 [label="{Emisor: lucia.gomez@example.com\nReceptor: juan.perez@example.com}"];
-node1 -> node2;
-node2 [label="{Emisor: ana.martinez@example.com\nReceptor: juan.perez@example.com}"];
-}
