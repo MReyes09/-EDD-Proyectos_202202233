@@ -1,0 +1,9 @@
+digraph G {
+node [shape=record];
+rankdir=LR;
+node0 [label="{Emisor: calificacion.fase1@example.com\nReceptor: maria.lopez@example.com}"];
+node0 -> node1;
+node1 [label="{Emisor: calificacion.fase1@example.com\nReceptor: ana.hernandez@example.com}"];
+node1 -> node2;
+node2 [label="{Emisor: calificacion.fase1@example.com\nReceptor: elena.torres@example.com}"];
+}

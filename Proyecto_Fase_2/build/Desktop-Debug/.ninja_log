@@ -1,0 +1,10 @@
+# ninja log v6
+19	171	7473555245362259	Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
+401	1648	7473547294415462	CMakeFiles/Proyecto_Fase_2.dir/Proyecto_Fase_2_autogen/mocs_compilation.cpp.obj	b051543640aa3874
+19	171	7473555245362259	Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
+1689	1825	7473555262065044	Proyecto_Fase_2.exe	901a52f3a555e058
+19	171	7473555245362259	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
+19	171	7473555245362259	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
+675	2805	7473538829605909	CMakeFiles/Proyecto_Fase_2.dir/main.cpp.obj	2c808f7e2892abd6
+173	1638	7473555246908558	CMakeFiles/Proyecto_Fase_2.dir/mainwindow.cpp.obj	ea2d56b06310daa2
+176	1688	7473555246945738	CMakeFiles/Proyecto_Fase_2.dir/registerview.cpp.obj	f37b0659ebd03d42

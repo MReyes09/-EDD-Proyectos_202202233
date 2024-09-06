@@ -1,85 +1,76 @@
 digraph Sparce_Matrix {
 node [shape=box, fontname=Arial];
 root [label="Root", shape=ellipse, group=1];
-col1 [label=<User1>, shape=box, group=3];
-root -> col1 [dir=none];
-col2 [label=<User2>, shape=box, group=4];
-root -> col2 [dir=none];
 col3 [label=<User3>, shape=box, group=5];
 root -> col3 [dir=none];
-col4 [label=<User4>, shape=box, group=6];
-root -> col4 [dir=none];
-col5 [label=<User5>, shape=box, group=7];
-root -> col5 [dir=none];
-col6 [label=<User6>, shape=box, group=8];
-root -> col6 [dir=none];
+col7 [label=<User7>, shape=box, group=9];
+root -> col7 [dir=none];
 col9 [label=<User9>, shape=box, group=11];
 root -> col9 [dir=none];
 col10 [label=<User10>, shape=box, group=12];
 root -> col10 [dir=none];
-row1 [label=<User1>, shape=box, group=1];
-root -> row1 [dir=none];
-row2 [label=<User2>, shape=box, group=1];
-root -> row2 [dir=none];
+col11 [label=<User11>, shape=box, group=13];
+root -> col11 [dir=none];
 row3 [label=<User3>, shape=box, group=1];
 root -> row3 [dir=none];
-row4 [label=<User4>, shape=box, group=1];
-root -> row4 [dir=none];
-row5 [label=<User5>, shape=box, group=1];
-root -> row5 [dir=none];
-row6 [label=<User6>, shape=box, group=1];
-root -> row6 [dir=none];
+row7 [label=<User7>, shape=box, group=1];
+root -> row7 [dir=none];
 row9 [label=<User9>, shape=box, group=1];
 root -> row9 [dir=none];
 row10 [label=<User10>, shape=box, group=1];
 root -> row10 [dir=none];
-node1_2 [label=<Solicitud>, shape=box, group=4];
-col2 -> node1_2 [dir=none];
-node1_-1 -> node1_2 [dir=none];
-row1 -> node1_2 [dir=none];
-col2 -> node1_2 [dir=none];
-node2_1 [label=<Solicitud>, shape=box, group=3];
-col1 -> node2_1 [dir=none];
-node2_-1 -> node2_1 [dir=none];
-row2 -> node2_1 [dir=none];
-col1 -> node2_1 [dir=none];
-node3_4 [label=<Solicitud>, shape=box, group=6];
-col4 -> node3_4 [dir=none];
-node3_-1 -> node3_4 [dir=none];
-row3 -> node3_4 [dir=none];
-col4 -> node3_4 [dir=none];
-node4_3 [label=<Solicitud>, shape=box, group=5];
-col3 -> node4_3 [dir=none];
-node4_-1 -> node4_3 [dir=none];
-row4 -> node4_3 [dir=none];
-col3 -> node4_3 [dir=none];
-node5_6 [label=<Solicitud>, shape=box, group=8];
-col6 -> node5_6 [dir=none];
-node5_-1 -> node5_6 [dir=none];
-row5 -> node5_6 [dir=none];
-col6 -> node5_6 [dir=none];
-node6_5 [label=<Solicitud>, shape=box, group=7];
-col5 -> node6_5 [dir=none];
-node6_-1 -> node6_5 [dir=none];
-row6 -> node6_5 [dir=none];
-col5 -> node6_5 [dir=none];
-node9_10 [label=<Solicitud>, shape=box, group=12];
-col10 -> node9_10 [dir=none];
-node9_-1 -> node9_10 [dir=none];
-row9 -> node9_10 [dir=none];
-col10 -> node9_10 [dir=none];
-node10_9 [label=<Solicitud>, shape=box, group=11];
-col9 -> node10_9 [dir=none];
-node10_-1 -> node10_9 [dir=none];
-row10 -> node10_9 [dir=none];
-col9 -> node10_9 [dir=none];
-{ rank=same; root; col1; col2; col3; col4; col5; col6; col9; col10;}
-{ rank=same; row1;node1_2;}
-{ rank=same; row2;node2_1;}
-{ rank=same; row3;node3_4;}
-{ rank=same; row4;node4_3;}
-{ rank=same; row5;node5_6;}
-{ rank=same; row6;node6_5;}
-{ rank=same; row9;node9_10;}
-{ rank=same; row10;node10_9;}
+row11 [label=<User11>, shape=box, group=1];
+root -> row11 [dir=none];
+node3_11 [label=<Solicitud>, shape=box, group=13];
+col11 -> node3_11 [dir=none];
+node3_11 -> node7_11 [dir=none];
+node3_-1 -> node3_11 [dir=none];
+row3 -> node3_11 [dir=none];
+col11 -> node3_11 [dir=none];
+node7_11 [label=<Solicitud>, shape=box, group=13];
+node3_11 -> node7_11 [dir=none];
+node7_11 -> node9_11 [dir=none];
+node7_-1 -> node7_11 [dir=none];
+row7 -> node7_11 [dir=none];
+col11 -> node7_11 [dir=none];
+node9_11 [label=<Solicitud>, shape=box, group=13];
+node7_11 -> node9_11 [dir=none];
+node9_11 -> node10_11 [dir=none];
+node9_-1 -> node9_11 [dir=none];
+row9 -> node9_11 [dir=none];
+col11 -> node9_11 [dir=none];
+node10_11 [label=<Solicitud>, shape=box, group=13];
+node9_11 -> node10_11 [dir=none];
+node10_-1 -> node10_11 [dir=none];
+row10 -> node10_11 [dir=none];
+col11 -> node10_11 [dir=none];
+node11_3 [label=<Solicitud>, shape=box, group=5];
+col3 -> node11_3 [dir=none];
+node11_-1 -> node11_3 [dir=none];
+node11_3 -> node11_7 [dir=none];
+row11 -> node11_3 [dir=none];
+col3 -> node11_3 [dir=none];
+node11_7 [label=<Solicitud>, shape=box, group=9];
+col7 -> node11_7 [dir=none];
+node11_3 -> node11_7 [dir=none];
+node11_7 -> node11_9 [dir=none];
+row11 -> node11_7 [dir=none];
+col7 -> node11_7 [dir=none];
+node11_9 [label=<Solicitud>, shape=box, group=11];
+col9 -> node11_9 [dir=none];
+node11_7 -> node11_9 [dir=none];
+node11_9 -> node11_10 [dir=none];
+row11 -> node11_9 [dir=none];
+col9 -> node11_9 [dir=none];
+node11_10 [label=<Solicitud>, shape=box, group=12];
+col10 -> node11_10 [dir=none];
+node11_9 -> node11_10 [dir=none];
+row11 -> node11_10 [dir=none];
+col10 -> node11_10 [dir=none];
+{ rank=same; root; col3; col7; col9; col10; col11;}
+{ rank=same; row3;node3_11;}
+{ rank=same; row7;node7_11;}
+{ rank=same; row9;node9_11;}
+{ rank=same; row10;node10_11;}
+{ rank=same; row11;node11_3;node11_7;node11_9;node11_10;}
 }

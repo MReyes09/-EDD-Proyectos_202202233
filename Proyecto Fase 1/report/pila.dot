@@ -1,0 +1,9 @@
+digraph G {
+node [shape=record];
+rankdir=TB;
+node0 [label="{Emisor: fase1@gmail.com\nReceptor: calificacion.fase1@example.com}"];
+node0 -> node1;
+node1 [label="{Emisor: luis.perez@example.com\nReceptor: calificacion.fase1@example.com}"];
+node1 -> node2;
+node2 [label="{Emisor: carlos.gomez@example.com\nReceptor: calificacion.fase1@example.com}"];
+}
