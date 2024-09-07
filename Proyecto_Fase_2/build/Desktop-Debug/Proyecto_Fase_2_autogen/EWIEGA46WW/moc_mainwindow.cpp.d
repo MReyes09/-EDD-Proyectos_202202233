@@ -79,13 +79,16 @@ C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyec
   C:/Qt/5.15.17/mingw81_64/include/QtGui/qtransform.h \
   C:/Qt/5.15.17/mingw81_64/include/QtGui/qwindowdefs.h \
   C:/Qt/5.15.17/mingw81_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/5.15.17/mingw81_64/include/QtWidgets/QDialog \
   C:/Qt/5.15.17/mingw81_64/include/QtWidgets/QMainWindow \
+  C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qdialog.h \
   C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qwidget.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/registerview.h \
   C:/msys64/ucrt64/include/_mingw.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
   C:/msys64/ucrt64/include/_mingw_off_t.h \

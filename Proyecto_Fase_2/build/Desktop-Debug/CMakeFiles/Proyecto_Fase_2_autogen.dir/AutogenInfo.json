@@ -75,6 +75,18 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/Node.h",
+			"MU",
+			"EWIEGA46WW/moc_Node.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/linkedlist.h",
+			"MU",
+			"EWIEGA46WW/moc_linkedlist.cpp",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -90,6 +102,12 @@
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user.h",
 			"MU",
 			"EWIEGA46WW/moc_user.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user_controller.h",
+			"MU",
+			"EWIEGA46WW/moc_user_controller.cpp",
 			null
 		]
 	],
@@ -145,6 +163,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/linkedlist.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/main.cpp",
 			"MU",
 			null
@@ -161,6 +184,11 @@
 		],
 		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user_controller.cpp",
 			"MU",
 			null
 		]

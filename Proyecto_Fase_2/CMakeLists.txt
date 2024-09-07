@@ -40,6 +40,10 @@ else()
             ${PROJECT_SOURCES}
             registerview.h registerview.cpp registerview.ui
             user.h user.cpp
+            user_controller.h user_controller.cpp
+            linkedlist.h linkedlist.cpp
+            Node.h
+
 
         )
     endif()
