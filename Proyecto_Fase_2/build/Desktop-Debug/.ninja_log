@@ -1,22 +1,24 @@
 # ninja log v6
-26	482	7473806757142193	Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
-483	2256	7473806757842873	CMakeFiles/Proyecto_Fase_2.dir/Proyecto_Fase_2_autogen/mocs_compilation.cpp.obj	b051543640aa3874
+28	516	7475566208873534	Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
+517	2346	7475566209605527	CMakeFiles/Proyecto_Fase_2.dir/Proyecto_Fase_2_autogen/mocs_compilation.cpp.obj	b051543640aa3874
 145	1365	7473754451864515	CMakeFiles/Proyecto_Fase_2.dir/linkedlist.cpp.obj	d52560e736a29868
-26	482	7473806757142193	Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
-2294	2463	7473805273993574	Proyecto_Fase_2.exe	39e730717d666c19
-26	482	7473806757142193	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
-26	482	7473806757142193	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
+28	516	7475566208873534	Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
+2837	3279	7475566232803470	Proyecto_Fase_2.exe	a71b9af750de569a
+28	516	7475566208873534	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
+28	516	7475566208873534	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
 382	2153	7473753344107153	CMakeFiles/Proyecto_Fase_2.dir/main.cpp.obj	2c808f7e2892abd6
-489	2773	7473806757880731	CMakeFiles/Proyecto_Fase_2.dir/mainwindow.cpp.obj	ea2d56b06310daa2
-494	2708	7473806757880731	CMakeFiles/Proyecto_Fase_2.dir/registerview.cpp.obj	f37b0659ebd03d42
+522	2836	7475566209605527	CMakeFiles/Proyecto_Fase_2.dir/mainwindow.cpp.obj	ea2d56b06310daa2
+526	2825	7475566209605527	CMakeFiles/Proyecto_Fase_2.dir/registerview.cpp.obj	f37b0659ebd03d42
 460	1492	7473588606120881	CMakeFiles/Proyecto_Fase_2.dir/user.cpp.obj	2c6053c39d144bc4
 167	1149	7473775307816064	CMakeFiles/Proyecto_Fase_2.dir/user_controller.cpp.obj	b8452365e87c51c0
 195	2170	7473805253032110	CMakeFiles/Proyecto_Fase_2.dir/adminview.cpp.obj	be8357bb9cb1df51
-38	258	7473808164632101	Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
-38	258	7473808164632101	Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
-38	258	7473808164632101	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
-38	258	7473808164632101	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
-260	2210	7473808165638358	CMakeFiles/Proyecto_Fase_2.dir/Proyecto_Fase_2_autogen/mocs_compilation.cpp.obj	b051543640aa3874
-266	2558	7473808165699085	CMakeFiles/Proyecto_Fase_2.dir/mainwindow.cpp.obj	ea2d56b06310daa2
-272	2595	7473808165759621	CMakeFiles/Proyecto_Fase_2.dir/registerview.cpp.obj	f37b0659ebd03d42
-2595	2760	7473808188946825	Proyecto_Fase_2.exe	1b656966f13c75c4
+532	2748	7475566209605527	CMakeFiles/Proyecto_Fase_2.dir/mainview.cpp.obj	cb2f3a14fcb867a7
+27	198	7475567301727056	Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
+27	198	7475567301727056	Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
+27	198	7475567301727056	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/timestamp	26ebd73f564acf6c
+27	198	7475567301727056	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/mocs_compilation.cpp	26ebd73f564acf6c
+199	1861	7475567302574344	CMakeFiles/Proyecto_Fase_2.dir/Proyecto_Fase_2_autogen/mocs_compilation.cpp.obj	b051543640aa3874
+204	2097	7475567302624336	CMakeFiles/Proyecto_Fase_2.dir/main.cpp.obj	2c808f7e2892abd6
+215	2404	7475567302734424	CMakeFiles/Proyecto_Fase_2.dir/mainview.cpp.obj	cb2f3a14fcb867a7
+209	2439	7475567302674344	CMakeFiles/Proyecto_Fase_2.dir/registerview.cpp.obj	f37b0659ebd03d42
+2440	2615	7475567324940341	Proyecto_Fase_2.exe	5c4e577f6ddc21ea

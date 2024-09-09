@@ -14,9 +14,6 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -43,6 +40,7 @@ else()
             user_controller.h user_controller.cpp
             linkedlist.h linkedlist.cpp
             Node.h
+            mainview.h mainview.cpp mainview.ui
 
 
         )

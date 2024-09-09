@@ -87,9 +87,9 @@
 			null
 		],
 		[
-			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/mainwindow.h",
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/mainview.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"EWIEGA46WW/moc_mainview.cpp",
 			null
 		],
 		[
@@ -173,7 +173,7 @@
 			null
 		],
 		[
-			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/mainwindow.cpp",
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/mainview.cpp",
 			"MU",
 			null
 		],
