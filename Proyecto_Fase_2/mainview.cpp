@@ -22,11 +22,11 @@ void mainView::on_btn_Login_clicked()
     auto result = userController->logIn(gmail, pass);
 
     if ( result != nullptr ){
-        //if( result->getRol() == "Admin" ){
-        //Opciones de administrador
-        //}else{
-        //Opciones de usuario
-        //}
+        if( result->getRol() == "Admin" ){
+            tipo = ADMIN;
+        }else{
+            tipo = USUARIO;
+        }
 
     }
     accept();

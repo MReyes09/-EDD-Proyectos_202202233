@@ -81,6 +81,12 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/adminvew.h",
+			"MU",
+			"EWIEGA46WW/moc_adminvew.cpp",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/linkedlist.h",
 			"MU",
 			"EWIEGA46WW/moc_linkedlist.cpp",
@@ -99,6 +105,12 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/tablemodeluser.h",
+			"MU",
+			"EWIEGA46WW/moc_tablemodeluser.cpp",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user.h",
 			"MU",
 			"EWIEGA46WW/moc_user.cpp",
@@ -108,6 +120,12 @@
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user_controller.h",
 			"MU",
 			"EWIEGA46WW/moc_user_controller.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/usuarioswidget.h",
+			"MU",
+			"EWIEGA46WW/moc_usuarioswidget.cpp",
 			null
 		]
 	],
@@ -163,6 +181,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/adminvew.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/linkedlist.cpp",
 			"MU",
 			null
@@ -183,12 +206,22 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/tablemodeluser.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user.cpp",
 			"MU",
 			null
 		],
 		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user_controller.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/usuarioswidget.cpp",
 			"MU",
 			null
 		]

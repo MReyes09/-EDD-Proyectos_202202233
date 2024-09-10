@@ -12,11 +12,15 @@ class LinkedList
 {
 private:
     Node* head;
+
 public:
     LinkedList();
     ~LinkedList();
     void append(User* value);
     User* search_LogIn(QString email, QString password);
+    int size_List();
+    User* at(int index);
+    void print();
 
 };
 

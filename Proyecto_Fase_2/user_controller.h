@@ -24,6 +24,7 @@ public:
     void sigIn(QString name_, QString lastname_, QString email_, QString password_, QString birthdate_, QString rol_);
     void admin_add();
     User* logIn(QString gmai, QString password);
+    LinkedList& getListUsers();
 
 };
 

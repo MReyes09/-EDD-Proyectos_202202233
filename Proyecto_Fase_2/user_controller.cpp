@@ -60,3 +60,7 @@ User* User_Controller::logIn(QString gmail, QString password)
 
 }
 
+LinkedList& User_Controller::getListUsers()
+{
+    return list_Users;
+}

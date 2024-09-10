@@ -105,6 +105,30 @@ build CMakeFiles/Proyecto_Fase_2.dir/mainview.cpp.obj: CXX_COMPILER__Proyecto_Fa
   OBJECT_DIR = CMakeFiles\Proyecto_Fase_2.dir
   OBJECT_FILE_DIR = CMakeFiles\Proyecto_Fase_2.dir
 
+build CMakeFiles/Proyecto_Fase_2.dir/adminvew.cpp.obj: CXX_COMPILER__Proyecto_Fase_2_unscanned_Debug C$:/Users/matth/OneDrive/Documentos/Proyectos$ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/adminvew.cpp || cmake_object_order_depends_target_Proyecto_Fase_2
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles\Proyecto_Fase_2.dir\adminvew.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/include" -isystem C:/Qt/5.15.17/mingw81_64/include -isystem C:/Qt/5.15.17/mingw81_64/include/QtWidgets -isystem C:/Qt/5.15.17/mingw81_64/include/QtGui -isystem C:/Qt/5.15.17/mingw81_64/include/QtANGLE -isystem C:/Qt/5.15.17/mingw81_64/include/QtCore -isystem C:/Qt/5.15.17/mingw81_64/./mkspecs/win32-g++
+  OBJECT_DIR = CMakeFiles\Proyecto_Fase_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Proyecto_Fase_2.dir
+
+build CMakeFiles/Proyecto_Fase_2.dir/usuarioswidget.cpp.obj: CXX_COMPILER__Proyecto_Fase_2_unscanned_Debug C$:/Users/matth/OneDrive/Documentos/Proyectos$ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/usuarioswidget.cpp || cmake_object_order_depends_target_Proyecto_Fase_2
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles\Proyecto_Fase_2.dir\usuarioswidget.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/include" -isystem C:/Qt/5.15.17/mingw81_64/include -isystem C:/Qt/5.15.17/mingw81_64/include/QtWidgets -isystem C:/Qt/5.15.17/mingw81_64/include/QtGui -isystem C:/Qt/5.15.17/mingw81_64/include/QtANGLE -isystem C:/Qt/5.15.17/mingw81_64/include/QtCore -isystem C:/Qt/5.15.17/mingw81_64/./mkspecs/win32-g++
+  OBJECT_DIR = CMakeFiles\Proyecto_Fase_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Proyecto_Fase_2.dir
+
+build CMakeFiles/Proyecto_Fase_2.dir/tablemodeluser.cpp.obj: CXX_COMPILER__Proyecto_Fase_2_unscanned_Debug C$:/Users/matth/OneDrive/Documentos/Proyectos$ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/tablemodeluser.cpp || cmake_object_order_depends_target_Proyecto_Fase_2
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles\Proyecto_Fase_2.dir\tablemodeluser.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/Proyecto_Fase_2_autogen/include" -isystem C:/Qt/5.15.17/mingw81_64/include -isystem C:/Qt/5.15.17/mingw81_64/include/QtWidgets -isystem C:/Qt/5.15.17/mingw81_64/include/QtGui -isystem C:/Qt/5.15.17/mingw81_64/include/QtANGLE -isystem C:/Qt/5.15.17/mingw81_64/include/QtCore -isystem C:/Qt/5.15.17/mingw81_64/./mkspecs/win32-g++
+  OBJECT_DIR = CMakeFiles\Proyecto_Fase_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Proyecto_Fase_2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Proyecto_Fase_2
@@ -113,7 +137,7 @@ build CMakeFiles/Proyecto_Fase_2.dir/mainview.cpp.obj: CXX_COMPILER__Proyecto_Fa
 #############################################
 # Link the executable Proyecto_Fase_2.exe
 
-build Proyecto_Fase_2.exe: CXX_EXECUTABLE_LINKER__Proyecto_Fase_2_Debug CMakeFiles/Proyecto_Fase_2.dir/Proyecto_Fase_2_autogen/mocs_compilation.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/main.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/registerview.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/user.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/user_controller.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/linkedlist.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/mainview.cpp.obj | C$:/Qt/5.15.17/mingw81_64/lib/libQt5Widgets.a C$:/Qt/5.15.17/mingw81_64/lib/libQt5Gui.a C$:/Qt/5.15.17/mingw81_64/lib/libQt5Core.a C$:/Qt/5.15.17/mingw81_64/lib/libqtmain.a || Proyecto_Fase_2_autogen Proyecto_Fase_2_autogen_timestamp_deps
+build Proyecto_Fase_2.exe: CXX_EXECUTABLE_LINKER__Proyecto_Fase_2_Debug CMakeFiles/Proyecto_Fase_2.dir/Proyecto_Fase_2_autogen/mocs_compilation.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/main.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/registerview.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/user.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/user_controller.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/linkedlist.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/mainview.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/adminvew.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/usuarioswidget.cpp.obj CMakeFiles/Proyecto_Fase_2.dir/tablemodeluser.cpp.obj | C$:/Qt/5.15.17/mingw81_64/lib/libQt5Widgets.a C$:/Qt/5.15.17/mingw81_64/lib/libQt5Gui.a C$:/Qt/5.15.17/mingw81_64/lib/libQt5Core.a C$:/Qt/5.15.17/mingw81_64/lib/libqtmain.a || Proyecto_Fase_2_autogen Proyecto_Fase_2_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/5.15.17/mingw81_64/lib/libQt5Widgets.a  C:/Qt/5.15.17/mingw81_64/lib/libQt5Gui.a  C:/Qt/5.15.17/mingw81_64/lib/libQt5Core.a  C:/Qt/5.15.17/mingw81_64/lib/libqtmain.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -200,7 +224,7 @@ build Proyecto_Fase_2_autogen_timestamp_deps: phony
 #############################################
 # Utility command for Proyecto_Fase_2_autogen
 
-build Proyecto_Fase_2_autogen: phony CMakeFiles/Proyecto_Fase_2_autogen Proyecto_Fase_2_autogen/include/ui_registerview.h Proyecto_Fase_2_autogen/include/ui_mainview.h Proyecto_Fase_2_autogen/timestamp Proyecto_Fase_2_autogen/mocs_compilation.cpp Proyecto_Fase_2_autogen_timestamp_deps
+build Proyecto_Fase_2_autogen: phony CMakeFiles/Proyecto_Fase_2_autogen Proyecto_Fase_2_autogen/include/ui_registerview.h Proyecto_Fase_2_autogen/include/ui_mainview.h Proyecto_Fase_2_autogen/include/ui_adminvew.h Proyecto_Fase_2_autogen/include/ui_usuarioswidget.h Proyecto_Fase_2_autogen/timestamp Proyecto_Fase_2_autogen/mocs_compilation.cpp Proyecto_Fase_2_autogen_timestamp_deps
 
 
 #############################################
@@ -217,7 +241,7 @@ build Proyecto_Fase_2_autogen/timestamp Proyecto_Fase_2_autogen/mocs_compilation
 #############################################
 # Phony custom command for CMakeFiles\Proyecto_Fase_2_autogen
 
-build CMakeFiles/Proyecto_Fase_2_autogen Proyecto_Fase_2_autogen/include/ui_registerview.h Proyecto_Fase_2_autogen/include/ui_mainview.h | ${cmake_ninja_workdir}CMakeFiles/Proyecto_Fase_2_autogen ${cmake_ninja_workdir}Proyecto_Fase_2_autogen/include/ui_registerview.h ${cmake_ninja_workdir}Proyecto_Fase_2_autogen/include/ui_mainview.h: phony Proyecto_Fase_2_autogen/timestamp || Proyecto_Fase_2_autogen_timestamp_deps
+build CMakeFiles/Proyecto_Fase_2_autogen Proyecto_Fase_2_autogen/include/ui_registerview.h Proyecto_Fase_2_autogen/include/ui_mainview.h Proyecto_Fase_2_autogen/include/ui_adminvew.h Proyecto_Fase_2_autogen/include/ui_usuarioswidget.h | ${cmake_ninja_workdir}CMakeFiles/Proyecto_Fase_2_autogen ${cmake_ninja_workdir}Proyecto_Fase_2_autogen/include/ui_registerview.h ${cmake_ninja_workdir}Proyecto_Fase_2_autogen/include/ui_mainview.h ${cmake_ninja_workdir}Proyecto_Fase_2_autogen/include/ui_adminvew.h ${cmake_ninja_workdir}Proyecto_Fase_2_autogen/include/ui_usuarioswidget.h: phony Proyecto_Fase_2_autogen/timestamp || Proyecto_Fase_2_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

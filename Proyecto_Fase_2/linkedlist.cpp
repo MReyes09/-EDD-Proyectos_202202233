@@ -4,8 +4,7 @@
 #include <cstdlib>
 #include <QMessageBox>
 #include <QString>
-
-using namespace std;
+#include <String>
 
 LinkedList::LinkedList() {
     head = nullptr;
@@ -68,4 +67,46 @@ User* LinkedList::search_LogIn(QString email, QString password)
     }
     QMessageBox::warning(nullptr, "Error", "El correo o la contraseña no corresponden a ningún usuario");
     return nullptr;
+}
+
+int LinkedList::size_List()
+{
+    int count = 0;
+    Node* current = head;
+    while (current) {
+        count++;
+        current = current->next;
+    }
+    return count;
+}
+
+// Método para acceder a un usuario por índice
+User* LinkedList::at(int index){
+
+    int count = 0;
+    Node* current = head;
+    while (current) {
+        if (count == index) {
+            return current->user;
+        }
+        count++;
+        current = current->next;
+    }
+    return nullptr;
+}
+
+void LinkedList::print()
+{
+    Node *temp = head;
+    if( head == nullptr ){
+        std::cout << "La lista esta vacia";
+    }
+    while (temp != nullptr)
+    {
+        int id = temp->user->getIdUser();
+        string correo = temp->user->getEmail().toStdString();
+        string mensaje = " || " + to_string(id) + ") " + correo;
+        std::cout << correo + " " + mensaje;
+        temp = temp->next;
+    }
 }

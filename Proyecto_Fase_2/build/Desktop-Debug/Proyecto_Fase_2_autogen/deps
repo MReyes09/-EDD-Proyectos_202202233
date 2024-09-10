@@ -1,4 +1,8 @@
 Proyecto_Fase_2_autogen/timestamp: \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/QAbstractTableModel \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/QObject \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/QString \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/qabstractitemmodel.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qalgorithms.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qarraydata.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qatomic.h \
@@ -23,6 +27,7 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qline.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qlist.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qlogging.h \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/qmap.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qmargins.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qmetatype.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qnamespace.h \
@@ -52,6 +57,7 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qsystemdetection.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qtcore-config.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qtypeinfo.h \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/qvariant.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qvarlengtharray.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qvector.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qversiontagging.h \
@@ -61,6 +67,7 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Qt/5.15.17/mingw81_64/include/QtGui/qfont.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtGui/qfontinfo.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtGui/qfontmetrics.h \
+	C:/Qt/5.15.17/mingw81_64/include/QtGui/qicon.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtGui/qimage.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtGui/qkeysequence.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtGui/qmatrix.h \
@@ -78,8 +85,12 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Qt/5.15.17/mingw81_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtGui/qwindowdefs_win.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/QDialog \
+	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/QMainWindow \
+	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/QWidget \
 	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qdialog.h \
+	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qsizepolicy.h \
+	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qtabwidget.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qtwidgets-config.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtWidgets/qwidget.h \
@@ -137,6 +148,8 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/CMakeLists.txt \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/Node.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/adminvew.cpp \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/adminvew.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
@@ -149,10 +162,14 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/mainview.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/registerview.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/registerview.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/tablemodeluser.cpp \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/tablemodeluser.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user_controller.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user_controller.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/usuarioswidget.cpp \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/usuarioswidget.h \
 	C:/msys64/ucrt64/include/_mingw.h \
 	C:/msys64/ucrt64/include/_mingw_mac.h \
 	C:/msys64/ucrt64/include/_mingw_off_t.h \
@@ -353,6 +370,8 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
 	C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
 	C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/adminvew.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/mainview.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/registerview.ui \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/usuarioswidget.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe
