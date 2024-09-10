@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include "user_controller.h"
-//#include "tablemodeluser.h"
 
 namespace Ui {
 class UsuariosWidget;
@@ -19,8 +18,7 @@ public:
 
 private:
     Ui::UsuariosWidget *ui;
-    User_Controller *ctrUser;
-    //TableModelUser *mTable;
+    User_Controller* ctrUser;
 };
 
 #endif // USUARIOSWIDGET_H

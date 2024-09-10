@@ -14,9 +14,6 @@ AdminVew::AdminVew(int tipo, QWidget *parent)
 {
     setCentralWidget(ui->mdiArea);
     ui->setupUi(this);
-    if (tipo == mainView::ADMIN){
-        on_actionAdministrar_Usuarios_triggered();
-    }
 }
 
 AdminVew::~AdminVew()

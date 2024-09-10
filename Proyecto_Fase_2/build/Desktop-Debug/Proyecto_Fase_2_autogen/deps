@@ -1,8 +1,5 @@
 Proyecto_Fase_2_autogen/timestamp: \
-	C:/Qt/5.15.17/mingw81_64/include/QtCore/QAbstractTableModel \
-	C:/Qt/5.15.17/mingw81_64/include/QtCore/QObject \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/QString \
-	C:/Qt/5.15.17/mingw81_64/include/QtCore/qabstractitemmodel.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qalgorithms.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qarraydata.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qatomic.h \
@@ -27,7 +24,6 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qline.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qlist.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qlogging.h \
-	C:/Qt/5.15.17/mingw81_64/include/QtCore/qmap.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qmargins.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qmetatype.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qnamespace.h \
@@ -57,7 +53,6 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qsystemdetection.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qtcore-config.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qtypeinfo.h \
-	C:/Qt/5.15.17/mingw81_64/include/QtCore/qvariant.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qvarlengtharray.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qvector.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qversiontagging.h \
@@ -162,8 +157,6 @@ Proyecto_Fase_2_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/mainview.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/registerview.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/registerview.h \
-	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/tablemodeluser.cpp \
-	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/tablemodeluser.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase_2/user_controller.cpp \

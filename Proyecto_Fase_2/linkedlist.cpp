@@ -4,7 +4,8 @@
 #include <cstdlib>
 #include <QMessageBox>
 #include <QString>
-#include <String>
+#include <QDebug>
+#include <string>
 
 LinkedList::LinkedList() {
     head = nullptr;
@@ -73,6 +74,7 @@ int LinkedList::size_List()
 {
     int count = 0;
     Node* current = head;
+    //qDebug() << head->user->getIdUser();
     while (current) {
         count++;
         current = current->next;
@@ -97,6 +99,7 @@ User* LinkedList::at(int index){
 
 void LinkedList::print()
 {
+    std::cout << "Aqui estamos" << endl;
     Node *temp = head;
     if( head == nullptr ){
         std::cout << "La lista esta vacia";
@@ -109,4 +112,6 @@ void LinkedList::print()
         std::cout << correo + " " + mensaje;
         temp = temp->next;
     }
+
+    QMessageBox::information(nullptr, "Éxito", "Estamos en el print!");
 }

@@ -1,12 +1,8 @@
 #include "user_controller.h"
 #include <iostream>
-#include <locale>
 #include <ctime>
-#include <iomanip>
-#include <sstream>
-#include <fstream>
-#include <limits>
 #include <QString>
+#include <string>
 using namespace std;
 
 // Inicializar el puntero a la instancia como nullptr
@@ -60,7 +56,18 @@ User* User_Controller::logIn(QString gmail, QString password)
 
 }
 
-LinkedList& User_Controller::getListUsers()
+User* User_Controller::addUserTable(int index)
+{
+    return list_Users.at(index);
+}
+
+int User_Controller::sizeList()
+{
+    return list_Users.size_List();
+}
+
+
+LinkedList& User_Controller::getListaUsers()
 {
     return list_Users;
 }

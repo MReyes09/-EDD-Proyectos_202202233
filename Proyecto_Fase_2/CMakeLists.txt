@@ -43,7 +43,7 @@ else()
             mainview.h mainview.cpp mainview.ui
             adminvew.h adminvew.cpp adminvew.ui
             usuarioswidget.h usuarioswidget.cpp usuarioswidget.ui
-            tablemodeluser.h tablemodeluser.cpp
+
 
 
 

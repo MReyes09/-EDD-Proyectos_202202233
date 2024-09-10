@@ -2,5 +2,4 @@
 #include "EWIEGA46WW/moc_adminvew.cpp"
 #include "EWIEGA46WW/moc_mainview.cpp"
 #include "EWIEGA46WW/moc_registerview.cpp"
-#include "EWIEGA46WW/moc_tablemodeluser.cpp"
 #include "EWIEGA46WW/moc_usuarioswidget.cpp"

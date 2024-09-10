@@ -3,7 +3,6 @@
 
 //Archivos del proyecto
 #include "user.h"
-//linkedlist.cpp
 #include "linkedlist.h"
 
 class User_Controller
@@ -24,7 +23,10 @@ public:
     void sigIn(QString name_, QString lastname_, QString email_, QString password_, QString birthdate_, QString rol_);
     void admin_add();
     User* logIn(QString gmai, QString password);
-    LinkedList& getListUsers();
+    User* addUserTable(int index);
+    int sizeList();
+    LinkedList& getListaUsers();
+    void printUsers();
 
 };
 
