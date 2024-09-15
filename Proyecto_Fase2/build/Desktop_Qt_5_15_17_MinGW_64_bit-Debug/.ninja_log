@@ -1,0 +1,76 @@
+# ninja log v6
+23	252	7480662037383619	Proyecto_Fase2_autogen/mocs_compilation.cpp	2326ce2a0abc5052
+264	5428	7480662039840838	CMakeFiles/Proyecto_Fase2.dir/main.cpp.obj	e32e86d2e9c9191f
+190	3138	7479578012072186	CMakeFiles/Proyecto_Fase2.dir/linkedlist.cpp.obj	f0644d9e12f24498
+23	252	7480662037383619	Proyecto_Fase2_autogen/timestamp	2326ce2a0abc5052
+306	5782	7480662040153487	CMakeFiles/Proyecto_Fase2.dir/widgetcargasmasivas.cpp.obj	1db7932dd032557f
+23	252	7480662037383619	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/mocs_compilation.cpp	2326ce2a0abc5052
+258	5235	7480662039807069	CMakeFiles/Proyecto_Fase2.dir/ventanabase.cpp.obj	b09f795e74b835bc
+23	252	7480662037383619	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/timestamp	2326ce2a0abc5052
+254	4811	7480662039767059	CMakeFiles/Proyecto_Fase2.dir/Proyecto_Fase2_autogen/mocs_compilation.cpp.obj	260db0bdda6906f
+7905	8336	7480662116134462	Proyecto_Fase2.exe	b6b804ab55184467
+628	2458	7479567702679519	CMakeFiles/Proyecto_Fase2.dir/hola.cpp.obj	208b15f971d0835a
+269	4547	7480662039840838	CMakeFiles/Proyecto_Fase2.dir/menu.cpp.obj	182f1336d388372
+185	1535	7479578012072186	CMakeFiles/Proyecto_Fase2.dir/user.cpp.obj	fc9fb84b7ba12ae3
+288	5558	7480662039997137	CMakeFiles/Proyecto_Fase2.dir/viewsctr.cpp.obj	f4764c9ee4c55fe1
+4811	7820	7480662085333795	CMakeFiles/Proyecto_Fase2.dir/widgetreports.cpp.obj	4eb02a973e0b0251
+282	6355	7480662039997137	CMakeFiles/Proyecto_Fase2.dir/widget_sigup.cpp.obj	19e2804648f10336
+265	5475	7480559797040076	CMakeFiles/Proyecto_Fase2.dir/user_controller.cpp.obj	234f8df51ec6e91
+275	5487	7480662039840838	CMakeFiles/Proyecto_Fase2.dir/widget_login.cpp.obj	70046167199915fb
+300	6037	7480662040153487	CMakeFiles/Proyecto_Fase2.dir/widget_ctruser_admin.cpp.obj	d235dd14ee216382
+294	5111	7480662040153487	CMakeFiles/Proyecto_Fase2.dir/widgetctradmin.cpp.obj	64df76ed72ae68cb
+2989	4398	7479674033735453	CMakeFiles/Proyecto_Fase2.dir/linkedlist_sol.cpp.obj	a11782f416830fd3
+4547	7556	7480662082695452	CMakeFiles/Proyecto_Fase2.dir/dialog_reporte.cpp.obj	47721779ccdfb8b8
+5111	7746	7480662088334784	CMakeFiles/Proyecto_Fase2.dir/widgetctruser.cpp.obj	17dd4f8961bd1ae6
+5236	7905	7480662089584176	CMakeFiles/Proyecto_Fase2.dir/widgetperfil.cpp.obj	fb4e4a2d5e70fadd
+27	522	7480702795076350	Proyecto_Fase2_autogen/timestamp	2326ce2a0abc5052
+27	522	7480702795076350	Proyecto_Fase2_autogen/mocs_compilation.cpp	2326ce2a0abc5052
+27	522	7480702795076350	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/timestamp	2326ce2a0abc5052
+27	522	7480702795076350	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/mocs_compilation.cpp	2326ce2a0abc5052
+537	4656	7480702795811005	CMakeFiles/Proyecto_Fase2.dir/menu.cpp.obj	182f1336d388372
+558	4733	7480702796123538	CMakeFiles/Proyecto_Fase2.dir/viewsctr.cpp.obj	f4764c9ee4c55fe1
+527	4788	7480702795811005	CMakeFiles/Proyecto_Fase2.dir/ventanabase.cpp.obj	b09f795e74b835bc
+544	5625	7480702795967299	CMakeFiles/Proyecto_Fase2.dir/widget_login.cpp.obj	70046167199915fb
+532	5801	7480702795811005	CMakeFiles/Proyecto_Fase2.dir/main.cpp.obj	e32e86d2e9c9191f
+584	6218	7480702796279831	CMakeFiles/Proyecto_Fase2.dir/widgetcargasmasivas.cpp.obj	1db7932dd032557f
+523	6225	7480702795799819	CMakeFiles/Proyecto_Fase2.dir/Proyecto_Fase2_autogen/mocs_compilation.cpp.obj	260db0bdda6906f
+563	6345	7480702796123538	CMakeFiles/Proyecto_Fase2.dir/widgetctradmin.cpp.obj	64df76ed72ae68cb
+550	6383	7480702795967299	CMakeFiles/Proyecto_Fase2.dir/widget_sigup.cpp.obj	19e2804648f10336
+578	6849	7480702796279831	CMakeFiles/Proyecto_Fase2.dir/widget_ctruser_admin.cpp.obj	d235dd14ee216382
+4656	7706	7480702837136222	CMakeFiles/Proyecto_Fase2.dir/dialog_reporte.cpp.obj	47721779ccdfb8b8
+4733	7896	7480702837912367	CMakeFiles/Proyecto_Fase2.dir/widgetreports.cpp.obj	4eb02a973e0b0251
+4788	7961	7480702838462122	CMakeFiles/Proyecto_Fase2.dir/widgetctruser.cpp.obj	17dd4f8961bd1ae6
+5625	8283	7480702846825308	CMakeFiles/Proyecto_Fase2.dir/widgetperfil.cpp.obj	fb4e4a2d5e70fadd
+5801	8392	7480702848585759	CMakeFiles/Proyecto_Fase2.dir/widgetpublicaciones.cpp.obj	22ef1ee00e730f61
+8393	8878	7480702874503713	Proyecto_Fase2.exe	e7a58b68f5f29423
+20	168	7480727085229916	Proyecto_Fase2_autogen/timestamp	2326ce2a0abc5052
+20	168	7480727085229916	Proyecto_Fase2_autogen/mocs_compilation.cpp	2326ce2a0abc5052
+20	168	7480727085229916	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/timestamp	2326ce2a0abc5052
+20	168	7480727085229916	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/mocs_compilation.cpp	2326ce2a0abc5052
+176	3687	7480727086883404	CMakeFiles/Proyecto_Fase2.dir/main.cpp.obj	e32e86d2e9c9191f
+169	3922	7480727086813324	CMakeFiles/Proyecto_Fase2.dir/Proyecto_Fase2_autogen/mocs_compilation.cpp.obj	260db0bdda6906f
+180	4209	7480727086894954	CMakeFiles/Proyecto_Fase2.dir/menu.cpp.obj	182f1336d388372
+194	4429	7480727087051242	CMakeFiles/Proyecto_Fase2.dir/viewsctr.cpp.obj	f4764c9ee4c55fe1
+173	4514	7480727086853391	CMakeFiles/Proyecto_Fase2.dir/ventanabase.cpp.obj	b09f795e74b835bc
+207	5025	7480727087051242	CMakeFiles/Proyecto_Fase2.dir/widgetctradmin.cpp.obj	64df76ed72ae68cb
+20	180	7480727853949216	Proyecto_Fase2_autogen/timestamp	2326ce2a0abc5052
+20	180	7480727853949216	Proyecto_Fase2_autogen/mocs_compilation.cpp	2326ce2a0abc5052
+20	180	7480727853949216	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/timestamp	2326ce2a0abc5052
+20	180	7480727853949216	C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/mocs_compilation.cpp	2326ce2a0abc5052
+188	3805	7480727855640908	CMakeFiles/Proyecto_Fase2.dir/main.cpp.obj	e32e86d2e9c9191f
+184	3821	7480727855640908	CMakeFiles/Proyecto_Fase2.dir/ventanabase.cpp.obj	b09f795e74b835bc
+181	4070	7480727855627538	CMakeFiles/Proyecto_Fase2.dir/Proyecto_Fase2_autogen/mocs_compilation.cpp.obj	260db0bdda6906f
+221	4249	7480727856033065	CMakeFiles/Proyecto_Fase2.dir/widgetctradmin.cpp.obj	64df76ed72ae68cb
+209	4644	7480727855896554	CMakeFiles/Proyecto_Fase2.dir/viewsctr.cpp.obj	f4764c9ee4c55fe1
+192	4854	7480727855735596	CMakeFiles/Proyecto_Fase2.dir/menu.cpp.obj	182f1336d388372
+197	5922	7480727855795735	CMakeFiles/Proyecto_Fase2.dir/widget_login.cpp.obj	70046167199915fb
+202	6082	7480727855795735	CMakeFiles/Proyecto_Fase2.dir/widget_sigup.cpp.obj	19e2804648f10336
+225	6171	7480727856033065	CMakeFiles/Proyecto_Fase2.dir/widget_ctruser_admin.cpp.obj	d235dd14ee216382
+215	6381	7480727855956686	CMakeFiles/Proyecto_Fase2.dir/user_controller.cpp.obj	234f8df51ec6e91
+3821	7412	7480727892034296	CMakeFiles/Proyecto_Fase2.dir/dialog_reporte.cpp.obj	47721779ccdfb8b8
+3805	7708	7480727891877967	CMakeFiles/Proyecto_Fase2.dir/widgetcargasmasivas.cpp.obj	1db7932dd032557f
+4250	7938	7480727896323465	CMakeFiles/Proyecto_Fase2.dir/widgetctruser.cpp.obj	17dd4f8961bd1ae6
+4070	8023	7480727894526538	CMakeFiles/Proyecto_Fase2.dir/widgetreports.cpp.obj	4eb02a973e0b0251
+4644	8075	7480727900272570	CMakeFiles/Proyecto_Fase2.dir/widgetperfil.cpp.obj	fb4e4a2d5e70fadd
+4855	8239	7480727902379656	CMakeFiles/Proyecto_Fase2.dir/widgetpublicaciones.cpp.obj	22ef1ee00e730f61
+8240	8699	7480727936084105	Proyecto_Fase2.exe	e7a58b68f5f29423

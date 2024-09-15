@@ -1,0 +1,376 @@
+{
+	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
+	"BUILD_DIR" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2",
+	"CMAKE_EXECUTABLE" : "C:/Qt/Tools/CMake_64/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/CMakeLists.txt",
+		"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
+		"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake",
+		"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/GNU.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake",
+		"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeRCInformation.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeParseArguments.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"C:/Qt/5.15.17/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeParseArguments.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "Proyecto_Fase2_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/Abb.h",
+			"MU",
+			"EWIEGA46WW/moc_Abb.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/Matriz.h",
+			"MU",
+			"EWIEGA46WW/moc_Matriz.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/Node.h",
+			"MU",
+			"EWIEGA46WW/moc_Node.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/Node_Sol.h",
+			"MU",
+			"EWIEGA46WW/moc_Node_Sol.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/Solicitud.h",
+			"MU",
+			"EWIEGA46WW/moc_Solicitud.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialog_reporte.h",
+			"MU",
+			"EWIEGA46WW/moc_dialog_reporte.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/dobleList.h",
+			"MU",
+			"EWIEGA46WW/moc_dobleList.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist.h",
+			"MU",
+			"EWIEGA46WW/moc_linkedlist.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist_sol.h",
+			"MU",
+			"EWIEGA46WW/moc_linkedlist_sol.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/main.h",
+			"MU",
+			"EWIEGA46WW/moc_main.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/menu.h",
+			"MU",
+			"EWIEGA46WW/moc_menu.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/publicacion.h",
+			"MU",
+			"EWIEGA46WW/moc_publicacion.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/user.h",
+			"MU",
+			"EWIEGA46WW/moc_user.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/user_controller.h",
+			"MU",
+			"EWIEGA46WW/moc_user_controller.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/ventanabase.h",
+			"MU",
+			"EWIEGA46WW/moc_ventanabase.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/viewsctr.h",
+			"MU",
+			"EWIEGA46WW/moc_viewsctr.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_ctruser_admin.h",
+			"MU",
+			"EWIEGA46WW/moc_widget_ctruser_admin.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_login.h",
+			"MU",
+			"EWIEGA46WW/moc_widget_login.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_sigup.h",
+			"MU",
+			"EWIEGA46WW/moc_widget_sigup.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetcargasmasivas.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetcargasmasivas.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetctradmin.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetctradmin.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetctruser.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetctruser.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetperfil.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetperfil.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetpublicaciones.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetpublicaciones.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreports.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetreports.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"C:/Qt/5.15.17/mingw81_64/include",
+		"C:/Qt/5.15.17/mingw81_64/include/QtWidgets",
+		"C:/Qt/5.15.17/mingw81_64/include/QtGui",
+		"C:/Qt/5.15.17/mingw81_64/include/QtANGLE",
+		"C:/Qt/5.15.17/mingw81_64/include/QtCore",
+		"C:/Qt/5.15.17/mingw81_64/mkspecs/win32-g++",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+		"C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"C:/Qt/Tools/mingw810_64/bin/g++.exe",
+		"-std=gnu++17",
+		"-dM",
+		"-E",
+		"-c",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/Proyecto_Fase2_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "C:/Qt/5.15.17/mingw81_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "C:/Qt/5.15.17/mingw81_64/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/Proyecto_Fase2_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialog_reporte.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist_sol.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/menu.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/user.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/user_controller.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/ventanabase.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/viewsctr.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_ctruser_admin.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_login.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_sigup.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetcargasmasivas.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetctradmin.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetctruser.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetperfil.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetpublicaciones.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreports.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

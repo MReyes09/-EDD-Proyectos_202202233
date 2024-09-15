@@ -1,9 +1,0 @@
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/Proyecto_Fase_2.dir
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/install.dir
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/Proyecto_Fase_2_autogen_timestamp_deps.dir
-C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase_2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/Proyecto_Fase_2_autogen.dir
