@@ -93,6 +93,12 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/NodePost.h",
+			"MU",
+			"EWIEGA46WW/moc_NodePost.cpp",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/Node_Sol.h",
 			"MU",
 			"EWIEGA46WW/moc_Node_Sol.cpp",
@@ -105,9 +111,21 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/avl.h",
+			"MU",
+			"EWIEGA46WW/moc_avl.cpp",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialog_reporte.h",
 			"MU",
 			"EWIEGA46WW/moc_dialog_reporte.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialognewpost.h",
+			"MU",
+			"EWIEGA46WW/moc_dialognewpost.cpp",
 			null
 		],
 		[
@@ -126,6 +144,12 @@
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist_sol.h",
 			"MU",
 			"EWIEGA46WW/moc_linkedlist_sol.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlistpost.h",
+			"MU",
+			"EWIEGA46WW/moc_linkedlistpost.cpp",
 			null
 		],
 		[
@@ -189,6 +213,12 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetbuscaruser.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetbuscaruser.cpp",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetcargasmasivas.h",
 			"MU",
 			"EWIEGA46WW/moc_widgetcargasmasivas.cpp",
@@ -222,6 +252,12 @@
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreports.h",
 			"MU",
 			"EWIEGA46WW/moc_widgetreports.cpp",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetsolicitudes.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetsolicitudes.cpp",
 			null
 		]
 	],
@@ -282,12 +318,22 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialognewpost.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist.cpp",
 			"MU",
 			null
 		],
 		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist_sol.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlistpost.cpp",
 			"MU",
 			null
 		],
@@ -337,6 +383,11 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetbuscaruser.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetcargasmasivas.cpp",
 			"MU",
 			null
@@ -363,6 +414,11 @@
 		],
 		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreports.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetsolicitudes.cpp",
 			"MU",
 			null
 		]

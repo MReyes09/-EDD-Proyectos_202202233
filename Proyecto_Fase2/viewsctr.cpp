@@ -58,3 +58,14 @@ WidgetPublicaciones* ViewsCtr::getInstanceWidgetPost()
     return new WidgetPublicaciones();
 }
 
+DialogNewPost* ViewsCtr::getInstanceDialogNewPost(){
+    return new DialogNewPost();
+}
+
+WidgetBuscarUser* ViewsCtr::getInstanceWidgetBuscarUser(){
+    return new WidgetBuscarUser();
+}
+
+WidgetSolicitudes* ViewsCtr::getInstanceWidgetSolicitudes(){
+    return new WidgetSolicitudes();
+}

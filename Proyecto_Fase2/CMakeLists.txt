@@ -61,6 +61,12 @@ else()
             widgetctruser.h widgetctruser.cpp widgetctruser.ui
             widgetperfil.h widgetperfil.cpp widgetperfil.ui
             widgetpublicaciones.h widgetpublicaciones.cpp widgetpublicaciones.ui
+            linkedlistpost.h linkedlistpost.cpp
+            NodePost.h
+            dialognewpost.h dialognewpost.cpp dialognewpost.ui
+            widgetbuscaruser.h widgetbuscaruser.cpp widgetbuscaruser.ui
+            avl.h
+            widgetsolicitudes.h widgetsolicitudes.cpp widgetsolicitudes.ui
 
         )
     endif()

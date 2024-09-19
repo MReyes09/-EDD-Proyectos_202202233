@@ -131,8 +131,6 @@ User* LinkedList::search_By_Id(int id, QString correo){
         }
         temp = temp->next;
     }
-
-    qDebug("El id que has compartido no corresponde a ningún usuario");
     return nullptr;
 
 }

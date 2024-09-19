@@ -13,6 +13,7 @@
 
 #include "publicacion.h"
 #include "linkedlist_sol.h"
+#include "linkedlistpost.h"
 #include "Abb.h"
 
 using namespace std;
@@ -161,14 +162,35 @@ public:
 
             QString email = current->data->email;
             if( email == user_email || amigos.search(email, user_email)){
-                arbolGenerado->insert(current->data->fecha);
+                arbolGenerado->insert(current->data->fecha, current->data);
             }
 
             current = current->next;
 
         }while(current != nullptr);
+        return arbolGenerado;
+    }
 
-        return nullptr;
+    LinkedListPost* extractPostAll(LinkedList_Sol& amigos, QString user_email)
+    {
+        NodeD* current = head;
+        LinkedListPost* posts = new LinkedListPost();
+
+        if (current == nullptr) {
+            QMessageBox::information(nullptr, "Carga De Publicaciones", "¡No tienes publicaciones para ver ahora!");
+            return nullptr;
+        }
+        do {
+
+            QString email = current->data->email;
+            if( email == user_email || amigos.search(email, user_email)){
+                posts->append(current->data);
+            }
+
+            current = current->next;
+
+        }while(current != nullptr);
+        return posts;
     }
 
     ~DoublyLinkedList(){

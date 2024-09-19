@@ -1,5 +1,7 @@
 C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/EWIEGA46WW/moc_widgetpublicaciones.cpp: C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetpublicaciones.h \
   C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/moc_predefs.h \
+  C:/Qt/5.15.17/mingw81_64/include/QtCore/QDate \
+  C:/Qt/5.15.17/mingw81_64/include/QtCore/QString \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qalgorithms.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qarraydata.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qatomic.h \
@@ -13,6 +15,7 @@ C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyec
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qcontainerfwd.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qdatastream.h \
+  C:/Qt/5.15.17/mingw81_64/include/QtCore/qdatetime.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qflags.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qgenericatomic.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qglobal.h \
@@ -255,4 +258,6 @@ C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyec
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
+  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/NodePost.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/publicacion.h

@@ -1,4 +1,6 @@
 Proyecto_Fase2_autogen/timestamp: \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/QDate \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/QString \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qalgorithms.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qarraydata.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qatomic.h \
@@ -12,6 +14,7 @@ Proyecto_Fase2_autogen/timestamp: \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qcontainerfwd.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qcontainertools_impl.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qdatastream.h \
+	C:/Qt/5.15.17/mingw81_64/include/QtCore/qdatetime.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qflags.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qgenericatomic.h \
 	C:/Qt/5.15.17/mingw81_64/include/QtCore/qglobal.h \
@@ -317,8 +320,10 @@ Proyecto_Fase2_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/CMakeLists.txt \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/Matriz.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/Node.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/NodePost.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/Node_Sol.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/Solicitud.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/avl.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
@@ -326,11 +331,15 @@ Proyecto_Fase2_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/moc_predefs.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialog_reporte.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialog_reporte.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialognewpost.cpp \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialognewpost.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/dobleList.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist_sol.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist_sol.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlistpost.cpp \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlistpost.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/main.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/main.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/menu.cpp \
@@ -350,6 +359,8 @@ Proyecto_Fase2_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_login.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_sigup.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_sigup.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetbuscaruser.cpp \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetbuscaruser.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetcargasmasivas.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetcargasmasivas.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetctradmin.cpp \
@@ -362,15 +373,20 @@ Proyecto_Fase2_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetpublicaciones.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreports.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreports.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetsolicitudes.cpp \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetsolicitudes.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialog_reporte.ui \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/dialognewpost.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/ventanabase.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_ctruser_admin.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_login.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_sigup.ui \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetbuscaruser.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetcargasmasivas.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetctradmin.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetctruser.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetperfil.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetpublicaciones.ui \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreports.ui \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetsolicitudes.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

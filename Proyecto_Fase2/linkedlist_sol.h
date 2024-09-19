@@ -11,7 +11,7 @@ using namespace std;
 class LinkedList_Sol{
 
 public:
-
+    int contador;
     Node_Sol* head;
     LinkedList_Sol();
     ~LinkedList_Sol();

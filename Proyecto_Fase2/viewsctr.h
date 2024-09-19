@@ -11,10 +11,13 @@
 #include "widget_ctruser_admin.h"
 #include "widgetcargasmasivas.h"
 #include "widgetreports.h"
-#include "dialog_reporte.h"
 #include "widgetctruser.h"
 #include "widgetperfil.h"
 #include "widgetpublicaciones.h"
+#include "dialog_reporte.h"
+#include "dialognewpost.h"
+#include "widgetbuscaruser.h"
+#include "widgetsolicitudes.h"
 
 class ViewsCtr
 {
@@ -32,12 +35,17 @@ public:
     Widget_CtrUser_Admin* getInstanceWidget_CtrUser_Admin();
     WidgetCargasMasivas* getInstanceWidgetCargasMasivas();
     WidgetReports* getInstanceWidgetReports();
+
     Dialog_Reporte* getInstanceDialogReporte();
 
     //USER
     WidgetctrUser* getInstanceWidgetctrUser();
     WidgetPerfil* getInstanceWidgetPerfil();
     WidgetPublicaciones* getInstanceWidgetPost();
+    WidgetBuscarUser* getInstanceWidgetBuscarUser();
+    WidgetSolicitudes* getInstanceWidgetSolicitudes();
+
+    DialogNewPost* getInstanceDialogNewPost();
 };
 
 #endif // VIEWSCTR_H

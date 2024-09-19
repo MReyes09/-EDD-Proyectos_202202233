@@ -2,7 +2,6 @@
 #include "LinkedList_Sol.h"
 
 #include <iostream>
-#include <fstream>
 #include <cstdlib>
 #include <QString>
 #include <QMessageBox>
@@ -12,6 +11,7 @@ using namespace std;
 LinkedList_Sol::LinkedList_Sol()
 {
     head = nullptr;
+    contador = 0;
 }
 
 bool LinkedList_Sol::append(Solicitud* value, QString email_User){
@@ -76,6 +76,7 @@ bool LinkedList_Sol::append(Solicitud* value, QString email_User){
 
         }
         temp->next = newNode_Sol;
+        contador++;
         return true;
     }
 }
@@ -131,11 +132,13 @@ void LinkedList_Sol::push(Solicitud* value){
     if (head == nullptr)
     {
         head = newNode;
+        contador++;
     }
     else
     {
         newNode->next = head;
         head = newNode;
+        contador++;
     }
 }
 
@@ -174,6 +177,7 @@ bool LinkedList_Sol::append_Friend(Solicitud* value){
     Node_Sol* newNode_Sol = new Node_Sol(value);
     if (head == nullptr) {
         head = newNode_Sol;
+        contador++;
         return true;
     }
     else {
@@ -182,6 +186,7 @@ bool LinkedList_Sol::append_Friend(Solicitud* value){
             temp = temp->next;
         }
         temp->next = newNode_Sol;
+        contador++;
         return true;
     }
 

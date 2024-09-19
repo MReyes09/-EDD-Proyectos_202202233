@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::WidgetPerfil *ui;
+    void initComponents();
 };
 
 #endif // WIDGETPERFIL_H

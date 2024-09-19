@@ -22,6 +22,10 @@ private slots:
 
     void on_btn_WPost_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::WidgetctrUser *ui;
 };

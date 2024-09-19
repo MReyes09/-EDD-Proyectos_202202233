@@ -1,7 +1,12 @@
 #include "widgetctruser.h"
 #include "ui_widgetctruser.h"
 #include "viewsctr.h"
+#include "user_controller.h"
+#include "linkedlistpost.h"
+#include "Abb.h"
+
 #include <QWidget>
+#include <QDebug>
 
 WidgetctrUser::WidgetctrUser(QWidget *parent)
     : QWidget(parent)
@@ -57,9 +62,27 @@ void WidgetctrUser::cambiarWidget(QWidget* widgetChange)
 
 void WidgetctrUser::on_btn_WPost_clicked()
 {
-
+    User_Controller* ctrUser = User_Controller::getInstance();
+    ctrUser->arbolAbb();
+    ctrUser->allList();
     ViewsCtr* viewsCtr = new ViewsCtr();
     QWidget* widgetChange = viewsCtr->getInstanceWidgetPost();
+    cambiarWidget(widgetChange);
+}
+
+
+void WidgetctrUser::on_pushButton_clicked()
+{
+    ViewsCtr* viewsCtr = new ViewsCtr();
+    QWidget* widgetChange = viewsCtr->getInstanceWidgetBuscarUser();
+    cambiarWidget(widgetChange);
+}
+
+
+void WidgetctrUser::on_pushButton_3_clicked()
+{
+    ViewsCtr* viewsCtr = new ViewsCtr();
+    QWidget* widgetChange = viewsCtr->getInstanceWidgetSolicitudes();
     cambiarWidget(widgetChange);
 }
 

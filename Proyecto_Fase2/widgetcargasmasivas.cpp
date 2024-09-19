@@ -42,7 +42,7 @@ QString WidgetCargasMasivas::get_Path()
     QString fileName = QFileDialog::getOpenFileName(this,
                                                     tr("Cargar Masiva"),    // Título del diálogo
                                                     "",                       // Ruta inicial (directorio actual por defecto)
-                                                    tr("Archivos CSV (*.csv);;Todos los archivos (*.*)") // Filtros de archivo
+                                                    tr("Archivos JSON (*.json);;Todos los archivos (*.*)") // Filtros de archivo
                                                     );
 
     // Verificar si se seleccionó un archivo

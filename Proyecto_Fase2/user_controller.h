@@ -3,19 +3,23 @@
 
 //Archivos del proyecto
 #include "user.h"
-#include "linkedlist.h"
+//#include "linkedlist.h"
 #include "Matriz.h"
+#include "linkedlistpost.h"
 #include "Solicitud.h"
 #include "dobleList.h"
 #include "Abb.h"
+#include "avl.h"
 
 class User_Controller
 {
 private:
     static User_Controller* instance; // Instancia única
     int id_User;
-    User* User_Logued;
-    LinkedList list_Users;
+
+    AVL* list_No_Amigos;
+    AVL list_Users;
+    ABB* arbolBBusqueda;
     // Constructor privado para que no pueda ser instanciado directamente
     User_Controller();
     DoublyLinkedList posts;
@@ -23,6 +27,9 @@ private:
 
 public:
     // Método estático para obtener la instancia única
+
+    User* User_Logued;
+    LinkedListPost *allPosts;
     static User_Controller* getInstance();
 
     // Métodos relacionados con el manejo de usuarios
@@ -31,15 +38,21 @@ public:
     User* logIn(QString gmai, QString password);
     User* addUserTable(int index);
     int sizeList();
-    LinkedList& getListaUsers();
+    AVL& getListaUsers();
     bool carga_Usuarios(QString path);
     bool carga_Solicitudes(QString path);
     void add_Matriz(Solicitud* solicitud, int i, int j);
 
     bool carga_Post(QString path);
-    ABB* arbolAbb();
+    void arbolAbb();
+    void allList();
     void report_Posts();
+    void searchDateAbb(QDate date);
+    void addPost(QString contenido, QString path = "");
+    User* searchUser(QString correo);
 
+    AVL* getListaNoAmigos();
+    void listDesconocidos();
 };
 
 #endif // USER_CONTROLLER_H

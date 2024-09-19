@@ -6,37 +6,42 @@
 #include <string>
 #include <QDate>
 #include <QMessageBox>
+#include <QProcess>  // Incluye QProcess para ejecutar comandos de consola
+#include <QDebug>
+
+#include "publicacion.h"
+#include "linkedlistpost.h"
 
 using namespace std;
 
-class NodeABB{
+class NodeABB {
 public:
     QDate value;                      // Valor almacenado en el nodo el cual tiene la fecha
-    int id;                         // Valor almacenado con la lista enlazada simple
+    LinkedListPost* listPost;                         // Valor almacenado con la lista enlazada simple
     shared_ptr<NodeABB> left, right;   // Punteros a los nodos izquierdo y derecho
 
     // Constructor del nodo
-    NodeABB(QDate val, int idVal) : value(val), id(idVal), left(nullptr), right(nullptr) {}
+    NodeABB(QDate val) : value(val), listPost(new LinkedListPost()), left(nullptr), right(nullptr) {}
 };
 
-class ABB
-{
+class ABB {
 private:
     shared_ptr<NodeABB> root;          // Puntero a la raíz del árbol
     int globalNodeCount;            // Contador global de nodos
 
-    bool insertRec(shared_ptr<NodeABB>& root, QDate val)
-    {
+    bool insertRec(shared_ptr<NodeABB>& root, QDate val, Publicacion* post) {
         if (!root) {  // Si el nodo actual es nulo, se inserta el nuevo nodo aquí
-            root = make_shared<NodeABB>(val, ++globalNodeCount);
+            root = make_shared<NodeABB>(val);
+            root->listPost->append(post);
             return true;
         } else if (val < root->value) {  // Si el valor es menor, se inserta en el subárbol izquierdo
-            insertRec(root->left, val);
+            insertRec(root->left, val, post);
             return true;
         } else if (val > root->value) {  // Si el valor es mayor, se inserta en el subárbol derecho
-            insertRec(root->right, val);
+            insertRec(root->right, val, post);
             return true;
         }
+        root->listPost->append(post);
         // Si el valor es igual, no se hace nada (no se permiten duplicados)
         return false;
     }
@@ -63,25 +68,42 @@ private:
         }
     }
 
+    // Método recursivo para buscar un nodo por fecha
+    LinkedListPost* searchRec(shared_ptr<NodeABB> root, QDate date) const {
+        if (!root) {
+            return nullptr;  // Retorna nullptr si el nodo no se encuentra
+        }
+
+        if (date == root->value) {  // Si la fecha coincide con la del nodo actual
+            return root->listPost;  // Retorna la lista de publicaciones asociada a este nodo
+        } else if (date < root->value) {  // Si la fecha es menor, busca en el subárbol izquierdo
+            return searchRec(root->left, date);
+        } else {  // Si la fecha es mayor, busca en el subárbol derecho
+            return searchRec(root->right, date);
+        }
+    }
+
 public:
-    bool insert(QDate val)
-    {
-        if(!root){
-            root = make_shared<NodeABB>(val, ++globalNodeCount);
+
+    bool insert(QDate val, Publicacion* post) {
+        if (!root) {
+            root = make_shared<NodeABB>(val);
+            root->listPost->append(post);
             return true;
-        }else{
-            return insertRec(root, val);
+        } else {
+            return insertRec(root, val, post);
         }
     }
 
     // Función para graficar el árbol
-    void graph(const string& filename) const {
+    void graph() const {
+        // Rutas especificadas
+        string basePath = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/report/";
+        string filename = "abb";
 
-        string basePath = "C:\\Users\\matth\\Descargas\\";
         // Construir los nombres completos de los archivos .dot y .png
         string dotFilename = basePath + filename + ".dot";
         string pngFilename = basePath + filename + ".png";
-        string dotCommand = "dot -Tpng " + dotFilename + " -o " + pngFilename;  // Comando para generar la imagen
 
         ofstream file(dotFilename);
         file << "digraph G {\n";  // Inicia el archivo DOT
@@ -92,13 +114,27 @@ public:
         file << "}\n";  // Finaliza el archivo DOT
         file.close();
 
-        // Ejecuta el comando para convertir el archivo DOT en una imagen PNG
-        int result = system(dotCommand.c_str());
-        if (result != 0) {
-            QMessageBox::critical(nullptr, "Error en dot ABB", "Error al generar imagen de ABB");
+        // Ejecuta el comando para convertir el archivo DOT en una imagen PNG usando QProcess
+        QString command = "dot";
+        QStringList arguments;
+        arguments << "-Tpng" << QString::fromStdString(dotFilename) << "-o" << QString::fromStdString(pngFilename);
+
+        QProcess process;
+        process.start(command, arguments);
+        process.waitForFinished();  // Espera a que el proceso termine
+
+        // Verifica el estado del proceso
+        if (process.exitStatus() == QProcess::NormalExit && process.exitCode() == 0) {
+            QMessageBox::information(nullptr, "Imagen ABB", "La imagen ABB se cargó con éxito");
         } else {
-            QMessageBox::information(nullptr, "Imagen ABB", "La imagen ABB se cargo con exito");
+            QMessageBox::critical(nullptr, "Error en dot ABB", "Error al generar imagen de ABB");
+            qDebug() << "Error:" << process.errorString();
         }
+    }
+
+    // Método público para buscar un nodo por fecha
+    LinkedListPost* search(QDate date) const {
+        return searchRec(root, date);  // Inicia la búsqueda desde la raíz
     }
 
 };

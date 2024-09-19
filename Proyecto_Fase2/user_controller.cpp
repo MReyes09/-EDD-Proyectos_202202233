@@ -19,6 +19,8 @@ User_Controller::User_Controller()
 {
     id_User = 0;
     admin_add();
+    allPosts = nullptr;
+    arbolBBusqueda = nullptr;
 }
 
 // Método para obtener la instancia única de la clase
@@ -33,7 +35,7 @@ bool User_Controller::sigIn(QString name_, QString lastname_, QString email_, QS
 {
     User* newUser = new User(id_User, name_, lastname_, email_, password_, birthdate_, "User");
     id_User += 1;
-    return list_Users.append(newUser);
+    return list_Users.append(newUser, -1);
 }
 
 void User_Controller::admin_add()
@@ -43,7 +45,7 @@ void User_Controller::admin_add()
 
     User *newUser = new User(id_User, name, "", name, password, "", "Admin");
     id_User += 1;
-    list_Users.append(newUser);
+    list_Users.append(newUser, -1);
 
 }
 
@@ -72,7 +74,7 @@ int User_Controller::sizeList()
     return list_Users.size_List();
 }
 
-LinkedList& User_Controller::getListaUsers()
+AVL& User_Controller::getListaUsers()
 {
     return list_Users;
 }
@@ -277,7 +279,6 @@ bool User_Controller::carga_Post(QString path)
             // Crear y agregar la nueva publicacion
             Publicacion* newPost = new Publicacion(correo, contenido, fecha, hora);
             posts.append(newPost);
-            //list_Users.append(newUser, 1);
         }
     }
 
@@ -290,7 +291,50 @@ void User_Controller::report_Posts(){
     posts.generateDot();
 }
 
-ABB* User_Controller::arbolAbb(){
+void User_Controller::arbolAbb(){
+    arbolBBusqueda = posts.extractPost(User_Logued->getListAmigos(), User_Logued->getEmail());
+}
+
+void User_Controller::allList(){
+    allPosts = posts.extractPostAll(User_Logued->getListAmigos(), User_Logued->getEmail());
+}
+
+void User_Controller::searchDateAbb(QDate date){
+
+    allPosts = arbolBBusqueda->search(date);
 
 }
+
+void User_Controller::addPost(QString contenido, QString path) {
+    QString email =User_Logued->getEmail();
+
+    // Obtener la fecha y hora actual usando QDateTime
+    QDateTime currentDateTime = QDateTime::currentDateTime();
+
+    // Formatear la fecha como dd/MM/yyyy
+    QDate fecha = currentDateTime.date();
+
+    // Formatear la hora como HH:mm en formato 24 horas
+    QString hora = currentDateTime.toString("HH:mm");
+
+    // Crear la nueva publicación
+    Publicacion* newPost = new Publicacion(email, contenido, fecha, hora, path);
+    posts.append(newPost);
+    User_Logued->No_Post += 1;
+
+    arbolAbb();
+    allList();
+}
+
+User* User_Controller::searchUser(QString correo){
+    return list_Users.search_By_Id(-1, correo);
+}
+
+AVL* User_Controller::getListaNoAmigos(){
+    return list_No_Amigos;
+}
+
+void User_Controller::listDesconocidos(){
+    list_No_Amigos = list_Users.getDesconocidos(User_Logued->getIdUser(), User_Logued->getListEnvios(), User_Logued->getListSol(), User_Logued->getListAmigos());
+};
 
