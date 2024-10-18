@@ -255,6 +255,12 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreportuser.h",
+			"MU",
+			"EWIEGA46WW/moc_widgetreportuser.cpp",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetsolicitudes.h",
 			"MU",
 			"EWIEGA46WW/moc_widgetsolicitudes.cpp",
@@ -348,6 +354,11 @@
 			null
 		],
 		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/ordenamientoABB.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/user.cpp",
 			"MU",
 			null
@@ -414,6 +425,11 @@
 		],
 		[
 			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreports.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/widgetreportuser.cpp",
 			"MU",
 			null
 		],

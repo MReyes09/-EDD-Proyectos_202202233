@@ -118,7 +118,7 @@ bool User_Controller::carga_Usuarios(QString path){
             QJsonObject obj = value.toObject();
             QString name = obj["nombres"].toString();
             QString lastname = obj["apellidos"].toString();
-            QString birthdate = obj["fecha_De_Nacimiento"].toString();
+            QString birthdate = obj["fecha_de_nacimiento"].toString();
             QString email = obj["correo"].toString();
             QString password = obj["contraseña"].toString();
             QString rol = "Usuario";  // Podrías agregar esto a tu JSON si es necesario
@@ -183,12 +183,12 @@ bool User_Controller::carga_Solicitudes(QString path)
                 if (estado == "PENDIENTE") {
                     // Verificar si ya existe la solicitud
                     if (userEM->getListEnvios().search(userRec->getEmail(), userEM->getEmail())) {
-                        qDebug() << "La solicitud entre " << emisor << " y " << receptor << " ya existe";
+                        QMessageBox::information(nullptr, "Estado de solicitud", "La solicitud entre " + emisor + " y " + receptor + " ya existe");
                         delete newSolicitud;
                         continue;
                     }
                     if (userEM->getListAmigos().search(userRec->getEmail(), userEM->getEmail())) {
-                        qDebug() << "Entre " << emisor << " y " << receptor << " ya existe una amistad";
+                        QMessageBox::information(nullptr, "Estado de solicitud", "La solicitud entre " + emisor + " y " + receptor + " ya existe");
                         delete newSolicitud;
                         continue;
                     }
@@ -211,10 +211,10 @@ bool User_Controller::carga_Solicitudes(QString path)
                 }
             } else {
                 if (userEM == nullptr) {
-                    qDebug() << "El usuario con correo: " << emisor << " no existe";
+                    QMessageBox::information(nullptr, "Estado de solicitud", "El usuario con correo: " + emisor + " no existe");
                 }
                 if (userRec == nullptr) {
-                    qDebug() << "El usuario con correo: " << receptor << " no existe";
+                    QMessageBox::information(nullptr, "Estado de solicitud", "El usuario con correo: " + receptor + " no existe");
                 }
             }
         }
@@ -274,10 +274,17 @@ bool User_Controller::carga_Post(QString path)
 
             QDate fecha = QDate::fromString(fechaStr, "dd/MM/yyyy");
 
+            // Verificar si la publicación tiene comentarios
+            int No_Comentarios = 0;
+            if (obj.contains("comentarios") && obj["comentarios"].isArray()) {
+                QJsonArray comentariosArray = obj["comentarios"].toArray();
+                No_Comentarios = comentariosArray.size();  // Contar los comentarios
+            }
+
             User* findUser = list_Users.search_By_Id(-1, correo);
             findUser->No_Post += 1;
             // Crear y agregar la nueva publicacion
-            Publicacion* newPost = new Publicacion(correo, contenido, fecha, hora);
+            Publicacion* newPost = new Publicacion(correo, contenido, fecha, hora, No_Comentarios);
             posts.append(newPost);
         }
     }
@@ -318,7 +325,7 @@ void User_Controller::addPost(QString contenido, QString path) {
     QString hora = currentDateTime.toString("HH:mm");
 
     // Crear la nueva publicación
-    Publicacion* newPost = new Publicacion(email, contenido, fecha, hora, path);
+    Publicacion* newPost = new Publicacion(email, contenido, fecha, hora, 0, path);
     posts.append(newPost);
     User_Logued->No_Post += 1;
 
@@ -337,4 +344,124 @@ AVL* User_Controller::getListaNoAmigos(){
 void User_Controller::listDesconocidos(){
     list_No_Amigos = list_Users.getDesconocidos(User_Logued->getIdUser(), User_Logued->getListEnvios(), User_Logued->getListSol(), User_Logued->getListAmigos());
 };
+
+void User_Controller::solicitudes(int opcion){
+
+    if( opcion == 1 ){ // Esta opcion es cuando el usuario acepta una solicitud
+
+        Solicitud *solicitud = User_Logued->getListSol().head->solicitud;
+
+        bool result = User_Logued->getListSol().remove(solicitud);
+        if(result){
+            QMessageBox::information(nullptr,"Estado solicitud", "Se acepto con exito la solicitud");
+        }else{
+            QMessageBox::information(nullptr,"Estado solicitud", "A ocurrido un error, nunca se encontro la solicitud ");
+        }
+
+        User* user_Emisor = list_Users.search_By_Id(-1, solicitud->getCorreoEmisor());
+        result = user_Emisor->getListEnvios().remove(solicitud);
+
+        if( !result ) {
+            QMessageBox::information(nullptr,"Estado solicitud", "A ocurrido un error, nunca se encontro la solicitud ");
+        }
+        User_Logued->getListAmigos().append_Friend(solicitud);
+        User_Logued->No_Fri += 1;
+        user_Emisor->getListAmigos().append_Friend(solicitud);
+        user_Emisor->No_Fri += 1;
+        User_Logued->getListAmigos().print(2, User_Logued->getEmail());
+        int i = User_Logued->getIdUser();
+        int j = user_Emisor->getIdUser();
+        add_Matriz(solicitud, i, j);
+
+    }else{  // Esta opcion es cuando el usuario rechaza una solicitud
+
+        Solicitud *solicitud = User_Logued->getListSol().head->solicitud;
+
+        bool result = User_Logued->getListSol().remove(solicitud);
+        if(result){
+            QMessageBox::information(nullptr,"Estado solicitud", "Se rechazo con exito la solicitud");
+        }else{
+
+            QMessageBox::information(nullptr,"Estado solicitud", "A ocurrido un error, nunca se encontro la solicitud ");
+        }
+
+        User* user_Emisor =  list_Users.search_By_Id(-1, solicitud->getCorreoEmisor());
+        result = user_Emisor->getListEnvios().remove(solicitud);
+
+        if( !result ) {
+            QMessageBox::information(nullptr,"Estado solicitud", "A ocurrido un error, nunca se encontro la solicitud ");
+        }
+
+        delete solicitud;
+
+    }
+
+}
+
+void User_Controller::cancelarSolicitud(QString email_Sol)
+{
+    Solicitud* solicitud = User_Logued->getListEnvios().search_Find(email_Sol, User_Logued->getEmail());
+
+    if(solicitud != nullptr)
+    {
+        bool result = false;
+        result = User_Logued->getListEnvios().remove(solicitud);
+        User* user_Receptor = list_Users.search_By_Id(-1, solicitud->getCorreoReceptor());
+        result = user_Receptor->getListSol().remove(solicitud);
+        if(result){
+            QMessageBox::information(nullptr,"Estado solicitud", "Se rechazo con exito la solicitud");
+            return;
+        }else{
+
+            QMessageBox::information(nullptr,"Estado solicitud", "A ocurrido un error, nunca se encontro la solicitud ");
+            return;
+        }
+    }
+
+    QMessageBox::information(nullptr, "Estado de solicitud", "Error en la busqueda de la solicitud");
+}
+
+void User_Controller::solicitud_Amistad(QString email) {
+
+    User* user_Solicitud = list_Users.search_By_Id(-1, email);
+
+    if (user_Solicitud != nullptr) {
+        Solicitud* newSolicitud = new Solicitud(User_Logued->getEmail(), user_Solicitud->getEmail());
+        bool res = User_Logued->getListEnvios().append(newSolicitud, User_Logued->getEmail());
+        if( res ){
+            user_Solicitud->getListSol().push(newSolicitud);
+            QMessageBox::information(nullptr,"Estado solicitud", "Se envio con exito la solicitud");
+        }
+    } else {
+        QMessageBox::information(nullptr, "Estado de solicitud", "Error en el envio de la solicitud");
+    }
+}
+
+void User_Controller::report_AVL(){
+    list_Users.graph();
+}
+
+void User_Controller::avl_inorden(LinkedList* listOrden){
+    list_Users.inOrderRec(list_Users.root, listOrden);
+}
+
+void User_Controller::avl_preorden(LinkedList* listOrden){
+    list_Users.preOrder(list_Users.root, listOrden);
+}
+
+void User_Controller::avl_posorden(LinkedList* listOrden){
+    list_Users.postOrder(list_Users.root, listOrden);
+}
+
+LinkedListPost* User_Controller::inordenPosts(int limit){
+    return arbolBBusqueda->inOrder(limit);
+}
+
+LinkedListPost* User_Controller::posordenPosts(int limit){
+    return arbolBBusqueda->postOrder(limit);
+}
+
+LinkedListPost* User_Controller::preordenPosts(int limit){
+    return arbolBBusqueda->preOrder(limit);
+}
 

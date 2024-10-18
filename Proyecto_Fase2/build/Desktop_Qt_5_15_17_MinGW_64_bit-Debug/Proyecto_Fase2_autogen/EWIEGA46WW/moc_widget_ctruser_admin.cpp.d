@@ -1,5 +1,6 @@
 C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/EWIEGA46WW/moc_widget_ctruser_admin.cpp: C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/widget_ctruser_admin.h \
   C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/Proyecto_Fase2_autogen/moc_predefs.h \
+  C:/Qt/5.15.17/mingw81_64/include/QtCore/QString \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qalgorithms.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qarraydata.h \
   C:/Qt/5.15.17/mingw81_64/include/QtCore/qatomic.h \
@@ -255,4 +256,10 @@ C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyec
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
+  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/Node.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/Node_Sol.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/Solicitud.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/linkedlist_sol.h \
+  C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase2/user.h

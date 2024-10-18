@@ -9,6 +9,7 @@
 #include <Qstring>
 #include <QDebug>
 #include "user.h" // Asegúrate de incluir el archivo de cabecera para la clase User
+#include "linkedlist.h"
 
 using namespace std;
 
@@ -131,16 +132,6 @@ private:
         }
     }
 
-    // Recorrido en orden para recolectar usuarios
-    void inOrderRec(NodeAVL* node, vector<User*>& users) const {
-        if (!node) return;
-
-        inOrderRec(node->left, users);
-        users.push_back(node->user);
-        inOrderRec(node->right, users);
-    }
-
-
 public:
     NodeAVL* root = nullptr;
     // Método append que devuelve bool
@@ -186,9 +177,18 @@ public:
         }
 
         vector<User*> users;
-        inOrderRec(root, users);
+        inOrderRec2(root, users);
 
         return users[index];
+    }
+
+    // Recorrido en orden para recolectar usuarios
+    void inOrderRec2(NodeAVL* root, vector<User*>& result) {
+        if (root != nullptr) {
+            inOrderRec2(root->left, result);    // Recorrer subárbol izquierdo
+            result.push_back(root->user);   // Visitar nodo raíz (almacenar el `User`)
+            inOrderRec2(root->right, result);   // Recorrer subárbol derecho
+        }
     }
 
     // Método para buscar un usuario por ID o por correo (opcional)
@@ -212,7 +212,8 @@ public:
     }
 
     // Método para graficar el árbol AVL
-    void graph(const QString& filename) const {
+    void graph() const {
+        QString filename = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/report/avl_Users";
         QString dotFilename = filename + ".dot";
         QString pngFilename = filename + ".png";
 
@@ -311,6 +312,32 @@ public:
 
         return listDesconocidos;
     }
+
+    // Recorrido en orden para recolectar usuarios
+    void inOrderRec(NodeAVL* node, LinkedList* result) {
+        if (node != nullptr) {  // Cambié "root" por "node"
+            inOrderRec(node->left, result);    // Recorrer subárbol izquierdo
+            result->append(node->user);        // Añadir el usuario actual a la lista
+            inOrderRec(node->right, result);   // Recorrer subárbol derecho
+        }
+    }
+
+    void preOrder(NodeAVL* root, LinkedList* result) {
+        if (root != nullptr) {
+            result->append(root->user);   // Visitar nodo raíz (almacenar el `User`)
+            preOrder(root->left, result);   // Recorrer subárbol izquierdo
+            preOrder(root->right, result);  // Recorrer subárbol derecho
+        }
+    }
+
+    void postOrder(NodeAVL* root, LinkedList* result) {
+        if (root != nullptr) {
+            postOrder(root->left, result);  // Recorrer subárbol izquierdo
+            postOrder(root->right, result); // Recorrer subárbol derecho
+            result->append(root->user);   // Visitar nodo raíz (almacenar el `User`)
+        }
+    }
+
 
 };
 

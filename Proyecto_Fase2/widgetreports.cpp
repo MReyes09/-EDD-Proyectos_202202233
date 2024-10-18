@@ -26,3 +26,12 @@ void WidgetReports::on_pushButton_2_clicked()
 
 }
 
+
+void WidgetReports::on_pushButton_clicked()
+{
+    User_Controller* ctrUser = User_Controller::getInstance();
+    ctrUser->report_AVL();
+    Dialog_Reporte* dialog = new Dialog_Reporte(this, "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/report/avl_Users.png");
+    dialog->exec();
+}
+

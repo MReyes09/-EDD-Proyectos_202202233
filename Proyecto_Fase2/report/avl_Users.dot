@@ -1,0 +1,26 @@
+digraph G {
+node [shape=box];
+"Nodo1" [label="juan.martinez@example.com"];
+"Nodo1" -> "Nodo2";
+"Nodo2" [label="carlos.gomez@example.com"];
+"Nodo2" -> "Nodo3";
+"Nodo3" [label="ana.hernandez@example.com"];
+"Nodo3" -> "Nodo4";
+"Nodo4" [label="admin@gmail.com"];
+"Nodo3" -> "Nodo5";
+"Nodo5" [label="calificacion.fase1@example.com"];
+"Nodo2" -> "Nodo6";
+"Nodo6" [label="jose.garcia@example.com"];
+"Nodo6" -> "Nodo7";
+"Nodo7" [label="elena.torres@example.com"];
+"Nodo1" -> "Nodo8";
+"Nodo8" [label="luis.perez@example.com"];
+"Nodo8" -> "Nodo9";
+"Nodo9" [label="laura.ramirez@example.com"];
+"Nodo8" -> "Nodo10";
+"Nodo10" [label="miguel.rodriguez@example.com"];
+"Nodo10" -> "Nodo11";
+"Nodo11" [label="maria.lopez@example.com"];
+"Nodo10" -> "Nodo12";
+"Nodo12" [label="sofia.gonzalez@example.com"];
+}

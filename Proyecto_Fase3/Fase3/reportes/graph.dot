@@ -1,0 +1,11 @@
+digraph G {
+3[label="juan.martinez@example.com"];
+11[label="calificacion.fase1@example.com"];
+3 -> 11[dir=none];
+10[label="sofia.gonzalez@example.com"];
+10 -> 11[dir=none];
+7[label="jose.garcia@example.com"];
+11 -> 7[dir=none];
+9[label="miguel.rodriguez@example.com"];
+11 -> 9[dir=none];
+}

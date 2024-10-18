@@ -1,51 +1,266 @@
 [
     {
-        "nombres": "Juan",
-        "apellidos": "Perez Gomez",
-        "fecha_De_Nacimiento": "1990/05/14",
         "correo": "juan.perez@example.com",
-        "contraseña": "password123"
+        "contenido": "QUe pasiones banda",
+        "fecha": "13/09/2024",
+        "hora": "10:00",
+        "comentarios": [
+            {
+                "correo": "juan.perez@example.com",
+                "comentario": "Buen dia",
+                "fecha": "19/08/2024",
+                "hora": "10:00"
+            },
+            {
+                "correo": "maria.lopez@example.com",
+                "comentario": "Como estas?",
+                "fecha": "19/08/2024",
+                "hora": "15:30"
+            }
+        ]
     },
     {
-        "nombres": "Mati",
-        "apellidos": "Reyes",
-        "fecha_De_Nacimiento": "2002/09/02",
-        "correo": "a",
-        "contraseña": "1"
+        "correo": "juan.perez@example.com",
+        "contenido": "Un día soleado en la playa",
+        "fecha": "12/07/2024",
+        "hora": "14:45",
+        "comentarios": [
+            {
+                "correo": "ramiro.hernandez@example.com",
+                "comentario": "¡Me encantaría estar en la playa!",
+                "fecha": "13/07/2024",
+                "hora": "10:30"
+            },
+            {
+                "correo": "lucia.gomez@example.com",
+                "comentario": "Disfruta el sol",
+                "fecha": "13/07/2024",
+                "hora": "12:45"
+            }
+        ]
     },
     {
-        "nombres": "Ana",
-        "apellidos": "Martinez López",
-        "fecha_De_Nacimiento": "1985/07/22",
-        "correo": "ana.martinez@example.com",
-        "contraseña": "anaPass2024"
+        "correo": "juan.perez@example.com",
+        "contenido": "Nuevo proyecto en marcha",
+        "fecha": "12/04/2024",
+        "hora": "09:15",
+        "comentarios": [
+            {
+                "correo": "ana.martinez@example.com",
+                "comentario": "¡Felicidades por el nuevo proyecto!",
+                "fecha": "12/04/2024",
+                "hora": "10:00"
+            }
+        ]
     },
     {
-        "nombres": "Ramiro",
-        "apellidos": "Hernandez Ruiz",
-        "fecha_De_Nacimiento": "1978/12/11",
-        "correo": "ramiro.hernandez@example.com",
-        "contraseña": "carlosHR78"
+        "correo": "juan.perez@example.com",
+        "contenido": "Cocinando algo delicioso",
+        "fecha": "16/01/2024",
+        "hora": "11:00",
+        "comentarios": [
+            {
+                "correo": "carlos.rodriguez@example.com",
+                "comentario": "¿Qué estás cocinando?",
+                "fecha": "16/01/2024",
+                "hora": "11:30"
+            }
+        ]
     },
     {
-        "nombres": "Lucia",
-        "apellidos": "Gomez Sanchez",
-        "fecha_De_Nacimiento": "1995/03/30",
-        "correo": "lucia.gomez@example.com",
-        "contraseña": "luciaG123"
-    },
-    {
-        "nombres": "Maria",
-        "apellidos": "Lopez Martinez",
-        "fecha_De_Nacimiento": "2000/11/19",
         "correo": "maria.lopez@example.com",
-        "contraseña": "miguelR2000"
+        "contenido": "Una publicacion más",
+        "fecha": "20/10/2024",
+        "hora": "12:30",
+        "comentarios": [
+            {
+                "correo": "lucia.gomez@example.com",
+                "comentario": "¡Qué interesante!",
+                "fecha": "20/10/2024",
+                "hora": "13:00"
+            }
+        ]
     },
     {
-        "nombres": "carlos",
-        "apellidos": "Rodriguez Fernandez",
-        "fecha_De_Nacimiento": "1993/06/25",
+        "correo": "maria.lopez@example.com",
+        "contenido": "Preparando una nueva receta",
+        "fecha": "25/11/2024",
+        "hora": "16:00",
+        "comentarios": [
+            {
+                "correo": "ramiro.hernandez@example.com",
+                "comentario": "Espero que compartas la receta.",
+                "fecha": "25/11/2024",
+                "hora": "16:30"
+            }
+        ]
+    },
+    {
+        "correo": "maria.lopez@example.com",
+        "contenido": "Gran día para una caminata",
+        "fecha": "22/11/2024",
+        "hora": "08:30",
+        "comentarios": [
+            {
+                "correo": "ana.martinez@example.com",
+                "comentario": "¡Amo las caminatas matutinas!",
+                "fecha": "22/11/2024",
+                "hora": "09:00"
+            }
+        ]
+    },
+    {
+        "correo": "maria.lopez@example.com",
+        "contenido": "Leyendo un buen libro",
+        "fecha": "16/01/2024",
+        "hora": "18:20",
+        "comentarios": [
+            {
+                "correo": "lucia.gomez@example.com",
+                "comentario": "¿Qué libro estás leyendo?",
+                "fecha": "16/01/2024",
+                "hora": "18:45"
+            }
+        ]
+    },
+    {
         "correo": "carlos.rodriguez@example.com",
-        "contraseña": "sofiaL93"
+        "contenido": "Esta es extra",
+        "fecha": "16/01/2024",
+        "hora": "15:30",
+        "comentarios": [
+            {
+                "correo": "ramiro.hernandez@example.com",
+                "comentario": "¡Qué buen contenido!",
+                "fecha": "16/01/2024",
+                "hora": "16:00"
+            }
+        ]
+    },
+    {
+        "correo": "carlos.rodriguez@example.com",
+        "contenido": "Aprendiendo C++",
+        "fecha": "16/01/2024",
+        "hora": "17:45",
+        "comentarios": [
+            {
+                "correo": "lucia.gomez@example.com",
+                "comentario": "¡Sigue aprendiendo, es un gran lenguaje!",
+                "fecha": "16/01/2024",
+                "hora": "18:00"
+            }
+        ]
+    },
+    {
+        "correo": "carlos.rodriguez@example.com",
+        "contenido": "Día de entrenamiento",
+        "fecha": "02/08/2024",
+        "hora": "07:00",
+        "comentarios": [
+            {
+                "correo": "ana.martinez@example.com",
+                "comentario": "¡Sigue así, la constancia es clave!",
+                "fecha": "02/08/2024",
+                "hora": "07:30"
+            }
+        ]
+    },
+    {
+        "correo": "carlos.rodriguez@example.com",
+        "contenido": "Reparando mi bicicleta",
+        "fecha": "03/08/2024",
+        "hora": "10:30",
+        "comentarios": [
+            {
+                "correo": "juan.perez@example.com",
+                "comentario": "Espero que lo hayas arreglado rápido.",
+                "fecha": "03/08/2024",
+                "hora": "11:00"
+            }
+        ]
+    },
+    {
+        "correo": "juan.perez@example.com",
+        "contenido": "Tarde de película",
+        "fecha": "02/08/2024",
+        "hora": "20:15",
+        "comentarios": [
+            {
+                "correo": "ana.martinez@example.com",
+                "comentario": "¿Qué película viste?",
+                "fecha": "02/08/2024",
+                "hora": "21:00"
+            }
+        ]
+    },
+    {
+        "correo": "maria.lopez@example.com",
+        "contenido": "Comprando flores",
+        "fecha": "04/08/2024",
+        "hora": "11:45",
+        "comentarios": [
+            {
+                "correo": "lucia.gomez@example.com",
+                "comentario": "¡Amo las flores frescas!",
+                "fecha": "04/08/2024",
+                "hora": "12:15"
+            }
+        ]
+    },
+    {
+        "correo": "carlos.rodriguez@example.com",
+        "contenido": "Jugando al fútbol",
+        "fecha": "04/08/2024",
+        "hora": "18:00",
+        "comentarios": [
+            {
+                "correo": "ramiro.hernandez@example.com",
+                "comentario": "¡El fútbol es lo mejor para desestresarse!",
+                "fecha": "04/08/2024",
+                "hora": "18:30"
+            }
+        ]
+    },
+    {
+        "correo": "maria.lopez@example.com",
+        "contenido": "Día de spa",
+        "fecha": "05/08/2024",
+        "hora": "13:00",
+        "comentarios": [
+            {
+                "correo": "ana.martinez@example.com",
+                "comentario": "¡Te lo mereces!",
+                "fecha": "05/08/2024",
+                "hora": "13:30"
+            }
+        ]
+    },
+    {
+        "correo": "juan.perez@example.com",
+        "contenido": "Reuniéndome con amigos",
+        "fecha": "06/08/2024",
+        "hora": "17:30",
+        "comentarios": [
+            {
+                "correo": "lucia.gomez@example.com",
+                "comentario": "¡Qué bien se siente estar con amigos!",
+                "fecha": "06/08/2024",
+                "hora": "18:00"
+            }
+        ]
+    },
+    {
+        "correo": "carlos.rodriguez@example.com",
+        "contenido": "Nueva meta alcanzada",
+        "fecha": "07/08/2024",
+        "hora": "19:45",
+        "comentarios": [
+            {
+                "correo": "juan.perez@example.com",
+                "comentario": "¡Felicitaciones, sigue alcanzando tus metas!",
+                "fecha": "07/08/2024",
+                "hora": "20:15"
+            }
+        ]
     }
 ]

@@ -67,6 +67,8 @@ else()
             widgetbuscaruser.h widgetbuscaruser.cpp widgetbuscaruser.ui
             avl.h
             widgetsolicitudes.h widgetsolicitudes.cpp widgetsolicitudes.ui
+            widgetreportuser.h widgetreportuser.cpp widgetreportuser.ui
+            ordenamientoABB.cpp
 
         )
     endif()

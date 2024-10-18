@@ -1,0 +1,25 @@
+digraph G {
+	node [shape=box];
+	0 [label="juan.martinez@example.com"];
+	{
+		rank = same;
+		1 [label="calificacion.fase1@example.com"];
+		0 -> 1 [label="amistades"];
+	}
+		0 -> 2;
+	2 [label="sofia.gonzalez@example.com"];
+	{
+		rank = same;
+		3 [label="calificacion.fase1@example.com"];
+		2 -> 3 [label="amistades"];
+	}
+		2 -> 4;
+	4 [label="calificacion.fase1@example.com"];
+	{
+		rank = same;
+		5 [label="jose.garcia@example.com"];
+		4 -> 5 [label="amistades"];
+		6 [label="miguel.rodriguez@example.com"];
+		5 -> 6;
+	}
+}
