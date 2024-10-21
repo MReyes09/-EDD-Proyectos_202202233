@@ -15,6 +15,9 @@ public:
     explicit WidgetPerfil(QWidget *parent = nullptr);
     ~WidgetPerfil();
 
+private slots:
+    void on_btn_UpdateData_clicked();
+
 private:
     Ui::WidgetPerfil *ui;
     void initComponents();

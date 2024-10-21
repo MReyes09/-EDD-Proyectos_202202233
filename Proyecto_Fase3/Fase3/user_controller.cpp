@@ -469,3 +469,13 @@ void User_Controller::ListOfListGraph(){
 void User_Controller::ListOfListGraphAsAdjacenty(){
     listOflist.graphAsAdjacencyList(list_Users);
 }
+
+void User_Controller::ActualizarUser(QString name, QString lastname, QString birthDay, QString pass){
+    User_Logued->setBirthdate(birthDay);
+    User_Logued->setLastname(lastname);
+    User_Logued->setPassword(pass);
+    User_Logued->setName(name);
+
+    QMessageBox::information(nullptr, "Actualización de datos", "Los datos se han actualizado correctamente");
+
+}

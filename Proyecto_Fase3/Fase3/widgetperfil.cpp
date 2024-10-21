@@ -30,3 +30,18 @@ void WidgetPerfil::initComponents(){
     ui->birthDay->setDate(QDate::fromString(user_logued->getBirthdate(), "yyyy/MM/d"));
 
 }
+
+void WidgetPerfil::on_btn_UpdateData_clicked()
+{
+
+    QString nombre = ui->txt_nombre->text();
+    QString apellidos = ui->txt_Apellidos->text();
+    QString pass = ui->txt_Pass->text();
+    QString birthDay = ui->birthDay->text();
+
+    User_Controller *ctrUser = User_Controller::getInstance();
+    ctrUser->ActualizarUser(nombre, apellidos, birthDay, pass);
+
+
+}
+

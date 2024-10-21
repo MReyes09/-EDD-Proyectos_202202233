@@ -199,7 +199,7 @@ public:
             temp = temp->next;
         }
 
-        out << "}" << endl;
+        out << "}" << Qt::endl;
         file.close();  // Cerramos el archivo DOT
 
         // Usar QProcess para ejecutar el comando de Graphviz y generar la imagen PNG
@@ -308,8 +308,6 @@ public:
             qDebug() << "Error:" << process.errorString();
         }
     }
-
-
 
 };
 

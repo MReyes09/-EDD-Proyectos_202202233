@@ -68,6 +68,9 @@ public:
     // LIST OF LIST
     void ListOfListGraph();
     void ListOfListGraphAsAdjacenty();
+
+    //Actualizar usuario
+    void ActualizarUser(QString name, QString lastname, QString birthDay, QString pass);
 };
 
 #endif // USER_CONTROLLER_H
