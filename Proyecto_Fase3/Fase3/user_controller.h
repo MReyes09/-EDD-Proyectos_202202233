@@ -4,13 +4,12 @@
 //Archivos del proyecto
 #include "user.h"
 #include "linkedlist.h"
-#include "Matriz.h"
 #include "linkedlistpost.h"
-#include "Solicitud.h"
 #include "dobleList.h"
 #include "Abb.h"
 #include "avl.h"
 #include "ListOfList.h"
+#include "linkedListBlockCHain.h"
 
 class User_Controller
 {
@@ -24,6 +23,7 @@ private:
     User_Controller();
     DoublyLinkedList posts;
     ListOfList listOflist;
+    LinkedListBlockChain blockChain;
 
 public:
     // Método estático para obtener la instancia única
@@ -71,6 +71,11 @@ public:
 
     //Actualizar usuario
     void ActualizarUser(QString name, QString lastname, QString birthDay, QString pass);
+
+    //BlockChain!
+    void generateBlockChain();
+    void generateJsonBlockChain();
+    void generateMerkleTree();
 };
 
 #endif // USER_CONTROLLER_H

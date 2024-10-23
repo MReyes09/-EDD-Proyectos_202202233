@@ -1,5 +1,7 @@
 #include "user_controller.h"
 #include "publicacion.h"
+#include "bloque.h"
+#include "treeMerkle.h"
 
 #include <QFile>
 #include <QJsonDocument>
@@ -8,6 +10,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QDate>
+
 
 using namespace std;
 
@@ -283,6 +286,7 @@ bool User_Controller::carga_Post(QString path)
             // Crear y agregar la nueva publicacion
             Publicacion* newPost = new Publicacion(correo, contenido, fecha, hora, No_Comentarios);
             posts.append(newPost);
+            generateBlockChain();
         }
     }
 
@@ -328,6 +332,7 @@ void User_Controller::addPost(QString contenido, QString path) {
 
     arbolAbb();
     allList();
+    generateBlockChain();
 }
 
 User* User_Controller::searchUser(QString correo){
@@ -478,4 +483,49 @@ void User_Controller::ActualizarUser(QString name, QString lastname, QString bir
 
     QMessageBox::information(nullptr, "Actualización de datos", "Los datos se han actualizado correctamente");
 
+}
+
+void User_Controller::generateBlockChain(){
+
+    //Obtencion de la informacion para el blockChain, se omite el index porque eso se lo asigno en la lista
+    QString TIMESTAMP = QDateTime::currentDateTime().toString("dd-MM-yy::hh:mm:ss");
+    QString DATA = posts.generateDataBlockChain();
+    //La asignacion del previousHash se omite porque tambien se la asigno cuando agrego el block a la lista
+    QString NONCE = "0000"; // YA que son cosas de pruebas y evitar consumir tanto poder de computo, se anidara al inicio 0000 en el hash
+    //El calculo del hash se hara adentro de la lista
+
+    Bloque *newBloque = new Bloque(0, TIMESTAMP, NONCE, "", "", DATA);
+    blockChain.AppendBlock(newBloque);
+
+}
+
+void User_Controller::generateJsonBlockChain(){
+
+    blockChain.generateJSON();
+
+}
+
+void User_Controller::generateMerkleTree(){
+    int numleaves = blockChain.indexChain;
+
+    NodeBlock* temp = blockChain.head;
+
+    if( temp == nullptr ){
+        QMessageBox::information(nullptr, "Generacion de arbol de merkle", "No hay informacion aun para generar el arbol");
+        return;
+    }
+
+    NodeMerkle* leaves[numleaves];
+
+    for( int i = 0; i < numleaves; i++ ){
+        if ( temp != nullptr ){
+            leaves[i] = new NodeMerkle(temp->data->HASH.toStdString());
+            temp = temp->next;
+        }
+    }
+
+    NodeMerkle *root = buildMerkleTree(leaves, 0, numleaves -1);
+    graphMerkleTree(root);
+    delete root;
+    return;
 }

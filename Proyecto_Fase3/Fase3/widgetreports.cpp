@@ -38,3 +38,13 @@ void WidgetReports::on_pushButton_clicked()
     dialog->exec(); // Mostrar el diálogo de forma modal
 }
 
+
+void WidgetReports::on_pushButton_3_clicked()
+{
+    User_Controller* ctrUser = User_Controller::getInstance();
+    ctrUser->generateMerkleTree();
+
+    Dialog_Reporte* dialog = new Dialog_Reporte(this, "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/reportes/treeMerkle.png");
+    dialog->exec();
+}
+

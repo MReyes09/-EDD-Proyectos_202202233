@@ -244,7 +244,7 @@ public:
 
     // Método para graficar el árbol AVL
     void graph() const {
-        QString filename = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/report/avl_Users";
+        QString filename = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/reportes/avl_Users";
         QString dotFilename = filename + ".dot";
         QString pngFilename = filename + ".png";
 

@@ -8,6 +8,11 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QProcess>
+#include <QJsonArray>     // Para manejar arrays JSON
+#include <QJsonObject>    // Para crear objetos JSON
+#include <QJsonDocument>  // Para generar el documento JSON
+#include <QDate>          // Para manejar fechas (QDate)
+
 
 #include <string>
 
@@ -35,10 +40,13 @@ private:
     NodeD* head;
     NodeD* tail;
 public:
+
+    int NoNodos = 0;
+
     DoublyLinkedList(){
         head = nullptr;
         tail = nullptr;
-    }
+    }    
 
     void append(Publicacion* value){
         NodeD* newNode = new NodeD(value);
@@ -50,6 +58,7 @@ public:
             newNode->prev = tail;
             tail = newNode;
         }
+        NoNodos++;
     }
 
     void print(){
@@ -60,6 +69,40 @@ public:
         }
         qDebug("fin");
     }
+
+    QString generateDataBlockChain() {
+        QString data;
+
+        // Comenzamos con el nodo 'head'
+        NodeD* current = head;
+
+        // Crear un array JSON para almacenar todas las publicaciones
+        QJsonArray publicacionesArray;
+
+        // Iterar a través de la lista doblemente enlazada
+        while (current != nullptr) {
+            // Crear un objeto JSON para la publicación actual
+            QJsonObject publicacionObj;
+            publicacionObj["correo"] = current->data->email;
+            publicacionObj["contenido"] = current->data->contenido;
+            publicacionObj["fecha"] = current->data->fecha.toString("dd/MM/yyyy");  // Asegurar formato de fecha
+            publicacionObj["hora"] = current->data->hora;  // Asegurar formato de hora
+
+            // Añadir la publicación al array de publicaciones
+            publicacionesArray.append(publicacionObj);
+
+            // Mover al siguiente nodo
+            current = current->next;
+        }
+
+        // Convertir el array de publicaciones a un QString en formato JSON con indentación
+        QJsonDocument doc(publicacionesArray);
+        data = doc.toJson(QJsonDocument::Indented);  // Usar formato Indented para mayor legibilidad
+
+        return data;
+    }
+
+
 
     void remove(QString email){
         NodeD* current = head;
@@ -129,8 +172,8 @@ public:
 
     void generateDot(){
         // Define las rutas absolutas para el archivo DOT y la imagen PNG
-        QString dotFilePath = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/report/List_Posts.dot";
-        QString pngFilePath = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/report/posts.png";
+        QString dotFilePath = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/reportes/List_Posts.dot";
+        QString pngFilePath = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/reportes/posts.png";
         // Redirigir la salida de error a un archivo para ver los errores de Graphviz
         QString command = "dot";
         QStringList arguments;

@@ -169,7 +169,7 @@ public:
     // Función para graficar el árbol
     void graph() const {
         // Rutas especificadas
-        string basePath = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase2/report/";
+        string basePath = "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/reportes/";
         string filename = "abb";
 
         // Construir los nombres completos de los archivos .dot y .png

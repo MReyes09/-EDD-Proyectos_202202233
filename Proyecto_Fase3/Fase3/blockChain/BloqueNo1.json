@@ -1,0 +1,22 @@
+{
+    "INDEX": 1,
+    "TIMESTAMP": "22-10-24::21:37:30",
+    "NONCE": "0000",
+    "DATA": [
+    {
+        "contenido": "Disfrutando de un día soleado en la playa, la vida es mejor con arena y mar.",
+        "correo": "carlos.gomez@example.com",
+        "fecha": "12/08/2024",
+        "hora": "14:23"
+    },
+    {
+        "contenido": "Hoy aprendí algo nuevo, siempre es bueno salir de la zona de confort.",
+        "correo": "maria.lopez@example.com",
+        "fecha": "11/08/2024",
+        "hora": "09:45"
+    }
+]
+,
+    "PREVIOUSHASH": "0000269c99dec10247bcde1328a1642cf73553d260238e881d4614695df4a74ad7b2",
+    "HASH": "0000fe2ce014a33499e7d38a8278e48a955e503e8da293a3a47fa52e29cb21234f5e"
+}

@@ -1,0 +1,40 @@
+{
+    "INDEX": 4,
+    "TIMESTAMP": "22-10-24::21:37:30",
+    "NONCE": "0000",
+    "DATA": [
+    {
+        "contenido": "Disfrutando de un día soleado en la playa, la vida es mejor con arena y mar.",
+        "correo": "carlos.gomez@example.com",
+        "fecha": "12/08/2024",
+        "hora": "14:23"
+    },
+    {
+        "contenido": "Hoy aprendí algo nuevo, siempre es bueno salir de la zona de confort.",
+        "correo": "maria.lopez@example.com",
+        "fecha": "11/08/2024",
+        "hora": "09:45"
+    },
+    {
+        "contenido": "El café de la mañana nunca decepciona, ¡energía pura para el día!",
+        "correo": "juan.martinez@example.com",
+        "fecha": "10/08/2024",
+        "hora": "07:30"
+    },
+    {
+        "contenido": "Los atardeceres en la ciudad son simplemente mágicos, me encanta.",
+        "correo": "ana.hernandez@example.com",
+        "fecha": "13/08/2024",
+        "hora": "18:12"
+    },
+    {
+        "contenido": "Día perfecto para una caminata por el parque, disfrutando de la naturaleza.",
+        "correo": "luis.perez@example.com",
+        "fecha": "15/08/2024",
+        "hora": "10:57"
+    }
+]
+,
+    "PREVIOUSHASH": "00007f8cbea8fd9158ebd4f5f9a462450ab0c162f9c4dbfcc4fe60046370357f5ace",
+    "HASH": "00005bca37aebdbba7439527a61c3eb42625da43a76241948d1fea7c75d6bb050e3c"
+}

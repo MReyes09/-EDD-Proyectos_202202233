@@ -44,13 +44,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 95,
+				"line" : 98,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 78,
+				"line" : 81,
 				"parent" : 0
 			},
 			{
@@ -377,7 +377,10 @@
 				83,
 				84,
 				85,
-				86
+				86,
+				87,
+				88,
+				89
 			]
 		},
 		{
@@ -399,14 +402,14 @@
 				62,
 				66,
 				69,
-				87
+				90
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				88
+				91
 			]
 		}
 	],
@@ -796,6 +799,21 @@
 		{
 			"backtrace" : 1,
 			"path" : "ListOfList.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "bloque.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "linkedListBlockCHain.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "treeMerkle.h",
 			"sourceGroupIndex" : 1
 		},
 		{

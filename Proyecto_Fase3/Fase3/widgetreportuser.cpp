@@ -3,6 +3,7 @@
 #include "user_controller.h"
 #include "NodePost.h"
 #include "publicacion.h"
+#include "dialog_reporte.h"
 
 #include <QPixmap>
 
@@ -75,5 +76,15 @@ void widgetReportUser::on_pushButton_clicked()
         // Si la imagen no se carga, muestra un mensaje de error
         ui->lbl_Image->setText("No se pudo cargar la imagen.");
     }
+}
+
+void widgetReportUser::on_pushButton_2_clicked()
+{
+    User_Controller* ctrUser = User_Controller::getInstance();
+    ctrUser->ListOfListGraph();
+
+    Dialog_Reporte* dialog = new Dialog_Reporte(this, "C:/Users/matth/OneDrive/Documentos/Proyectos C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/reportes/graph.png");
+    dialog->exec();
+
 }
 

@@ -325,6 +325,7 @@ Fase3_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/Node_Sol.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/Solicitud.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/avl.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/bloque.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
@@ -335,6 +336,7 @@ Fase3_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/dialognewpost.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/dialognewpost.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/dobleList.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/linkedListBlockCHain.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/linkedlist.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/linkedlist.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/linkedlist_sol.cpp \
@@ -347,6 +349,7 @@ Fase3_autogen/timestamp: \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/menu.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/ordenamientoABB.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/publicacion.h \
+	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/treeMerkle.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/user.cpp \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/user.h \
 	C:/Users/matth/OneDrive/Documentos/Proyectos\ C++/EDD_Proyectos_202202233/Proyecto_Fase3/Fase3/user_controller.cpp \

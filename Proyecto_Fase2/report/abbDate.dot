@@ -2,25 +2,6 @@ digraph G {
 node [shape=record];
 rankdir=TB;
 node_20240810 [label="{10/08/2024}"];
-node_20240810 -> node_20240820;
-node_20240820 [label="{20/08/2024}"];
-node_20240820 -> node_20240819;
-node_20240820 -> node_20240821;
-node_20240819 [label="{19/08/2024}"];
-node_20240819 -> node_20240818;
-node_20240818 [label="{18/08/2024}"];
-node_20240818 -> node_20240811;
-node_20240811 [label="{11/08/2024}"];
-node_20240811 -> node_20240815;
+node_20240810 -> node_20240815;
 node_20240815 [label="{15/08/2024}"];
-node_20240821 [label="{21/08/2024}"];
-node_20240821 -> node_20240822;
-node_20240822 [label="{22/08/2024}"];
-node_20240822 -> node_20241001;
-node_20241001 [label="{01/10/2024}"];
-publications_20240818 [label="{Publicaciones de 18/08/2024}"];
-pub_0 [label="{La música siempre encuentra la manera de alegrar mi día.}"];
-publications_20240818 -> pub_0;
-pub_1 [label="{Las sonrisas sinceras son el mejor regalo que puedes dar.}"];
-publications_20240818 -> pub_1;
 }

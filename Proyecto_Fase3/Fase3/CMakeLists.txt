@@ -70,6 +70,9 @@ else()
             widgetreportuser.h widgetreportuser.cpp widgetreportuser.ui
             ordenamientoABB.cpp
             ListOfList.h
+            bloque.h
+            linkedListBlockCHain.h
+            treeMerkle.h
 
         )
     endif()
